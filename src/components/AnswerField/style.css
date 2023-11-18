@@ -12,19 +12,10 @@
   padding: 16px 20px;
   position: relative;
   width: 100%;
-}
-
-.answer-field .text-wrapper {
-  color: #d1d9e2;
   font-family: var(--fluentify-input-placeholder-font-family);
   font-size: var(--fluentify-input-placeholder-font-size);
   font-style: var(--fluentify-input-placeholder-font-style);
   font-weight: var(--fluentify-input-placeholder-font-weight);
   letter-spacing: var(--fluentify-input-placeholder-letter-spacing);
   line-height: var(--fluentify-input-placeholder-line-height);
-  margin-top: -1px;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  width: fit-content;
 }

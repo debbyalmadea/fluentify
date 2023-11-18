@@ -9,10 +9,35 @@ import { VuesaxLinearDiagram } from "../../icons/VuesaxLinearDiagram";
 import "./style.css";
 import { VuesaxLinearHome } from "../../icons/VuesaxLinearHome";
 import { VuesaxLinearMessages } from "../../icons/VuesaxLinearMessages";
+import { useEffect, useState } from "react";
 
 export const BottomNavigation = ({ screen, className }) => {
+  const [originalPosition, setOriginalPosition] = useState(0);
+  useEffect(() => {
+    if (!originalPosition) {
+      setOriginalPosition(window.innerHeight);
+    }
+    const handleResize = () => {
+      const footer = document.getElementById("bottom-navigation");
+      console.log(footer);
+      if (footer) {
+        // Update bottom padding of the content when the keyboard is visible
+        footer.style.display =
+          window.innerHeight < originalPosition ? "none" : "inline-flex";
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleResize);
+    };
+  }, [originalPosition]);
+
   return (
-    <div className={`bottom-navigation ${className}`}>
+    <div id="bottom-navigation" className={`bottom-navigation ${className}`}>
       <div className="container">
         <div className="navigation-base">
           <VuesaxLinearHome

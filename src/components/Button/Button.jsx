@@ -16,10 +16,14 @@ export const Button = ({
   size,
   className,
   divClassName,
+  onClick,
   text = "Teks",
 }) => {
   return (
-    <button className={`button ${type} ${size} ${hierachy} ${className}`}>
+    <button
+      onClick={onClick}
+      className={`button ${type} ${size} ${hierachy} ${className}`}
+    >
       {["default", "outline"].includes(type) && (
         <div
           className={`teks ${
@@ -51,4 +55,7 @@ Button.propTypes = {
   type: PropTypes.oneOf(["icon-only", "outline", "default"]),
   size: PropTypes.oneOf(["large", "medium", "small"]),
   text: PropTypes.string,
+  className: PropTypes.string,
+  divClassName: PropTypes.string,
+  onClick: PropTypes.func,
 };

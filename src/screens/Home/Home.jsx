@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import { BottomNavigation } from "../../components/BottomNavigation";
 import { Button } from "../../components/Button";
 import "./style.css";
+import { connect } from "react-redux";
+import { setTopic } from "../../actions";
 
-export const Home = () => {
+const _Home = ({ topic }) => {
   return (
     <div className="home">
       <div className="frame">
@@ -19,7 +21,7 @@ export const Home = () => {
         <div className="frame-wrapper">
           <div className="frame-4">
             <div className="topic">
-              <div className="text-wrapper-3">Travel</div>
+              <div className="text-wrapper-3">{topic}</div>
             </div>
             <Link
               to="/ubah-topik"
@@ -82,3 +84,14 @@ export const Home = () => {
     </div>
   );
 };
+
+const mapStateToProps = (state) => ({
+  topic: state.topic,
+});
+
+const mapDispatchToProps = {
+  setTopic,
+};
+
+const Home = connect(mapStateToProps, mapDispatchToProps)(_Home);
+export { Home };

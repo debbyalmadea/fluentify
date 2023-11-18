@@ -1,1 +1,3 @@
-export { UbahTopik } from "./UbahTopik";
+import UbahTopik from "./UbahTopik";
+
+export { UbahTopik };

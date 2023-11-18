@@ -5,10 +5,8 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 
 import "./style.css";
 
-export const AnswerField = () => {
-  return (
-    <div className="answer-field">
-      <p className="text-wrapper">Ketik topik dalam bahasa apapun...</p>
-    </div>
-  );
+export const AnswerField = (props) => {
+  return <textarea {...props} className={"answer-field " + props.className} />;
 };
+
+AnswerField.propTypes = HTMLTextAreaElement.propTypes;

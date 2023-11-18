@@ -4,8 +4,19 @@ import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
 import { TopikButton } from "../../components/TopikButton";
 import "./style.css";
+import { connect } from "react-redux";
+import { setTopic } from "../../actions";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-export const UbahTopik = () => {
+const popularTopics = ["Travel", "Shopping", "Business", "Education"];
+const _UbahTopik = ({ topic, setTopic }) => {
+  const [topicButton, setTopicButton] = useState(topic);
+  const navigate = useNavigate();
+  const handleTopicChange = (newTopic) => {
+    document.getElementById("answer-field").value = "";
+    setTopicButton(newTopic);
+  };
   return (
     <div className="ubah-topik">
       <div className="frame">
@@ -21,36 +32,54 @@ export const UbahTopik = () => {
                 <div className="frame-4">
                   <TopikButton
                     className="topik-button-instance"
-                    state="selected"
+                    state={topicButton === "Travel" ? "selected" : "default"}
                     text="Travel"
+                    onClick={() => handleTopicChange("Travel")}
                   />
                   <TopikButton
                     className="topik-button-instance"
-                    state="default"
+                    state={topicButton === "Shopping" ? "selected" : "default"}
                     text="Shopping"
+                    onClick={() => handleTopicChange("Shopping")}
                   />
                 </div>
                 <div className="frame-4">
                   <TopikButton
                     className="topik-button-instance"
-                    state="default"
+                    state={topicButton === "Business" ? "selected" : "default"}
                     text="Business"
+                    onClick={() => handleTopicChange("Business")}
                   />
                   <TopikButton
                     className="topik-button-instance"
-                    state="default"
+                    state={topicButton === "Education" ? "selected" : "default"}
                     text="Education"
+                    onClick={() => handleTopicChange("Education")}
                   />
                 </div>
               </div>
               <div className="text-wrapper-7">atau masukkan topik</div>
-              <AnswerField className="answer-field-instance" />
+              <AnswerField
+                id={"answer-field"}
+                placeholder="Ketik topik dalam bahasa apapun..."
+                defaultValue={popularTopics.includes(topic) ? "" : topic}
+              />
               <Button
                 className="button-instance"
                 hierachy="primary"
                 size="large"
                 text="Simpan"
                 type="default"
+                onClick={() => {
+                  const value = document.getElementById("answer-field").value;
+                  if (topicButton && !value) {
+                    setTopic(topicButton);
+                    navigate("/");
+                    return;
+                  }
+                  setTopic(value);
+                  navigate("/");
+                }}
               />
             </div>
           </div>
@@ -60,3 +89,14 @@ export const UbahTopik = () => {
     </div>
   );
 };
+
+const mapStateToProps = (state) => ({
+  topic: state.topic,
+});
+
+const mapDispatchToProps = {
+  setTopic,
+};
+
+const UbahTopik = connect(mapStateToProps, mapDispatchToProps)(_UbahTopik);
+export default UbahTopik;
