@@ -90,6 +90,7 @@
   letter-spacing: var(--fluentify-ctas-medium-letter-spacing);
   line-height: var(--fluentify-ctas-medium-line-height);
   width: fit-content;
+  padding: 4px 0px;
 }
 
 .button.small .teks {

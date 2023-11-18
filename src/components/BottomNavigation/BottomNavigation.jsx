@@ -50,7 +50,7 @@ export const BottomNavigation = ({ screen, className }) => {
             }}
             className={`div screen-${screen}`}
           >
-            Progress
+            Home
           </div>
         </div>
         <div className="navigation-base">

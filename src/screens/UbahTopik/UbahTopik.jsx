@@ -20,11 +20,7 @@ const _UbahTopik = ({ topic, setTopic }) => {
   return (
     <div className="ubah-topik">
       <div className="frame">
-        <Header
-          className="header-instance"
-          navigationClassName="design-component-instance-node"
-          title={"Ubah Topik"}
-        />
+        <Header title={"Ubah Topik"} />
         <div className="frame-2">
           <div className="frame-wrapper">
             <div className="frame-3">

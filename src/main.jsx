@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { UbahTopik } from "./screens/UbahTopik";
 import { Provider } from "react-redux";
 import store from "./store";
+import { ListeningSkill } from "./screens/ListeningSkill";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/ubah-topik",
     element: <UbahTopik />,
+  },
+  {
+    path: "/skill-builder/listening",
+    element: <ListeningSkill />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

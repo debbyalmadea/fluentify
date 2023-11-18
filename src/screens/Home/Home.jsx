@@ -49,11 +49,11 @@ const _Home = ({ topic }) => {
                   />
                   <div className="text-wrapper-5">Writing</div>
                 </div>
-                <div className="div-2">
+                <Link to={"/skill-builder/listening"} className="div-2">
                   <img className="group" alt="Group" src="/img/group-8.png" />
                   <div className="text-wrapper-5">Listening</div>
                   <img className="img" alt="Group" src="/img/group-9.png" />
-                </div>
+                </Link>
               </div>
               <div className="frame-5">
                 <div className="div-2">

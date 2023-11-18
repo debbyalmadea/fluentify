@@ -4,13 +4,12 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 */
 
 import PropTypes from "prop-types";
-import { PlaceholderFill5 } from "../../icons/PlaceholderFill5";
 import "./style.css";
 
 export const Button = ({
-  firstIcon = false,
-  trilingIcon = false,
-  realText = false,
+  // firstIcon = false,
+  // trilingIcon = false,
+  // realText = false,
   hierachy,
   type,
   size,
@@ -18,6 +17,7 @@ export const Button = ({
   divClassName,
   onClick,
   text = "Teks",
+  icon,
 }) => {
   return (
     <button
@@ -37,12 +37,7 @@ export const Button = ({
         </div>
       )}
 
-      {type === "icon-only" && (
-        <PlaceholderFill5
-          className="placeholder-fill"
-          color={hierachy === "secondary" ? "#2563EB" : "white"}
-        />
-      )}
+      {type === "icon-only" && icon}
     </button>
   );
 };
@@ -58,4 +53,5 @@ Button.propTypes = {
   className: PropTypes.string,
   divClassName: PropTypes.string,
   onClick: PropTypes.func,
+  icon: PropTypes.node,
 };

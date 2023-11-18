@@ -1,0 +1,243 @@
+   .audio-player {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .audio-player .text-wrapper {
+    align-self: stretch;
+    color: #000000;
+    font-family: var(--fluentify-text-p2-font-family);
+    font-size: var(--fluentify-text-p2-font-size);
+    font-style: var(--fluentify-text-p2-font-style);
+    font-weight: var(--fluentify-text-p2-font-weight);
+    letter-spacing: var(--fluentify-text-p2-letter-spacing);
+    line-height: var(--fluentify-text-p2-line-height);
+    position: relative;
+    text-align: center;
+  }
+  
+   .audio {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+  
+   .actions {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  
+   .low-fi-button {
+    height: 50px;
+    margin-left: -20.5px;
+    position: relative;
+    width: 50px;
+  }
+  
+   .frame {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+  }
+  
+   .div-wrapper {
+    align-items: center;
+    border-radius: 1000px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+  
+   .mobile-button {
+    all: unset;
+    align-items: center;
+    background-color: var(--fluentifyprimary);
+    border-radius: 120px;
+    display: flex;
+    height: 120px;
+    justify-content: center;
+    position: relative;
+    width: 120px;
+  }
+  
+   .vuesax-linear-play {
+    height: 30px !important;
+    position: relative !important;
+    width: 30px !important;
+  }
+  
+   .button-instance {
+    background-color: var(--fluentifyprimary-100) !important;
+    border-radius: 49px !important;
+    height: 60px !important;
+    width: 60px !important;
+  }
+  
+   .rabbit-instance {
+    flex: 0 0 auto !important;
+    position: relative !important;
+  }
+  
+  .main .text-wrapper {
+    align-self: stretch;
+    color: #000000;
+    font-family: var(--fluentify-text-p2-font-family);
+    font-size: var(--fluentify-text-p2-font-size);
+    font-style: var(--fluentify-text-p2-font-style);
+    font-weight: var(--fluentify-text-p2-font-weight);
+    letter-spacing: var(--fluentify-text-p2-letter-spacing);
+    line-height: var(--fluentify-text-p2-line-height);
+    position: relative;
+    text-align: center;
+  }
+  
+   .slidebar {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 12px;
+    justify-content: center;
+    padding: 16px;
+    position: relative;
+    width: 100%;
+  }
+  
+   .div {
+    color: #000000;
+    font-family: var(--text-xs-regular-font-family);
+    font-size: var(--text-xs-regular-font-size);
+    font-style: var(--text-xs-regular-font-style);
+    font-weight: var(--text-xs-regular-font-weight);
+    letter-spacing: var(--text-xs-regular-letter-spacing);
+    line-height: var(--text-xs-regular-line-height);
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+   .slider {
+    background-color: var(--slate-200);
+    border-radius: 5px;
+    flex: 1;
+    flex-grow: 1;
+    height: 8px;
+    position: relative;
+  }
+  
+   .progress {
+    height: 8px;
+    width: 176px;
+  }
+  
+   .control-point {
+    background-color: var(--fluentifyprimary-500);
+    border: 2px solid;
+    border-color: var(--slate-200);
+    border-radius: 20px;
+    height: 20px;
+    left: -5px;
+    position: relative;
+    top: -6px;
+    width: 20px;
+  }
+  
+  /* =========================
+Custom Input range 
+=============================*/
+
+/* Input range - chrome and safari */
+input[type="range"] {
+  --range-progress: 0;
+  -webkit-appearance: none;
+  position: relative;
+  background:var(--fluentifyneutral-400);
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Input range - firefox */
+input[type="range"]::-moz-range-track {
+  position: relative;
+  background:var(--fluentifyneutral-400);
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* played progress length - Chrome & safari*/
+input[type="range"]::before {
+  content: '';
+  height: 8px;
+  background: var(--fluentifyprimary);
+  width: var(--range-progress);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* played progress length - firefox */
+input[type="range"]::-moz-range-progress {
+  background: var(--fluentifyprimary);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  height: 8px;
+}
+
+/* slider thumb - chrome and safari */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--fluentifyprimary);
+  cursor: pointer;
+  position: relative;
+}
+
+/* dragging thumb - chrome and safari */
+input[type="range"]:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+/* slider thumb - firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: var(--fluentifyprimary);
+  cursor: pointer;
+  border: transparent;
+  position: relative;
+}
+/* dragging thumb - firefox */
+input[type="range"]:active::-moz-range-thumb {
+  transform: scale(1.2);
+}

@@ -1,0 +1,1 @@
+export { VuesaxLinearPause } from "./VuesaxLinearPause";
