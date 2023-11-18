@@ -1,0 +1,131 @@
+.button {
+  all: unset;
+  align-items: center;
+  border-radius: 12px;
+  box-sizing: border-box;
+  justify-content: center;
+  position: relative;
+}
+
+.button .teks {
+  position: relative;
+  text-align: center;
+}
+
+.button .placeholder-fill {
+  height: 20px !important;
+  position: relative !important;
+  width: 20px !important;
+}
+
+.button.default {
+  display: inline-flex;
+  gap: 6px;
+  padding: 8px 32px;
+}
+
+.button.small {
+  height: 36px;
+}
+
+.button.outline {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--fluentifyprimary);
+  display: inline-flex;
+  gap: 6px;
+  padding: 8px 32px;
+}
+
+.button.icon-only {
+  display: flex;
+}
+
+.button.medium {
+  height: 40px;
+}
+
+.button.small.icon-only {
+  width: 40px;
+}
+
+.button.primary.icon-only {
+  background-color: var(--fluentifyprimary);
+}
+
+.button.default.secondary {
+  background-color: var(--fluentifyprimary-100);
+}
+
+.button.medium.icon-only {
+  width: 40px;
+}
+
+.button.default.primary {
+  background-color: var(--fluentifyprimary);
+}
+
+.button.secondary.icon-only {
+  background-color: var(--fluentifyprimary-100);
+}
+
+.button.large.icon-only {
+  height: 46px;
+  width: 46px;
+}
+
+.button.default.large.secondary {
+  height: 46px;
+}
+
+.button.secondary .teks {
+  color: var(--fluentifyprimary);
+}
+
+.button.large .teks {
+  font-family: var(--fluentify-ctas-medium-font-family);
+  font-size: var(--fluentify-ctas-medium-font-size);
+  font-style: var(--fluentify-ctas-medium-font-style);
+  font-weight: var(--fluentify-ctas-medium-font-weight);
+  letter-spacing: var(--fluentify-ctas-medium-letter-spacing);
+  line-height: var(--fluentify-ctas-medium-line-height);
+  width: fit-content;
+}
+
+.button.small .teks {
+  font-family: var(--text-xs-semi-bold-font-family);
+  font-size: var(--text-xs-semi-bold-font-size);
+  font-style: var(--text-xs-semi-bold-font-style);
+  font-weight: var(--text-xs-semi-bold-font-weight);
+  height: 14px;
+  letter-spacing: var(--text-xs-semi-bold-letter-spacing);
+  line-height: var(--text-xs-semi-bold-line-height);
+  white-space: nowrap;
+  width: 34px;
+}
+
+.button.outline .teks {
+  color: var(--fluentifyprimary);
+}
+
+.button.icon-only .teks {
+  color: var(--fluentifyprimary);
+}
+
+.button.medium .teks {
+  font-family: var(--fluentify-ctas-medium-font-family);
+  font-size: var(--fluentify-ctas-medium-font-size);
+  font-style: var(--fluentify-ctas-medium-font-style);
+  font-weight: var(--fluentify-ctas-medium-font-weight);
+  letter-spacing: var(--fluentify-ctas-medium-letter-spacing);
+  line-height: var(--fluentify-ctas-medium-line-height);
+  width: fit-content;
+}
+
+.button.large.primary .teks {
+  margin-top: -1px;
+}
+
+.button.default.primary .teks {
+  color: var(--white);
+}

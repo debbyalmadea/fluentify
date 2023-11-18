@@ -1,0 +1,1 @@
+export { VuesaxLinearHome } from "./VuesaxLinearHome";

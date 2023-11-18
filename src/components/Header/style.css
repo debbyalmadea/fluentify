@@ -1,0 +1,40 @@
+.header {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(29, 78, 216) 0%, rgba(29, 78, 216, 0.73) 100%);
+  display: inline-flex;
+  flex-direction: column;
+  padding: 40px 16px 16px;
+  position: relative;
+  width: 100%;
+}
+
+.header .navigation {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.header .chevron-left-regular {
+  height: 20px !important;
+  position: relative !important;
+  width: 20px !important;
+}
+
+.header .text-wrapper {
+  color: var(--white);
+  flex: 1;
+  font-family: var(--fluentify-text-bold-font-family);
+  font-size: var(--fluentify-text-bold-font-size);
+  font-style: var(--fluentify-text-bold-font-style);
+  font-weight: var(--fluentify-text-bold-font-weight);
+  letter-spacing: var(--fluentify-text-bold-letter-spacing);
+  line-height: var(--fluentify-text-bold-line-height);
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}

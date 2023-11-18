@@ -1,0 +1,1 @@
+export { UbahTopik } from "./UbahTopik";

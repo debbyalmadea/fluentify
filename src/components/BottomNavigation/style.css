@@ -1,0 +1,172 @@
+.bottom-navigation {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 10px 10px 0px 0px;
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 10px 0px 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-navigation .container {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  height: 64px;
+  position: relative;
+  width: 375px;
+}
+
+.bottom-navigation .navigation-base {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 4px;
+  height: 64px;
+  justify-content: center;
+  position: relative;
+}
+
+.bottom-navigation .vuesax-linear-home {
+  height: 61.47px !important;
+  margin-top: -8.73px !important;
+  position: relative !important;
+  width: 61.5px !important;
+}
+
+.bottom-navigation .instance-node {
+  height: 24px !important;
+  position: relative !important;
+  width: 24px !important;
+}
+
+.bottom-navigation .text-wrapper {
+  font-family: var(--fluentify-caption-medium-font-family);
+  font-size: var(--fluentify-caption-medium-font-size);
+  font-style: var(--fluentify-caption-medium-font-style);
+  font-weight: var(--fluentify-caption-medium-font-weight);
+  letter-spacing: var(--fluentify-caption-medium-letter-spacing);
+  line-height: var(--fluentify-caption-medium-line-height);
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.bottom-navigation .div {
+  font-family: var(--fluentify-caption-medium-font-family);
+  font-size: var(--fluentify-caption-medium-font-size);
+  font-style: var(--fluentify-caption-medium-font-style);
+  font-weight: var(--fluentify-caption-medium-font-weight);
+  letter-spacing: var(--fluentify-caption-medium-letter-spacing);
+  line-height: var(--fluentify-caption-medium-line-height);
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.bottom-navigation .vuesax-linear-chart {
+  height: 61.5px !important;
+  margin-top: -8.75px !important;
+  position: relative !important;
+  width: 59.5px !important;
+}
+
+.bottom-navigation .text-wrapper-2 {
+  font-family: var(--fluentify-caption-medium-font-family);
+  font-size: var(--fluentify-caption-medium-font-size);
+  font-style: var(--fluentify-caption-medium-font-style);
+  font-weight: var(--fluentify-caption-medium-font-weight);
+  letter-spacing: var(--fluentify-caption-medium-letter-spacing);
+  line-height: var(--fluentify-caption-medium-line-height);
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.bottom-navigation .vuesax-linear {
+  height: 61.5px !important;
+  margin-top: -8.75px !important;
+  position: relative !important;
+  width: 61.5px !important;
+}
+
+.bottom-navigation .text-wrapper-3 {
+  font-family: var(--fluentify-caption-medium-font-family);
+  font-size: var(--fluentify-caption-medium-font-size);
+  font-style: var(--fluentify-caption-medium-font-style);
+  font-weight: var(--fluentify-caption-medium-font-weight);
+  letter-spacing: var(--fluentify-caption-medium-letter-spacing);
+  line-height: var(--fluentify-caption-medium-line-height);
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.bottom-navigation .progress {
+  color: var(--fluentifyneutral-400);
+}
+
+.bottom-navigation .leaderboard {
+  color: var(--fluentifyneutral-400);
+}
+
+.bottom-navigation .home {
+  color: var(--fluentifyprimary);
+}
+
+.bottom-navigation .chat-bot {
+  color: var(--fluentifyneutral-400);
+}
+
+.bottom-navigation .screen-progress {
+  color: var(--fluentifyprimary);
+}
+
+.bottom-navigation .screen-leaderboard {
+  color: var(--fluentifyneutral-400);
+}
+
+.bottom-navigation .screen-home {
+  color: var(--fluentifyneutral-400);
+}
+
+.bottom-navigation .screen-chat-bot {
+  color: var(--fluentifyneutral-400);
+}
+
+.bottom-navigation .screen-0-progress {
+  color: var(--fluentifyneutral-400);
+}
+
+.bottom-navigation .screen-0-leaderboard {
+  color: var(--fluentifyprimary);
+}
+
+.bottom-navigation .screen-0-home {
+  color: var(--fluentifyneutral-400);
+}
+
+.bottom-navigation .screen-0-chat-bot {
+  color: var(--fluentifyneutral-400);
+}
+
+.bottom-navigation .screen-1-progress {
+  color: var(--fluentifyneutral-400);
+}
+
+.bottom-navigation .screen-1-leaderboard {
+  color: var(--fluentifyneutral-400);
+}
+
+.bottom-navigation .screen-1-home {
+  color: var(--fluentifyneutral-400);
+}
+
+.bottom-navigation .screen-1-chat-bot {
+  color: var(--fluentifyprimary);
+}

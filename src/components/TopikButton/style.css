@@ -1,0 +1,42 @@
+.topik-button {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 20px;
+  position: relative;
+  width: 162px;
+}
+
+.topik-button .shopping {
+  font-family: var(--fluentify-ctas-medium-font-family);
+  font-size: var(--fluentify-ctas-medium-font-size);
+  font-style: var(--fluentify-ctas-medium-font-style);
+  font-weight: var(--fluentify-ctas-medium-font-weight);
+  letter-spacing: var(--fluentify-ctas-medium-letter-spacing);
+  line-height: var(--fluentify-ctas-medium-line-height);
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.topik-button.selected {
+  background-color: var(--fluentifyprimary-100);
+  border-color: var(--fluentifyprimary);
+}
+
+.topik-button.default {
+  background-color: var(--white);
+  border-color: var(--fluentifyneutral-400);
+}
+
+.topik-button.selected .shopping {
+  color: var(--fluentifyprimary);
+}
+
+.topik-button.default .shopping {
+  color: var(--fluentifyneutral-400);
+}

@@ -1,0 +1,1 @@
+export { VuesaxLinearChart } from "./VuesaxLinearChart";
