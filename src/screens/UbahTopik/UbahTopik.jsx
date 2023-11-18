@@ -23,6 +23,7 @@ const _UbahTopik = ({ topic, setTopic }) => {
         <Header
           className="header-instance"
           navigationClassName="design-component-instance-node"
+          title={"Ubah Topik"}
         />
         <div className="frame-2">
           <div className="frame-wrapper">

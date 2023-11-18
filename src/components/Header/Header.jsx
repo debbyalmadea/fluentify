@@ -7,7 +7,7 @@ import { ChevronLeftRegular } from "../../icons/ChevronLeftRegular";
 import "./style.css";
 import { Link } from "react-router-dom";
 
-export const Header = ({ className }) => {
+export const Header = ({ className, title }) => {
   return (
     <div className={`header ${className}`}>
       <div className="navigation">
@@ -15,7 +15,7 @@ export const Header = ({ className }) => {
           <ChevronLeftRegular className="chevron-left-regular" color="white" />
         </Link>
         <div className="text-wrapper">
-          <p>Skill Builder</p>
+          <p>{title}</p>
         </div>
       </div>
     </div>
@@ -24,4 +24,5 @@ export const Header = ({ className }) => {
 
 Header.propTypes = {
   className: PropTypes.string,
+  title: PropTypes.string,
 };
