@@ -1,0 +1,95 @@
+button {
+    all: unset;
+}
+
+.modal-background {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    padding: 5px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: rgba(37, 99, 235, 0.25);
+    backdrop-filter: blur(3.5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.modal {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    flex: 1 0 0;
+    border-radius: 5px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.modal-close {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-title {
+    color: #000;
+    text-align: center;
+    align-self: stretch;
+    /* Fluentify/Subtitles/subtitle 1 */
+    font-family: var( --fluentify-headings-h5-font-family);
+    font-size: var(--fluentify-headings-h5-font-size);
+    font-style: var(--fluentify-headings-h5-font-style);
+    font-weight: var(--fluentify-headings-h5-font-weight);
+    line-height: var(--fluentify-headings-h5-line-height); /* 130% */
+}
+
+.modal-text {
+    align-self: stretch;
+    color: #000;
+    text-align: center;
+    /* Fluentify/Text/p1 */
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+.modal-body {
+    margin-top: 8px;
+}
+
+.modal-illust {
+    margin-bottom: 32px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.modal-button {
+    margin-top: 32px;
+    width: 100%;
+}
+
+.modal-button__back.button.default.primary {
+    background: var(--fluentify-danger-400, #EF4444);
+}

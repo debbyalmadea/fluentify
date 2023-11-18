@@ -30,8 +30,6 @@ const _Home = ({ topic }) => {
               }}
             >
               <Button
-                className="button-instance"
-                divClassName="design-component-instance-node"
                 hierachy="primary"
                 size="large"
                 text="Ubah Topik"

@@ -26,7 +26,6 @@ export const AudioPlayer = () => {
 
     playAnimationRef.current = requestAnimationFrame(repeat);
 
-    console.log(audioRef.current.ended);
     if (audioRef.current.ended) {
       progressBarRef.current.style.setProperty("--range-progress", `100%`);
     }
