@@ -5,6 +5,7 @@
   align-items: flex-start;
   gap: 16px;
   align-self: stretch;
+  position: relative;
 
   border-radius: 5px;
 border: 1px solid var(--fluentify-neutral-400, #D1D9E2);
@@ -32,4 +33,11 @@ font-size: 18px;
 font-style: normal;
 font-weight: 600;
 line-height: 24px; /* 133.333% */
+}
+
+.question .flag {
+  all: unset;
+  position: absolute;
+  top: 24px;
+  right: 24px;
 }

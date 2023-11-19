@@ -29,7 +29,12 @@ export const EssayQuestion = ({
   console.log(user_answer);
   return (
     <div className={`essay state-${state} ${className}`}>
-      <Question number={number} total={total} question={question} />
+      <Question
+        flag={state !== "default"}
+        number={number}
+        total={total}
+        question={question}
+      />
       {state === "default" && (
         <AnswerField
           defaultValue={reduxAnswers[questionId]}
