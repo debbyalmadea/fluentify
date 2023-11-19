@@ -13,7 +13,7 @@ export const EssayQuestion = ({
   number,
   total,
   question,
-  state,
+  state = "default",
   className,
   user_answer,
   correct_answer,
@@ -83,37 +83,6 @@ export const EssayQuestion = ({
           type="default"
         />
       )}
-      {/* 
-      {state === "wrong" && (
-        <>
-          <div className="answer-field-2">
-            <div className="frame-2">
-              <CloseCrossFill className="close-cross-fill" />
-              <div className="text-wrapper-2">Jawaban kamu salah</div>
-            </div>
-            <p className="p">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
-          </div>
-          <div className="text-wrapper-3">Jawaban benar</div>
-          <div className="answer-field-3">
-            <img className="group" alt="Group" src="/img/group-12-2.png" />
-            <p className="text-wrapper-4">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Donec qu
-            </p>
-          </div>
-          <Button
-            className="button-2"
-            hierachy="secondary"
-            size="large"
-            text="Tanya Bot"
-            type="default"
-          />
-        </>
-      )} */}
     </div>
   );
 };
