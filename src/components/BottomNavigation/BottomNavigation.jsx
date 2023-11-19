@@ -40,27 +40,26 @@ export const BottomNavigation = ({ screen, className }) => {
   return (
     <div id="bottom-navigation" className={`bottom-navigation ${className}`}>
       <div className="container">
-        <div className="navigation-base">
+        <Link to={"/"} className="navigation-base">
           <VuesaxLinearHome
             color={screen === "home" ? "#2563EB" : "white"}
             strokeColor={screen === "home" ? "white" : "#D1D9E2"}
           />
-          <Link
-            to={"/"}
+          <div
             style={{
               color: screen === "home" ? "#2563EB" : "#D1D9E2",
             }}
             className={`div screen-${screen}`}
           >
             Home
-          </Link>
-        </div>
-        <div className="navigation-base">
+          </div>
+        </Link>
+        <Link to={"/progress-tracker"} className="navigation-base">
           <VuesaxLinearDiagram
             color={screen === "progress" ? "#2563EB" : "#D1D9E2"}
           />
           <div className={`div screen-${screen}`}>Progress</div>
-        </div>
+        </Link>
         <div className="navigation-base">
           <VuesaxLinearChart
             color={screen === "leaderboard" ? "#2563EB" : "white"}

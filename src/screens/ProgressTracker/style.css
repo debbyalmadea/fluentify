@@ -1,0 +1,76 @@
+.progress-tracker {
+    display: flex;
+width: 100%;
+flex-direction: column;
+align-items: center;
+position: relative;
+}
+
+.progress-tracker .body {
+    display: flex;
+flex-direction: column;
+align-items: center;
+align-self: stretch;
+position: relative;
+background: var(--fluentifygradient, linear-gradient(248deg, #1D4ED8 49.71%, rgba(29, 78, 216, 0.73) 100.13%));
+}
+
+.progress-tracker .main {
+    display: flex;
+padding: 16px;
+flex-direction: column;
+align-items: flex-end;
+gap: 20px;
+align-self: stretch;
+border-radius: 15px 15px 0px 0px;
+background: var(--white, #FFF);
+}
+
+.progress-tracker .main .container {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 40px;
+align-self: stretch;
+padding-bottom: 80px;
+
+}
+
+.progress-tracker .section-title {
+    color: #000;
+
+/* Fluentify/Subtitles/subtitle 2 */
+font-family: Nunito;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 133.333% */
+}
+
+.progress-tracker .progress {
+    display: flex;
+padding-bottom: 0px;
+flex-direction: column;
+align-items: flex-start;
+gap: 20px;
+align-self: stretch;
+border-bottom: 1px solid var(--fluentify-neutral-400, #D1D9E2);
+}
+
+.progress-tracker .expertise {
+    display: flex;
+padding-bottom: 0px;
+flex-direction: column;
+align-items: flex-start;
+gap: 20px;
+align-self: stretch;
+border-bottom: 1px solid var(--fluentify-neutral-400, #D1D9E2);
+}
+
+.progress-tracker .history {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 20px;
+align-self: stretch;
+}

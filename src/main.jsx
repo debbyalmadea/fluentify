@@ -11,6 +11,7 @@ import {
   ListeningSkillQuestions,
 } from "./screens/ListeningSkill";
 import { ListeningSkillResult } from "./screens/ListeningSkill/Result/ListeningSkillResult";
+import { ProgressTracker } from "./screens/ProgressTracker";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/skill-builder/listening/:id/result",
     element: <ListeningSkillResult />,
+  },
+  {
+    path: "/progress-tracker",
+    element: <ProgressTracker />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

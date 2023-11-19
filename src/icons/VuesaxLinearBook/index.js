@@ -1,0 +1,1 @@
+export { VuesaxLinearBook } from "./VuesaxLinearBook";

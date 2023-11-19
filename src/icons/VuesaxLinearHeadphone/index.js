@@ -1,0 +1,1 @@
+export { VuesaxLinearHeadphone } from "./VuesaxLinearHeadphone";
