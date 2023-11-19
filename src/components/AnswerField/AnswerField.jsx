@@ -6,6 +6,7 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 import "./style.css";
 
 export const AnswerField = (props) => {
+  console.log(props);
   return <textarea {...props} className={"answer-field " + props.className} />;
 };
 

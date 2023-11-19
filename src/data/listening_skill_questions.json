@@ -1,0 +1,110 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "type": "multiple_choice",
+            "question": "What is the capital of France?",
+            "answers": [
+                {
+                    "id": 1,
+                    "value": "A",
+                    "label": "Paris",
+                    "isCorrect": true
+                },
+                {
+                    "id": 2,
+                    "value": "B",
+                    "label": "London",
+                    "isCorrect": false
+                },
+                {
+                    "id": 3,
+                    "value": "C",
+                    "label": "Berlin",
+                    "isCorrect": false
+                },
+                {
+                    "id": 4,
+                    "value": "D",
+                    "label": "Madrid",
+                    "isCorrect": false
+                }
+            ]
+        }, 
+        {
+                "id": 2,
+                "type": "essay",
+                "question": "What is the capital of France?",
+                "answers": []
+        },
+        {
+            "id": 3,
+            "type": "multiple_choice",
+            "question": "What is the capital of France?",
+            "answers": [
+                {
+                    "id": 1,
+                    "value": "A",
+                    "label": "Paris",
+                    "isCorrect": true
+                },
+                {
+                    "id": 2,
+                    "value": "B",
+                    "label": "London",
+                    "isCorrect": false
+                },
+                {
+                    "id": 3,
+                    "value": "C",
+                    "label": "Berlin",
+                    "isCorrect": false
+                },
+                {
+                    "id": 4,
+                    "value": "D",
+                    "label": "Madrid",
+                    "isCorrect": false
+                }
+            ]
+        }, 
+        {
+                "id": 4,
+                "type": "essay",
+                "question": "What is the capital of France?",
+                "answers": []
+        },
+        {
+            "id": 5,
+            "type": "multiple_choice",
+            "question": "What is the capital of France?",
+            "answers": [
+                {
+                    "id": 1,
+                    "value": "A",
+                    "label": "Paris",
+                    "isCorrect": true
+                },
+                {
+                    "id": 2,
+                    "value": "B",
+                    "label": "London",
+                    "isCorrect": false
+                },
+                {
+                    "id": 3,
+                    "value": "C",
+                    "label": "Berlin",
+                    "isCorrect": false
+                },
+                {
+                    "id": 4,
+                    "value": "D",
+                    "label": "Madrid",
+                    "isCorrect": false
+                }
+            ]
+        }
+    ],
+    "total": 5
+}

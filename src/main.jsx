@@ -6,7 +6,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { UbahTopik } from "./screens/UbahTopik";
 import { Provider } from "react-redux";
 import store from "./store";
-import { ListeningSkill } from "./screens/ListeningSkill";
+import {
+  ListeningSkill,
+  ListeningSkillQuestions,
+} from "./screens/ListeningSkill";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/skill-builder/listening",
     element: <ListeningSkill />,
+  },
+  {
+    path: "/skill-builder/listening/:id/question/:number",
+    element: <ListeningSkillQuestions />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

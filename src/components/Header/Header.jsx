@@ -11,7 +11,12 @@ import { Modal } from "../Modal";
 import { Button } from "../Button";
 import { Warning } from "../../assets/illusts";
 
-export const Header = ({ className, title, showAlert = false }) => {
+export const Header = ({
+  className,
+  title,
+  showAlert = false,
+  backUrl = "..",
+}) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -59,7 +64,7 @@ export const Header = ({ className, title, showAlert = false }) => {
                 className="modal-button modal-button__back"
                 onClick={() => {
                   setOpen(false);
-                  navigate("..");
+                  navigate(backUrl);
                 }}
                 type="default"
                 text="Keluar"
@@ -78,7 +83,11 @@ export const Header = ({ className, title, showAlert = false }) => {
       )}
       <div className={`header ${className}`}>
         <div className="navigation">
-          <button onClick={() => setOpen(true)}>
+          <button
+            onClick={() => {
+              showAlert ? setOpen(true) : navigate(backUrl);
+            }}
+          >
             <ChevronLeftRegular
               className="chevron-left-regular"
               color="white"
@@ -97,4 +106,5 @@ Header.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
   showAlert: PropTypes.bool,
+  backUrl: PropTypes.string,
 };

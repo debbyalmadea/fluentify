@@ -1,0 +1,35 @@
+.question {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+
+  border-radius: 5px;
+border: 1px solid var(--fluentify-neutral-400, #D1D9E2);
+background: var(--white, #FFF);
+}
+
+.question .text-wrapper {
+  color: var(--fluentify-primary, #2563EB);
+text-align: start;
+/* Fluentify/Text/bold */
+font-family: Nunito;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px; /* 157.143% */
+}
+
+.question .div {
+  align-self: stretch;
+  color: #000;
+
+/* Fluentify/Subtitles/subtitle 2 */
+font-family: Nunito;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 133.333% */
+}

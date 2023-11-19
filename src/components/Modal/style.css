@@ -67,7 +67,8 @@ button {
 }
 
 .modal-illust {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
+    margin-top: -42px;
 }
 
 .modal-content {

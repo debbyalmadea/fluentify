@@ -1,0 +1,123 @@
+.choice-button {
+  width: 100%;
+}
+
+.choice {
+    align-items: center;
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    gap: 16px;
+    overflow: hidden;
+    padding: 12px 16px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .choice .text-wrapper {
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .choice .div {
+    flex: 1;
+    position: relative;
+  }
+  
+  .choice.selected {
+    background-color: var(--fluentifyprimary-100);
+    border-color: var(--fluentifyprimary);
+    box-shadow: 0px 0px 5px #2563eb40;
+  }
+  
+  .choice.wrong {
+    background-color: var(--fluentifydanger-50);
+    border-color: var(--fluentifydanger-500);
+    box-shadow: 0px 0px 5px #2563eb40;
+  }
+  
+  .choice.correct {
+    background-color: var(--fluentifysuccess-50);
+    border-color: var(--fluentifysuccess-500);
+  }
+  
+  .choice.default {
+    border: 1px solid var(--fluentify-neutral-400, #D1D9E2);
+    background: var(--white, #FFF);
+  }
+  
+  .choice.selected .text-wrapper {
+    color: var(--fluentifyprimary);
+    font-family: "Nunito-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  
+  .choice.wrong .text-wrapper {
+    color: var(--fluentifydanger-600);
+    font-family: "Nunito-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  
+  .choice.correct .text-wrapper {
+    color: var(--fluentifysuccess-600);
+    font-family: "Nunito-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  
+  .choice.default .text-wrapper {
+    color: var(--black);
+    font-family: var(--fluentify-text-p1-font-family);
+    font-size: var(--fluentify-text-p1-font-size);
+    font-style: var(--fluentify-text-p1-font-style);
+    font-weight: var(--fluentify-text-p1-font-weight);
+    letter-spacing: var(--fluentify-text-p1-letter-spacing);
+    line-height: var(--fluentify-text-p1-line-height);
+  }
+  
+  .choice.selected .div {
+    color: var(--fluentifyprimary);
+    font-family: "Nunito-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  
+  .choice.wrong .div {
+    color: var(--fluentifydanger-600);
+    font-family: "Nunito-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  
+  .choice.correct .div {
+    color: var(--fluentifysuccess-600);
+    font-family: "Nunito-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  
+  .choice.default .div {
+    color: var(--black);
+    font-family: var(--fluentify-text-p1-font-family);
+    font-size: var(--fluentify-text-p1-font-size);
+    font-style: var(--fluentify-text-p1-font-style);
+    font-weight: var(--fluentify-text-p1-font-weight);
+    letter-spacing: var(--fluentify-text-p1-letter-spacing);
+    line-height: var(--fluentify-text-p1-line-height);
+  }
+  
