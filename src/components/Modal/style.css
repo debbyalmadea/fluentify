@@ -29,6 +29,7 @@ button {
     border-radius: 5px;
     background: var(--white, #FFF);
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    width: 100%;
 }
 
 .modal-close {
@@ -48,6 +49,7 @@ button {
     font-style: var(--fluentify-headings-h5-font-style);
     font-weight: var(--fluentify-headings-h5-font-weight);
     line-height: var(--fluentify-headings-h5-line-height); /* 130% */
+    width: 100%;
 }
 
 .modal-text {
@@ -60,10 +62,16 @@ button {
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 150% */
+    width: 100%;
 }
 
 .modal-body {
     margin-top: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
 }
 
 .modal-illust {
@@ -84,10 +92,10 @@ button {
     align-items: center;
     gap: 16px;
     width: 100%;
+    margin-top: 32px;
 }
 
 .modal-button {
-    margin-top: 32px;
     width: 100%;
 }
 

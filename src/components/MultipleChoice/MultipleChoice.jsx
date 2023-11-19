@@ -45,7 +45,12 @@ export const MultipleChoice = ({
   }
   return (
     <div className={`multiple-choice state-${state}`}>
-      <Question number={number} total={total} question={question} />
+      <Question
+        flag={state !== "default"}
+        number={number}
+        total={total}
+        question={question}
+      />
       <div className="frame-2">
         {answers.map((answer, index) => (
           <Choice

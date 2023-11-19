@@ -35,10 +35,6 @@ export const Header = ({
       window.removeEventListener("popstate", handleBackButton);
     };
   }, []);
-
-  useEffect(() => {
-    console.log("open", open);
-  }, [open]);
   return (
     <>
       {showAlert && (
