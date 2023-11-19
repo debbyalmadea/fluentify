@@ -1,1 +1,1 @@
-export { CheckFIll } from "./CheckFill";
+export { CheckFill } from "./CheckFill";
