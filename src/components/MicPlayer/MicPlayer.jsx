@@ -22,6 +22,8 @@ const pairs = {
     "shopping": "Shopping is always a good idea! Are you looking for something specific?",
     "clothing": "Finding the perfect outfit is fun! Any particular style or clothing item you're searching for?",
     "electronics": "Tech gadgets make shopping exciting! Interested in any specific electronic devices?",
+    "thanks": "You're welcome! I'm always happy to help you improve your english skills! Keep practicing and you'll be fluent in no time!",
+    "thank": "You're welcome! I'm always happy to help your english skills! Keep practicing and you'll be fluent in no time!",
 };
 
 

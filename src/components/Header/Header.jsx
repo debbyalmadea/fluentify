@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import { Modal } from "../Modal";
 import { Button } from "../Button";
 import { Warning } from "../../assets/illusts";
-
+import { toast } from "react-hot-toast";
 export const Header = ({
   className,
   title,
@@ -60,6 +60,7 @@ export const Header = ({
                 className="modal-button modal-button__back"
                 onClick={() => {
                   setOpen(false);
+                  toast.success("Berhasil kembali!!");
                   navigate(backUrl);
                 }}
                 type="default"
@@ -81,7 +82,12 @@ export const Header = ({
         <div className="navigation">
           <button
             onClick={() => {
-              showAlert ? setOpen(true) : navigate(backUrl);
+              if (showAlert) {
+                setOpen(true);
+              } else {
+                toast.success("Berhasil kembali");
+                navigate(backUrl);
+              }
             }}
           >
             <ChevronLeftRegular

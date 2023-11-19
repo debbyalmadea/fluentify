@@ -37,7 +37,7 @@ export const SpeakingSkillAudio = () => {
                             className="modal-button"
                             onClick={() => {
                                 setOpen(false);
-                                navigate("/skill-builder/listening/1/question/1");
+                                navigate("/skill-builder/speaking/result");
                             }}
                             type="default"
                             text="Lanjut!"

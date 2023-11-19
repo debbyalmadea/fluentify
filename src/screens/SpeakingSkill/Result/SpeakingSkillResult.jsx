@@ -14,10 +14,12 @@ import { useState } from "react";
 import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
 import { Modal } from "../../../components/Modal";
 import { AnswerField } from "../../../components/AnswerField";
-
-export const ListeningSkillResult = () => {
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+export const SpeakingSkillResult = () => {
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -34,7 +36,7 @@ export const ListeningSkillResult = () => {
                 textAlign: "start",
               }}
             >
-              Listening Skill Builder
+              Writing Skill Builder
             </p>
           </div>
           <div className="modal-body">
@@ -45,6 +47,11 @@ export const ListeningSkillResult = () => {
             <div className="checkboxes">
               <label className="container">
                 <p>Soal yang diberikan tidak sesuai topik</p>
+                <input type="checkbox" />
+                <span className="checkmark"></span>
+              </label>
+              <label className="container">
+                <p>Bot kurang interaktif</p>
                 <input type="checkbox" />
                 <span className="checkmark"></span>
               </label>
@@ -80,7 +87,7 @@ export const ListeningSkillResult = () => {
       </Modal>
       <div className="reading-result">
         <div className="body">
-          <Header title="Listening Builder: Result" backUrl="/" />
+          <Header title="Speaking Builder: Result" backUrl="/" />
           <div className="main">
             <div className="container">
               <div className="above-the-fold">
@@ -139,50 +146,11 @@ export const ListeningSkillResult = () => {
                 </div>
               </div>
               <div className="audio-player-container">
-                <p className="section-title">Audio</p>
+                <p className="section-title">Rekaman Pembicaraan</p>
                 <AudioPlayer />
               </div>
               <div className="answers-container">
-                <p className="section-title">Jawaban</p>
-                <div className="container">
-                  {data.questions.map((question, index) =>
-                    question.type === "multiple_choice" ? (
-                      <MultipleChoice
-                        key={index}
-                        {...question}
-                        number={index + 1}
-                        total={data.total}
-                        questionId={question.id}
-                        state={question.is_correct ? "correct" : "wrong"}
-                      />
-                    ) : (
-                      <EssayQuestion
-                        key={index}
-                        {...question}
-                        number={index + 1}
-                        questionId={question.id}
-                        total={data.total}
-                        state={question.is_correct ? "correct" : "wrong"}
-                      />
-                    )
-                  )}
-                </div>
               </div>
-              {/* <MultipleChoice
-              buttonIcon={
-                <VuesaxLinearFlag className="vuesax-linear-flag-2-3" />
-              }
-              className="design-component-instance-node-2"
-              state="correct"
-            />
-            <MultipleChoice
-              className="design-component-instance-node-2"
-              group="/img/group-12.png"
-              override={
-                <VuesaxLinearFlag className="vuesax-linear-flag-2-3" />
-              }
-              state="wrong"
-            /> */}
             </div>
           </div>
         </div>
