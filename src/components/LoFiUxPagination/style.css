@@ -1,0 +1,188 @@
+.lo-fi-UX-pagination {
+    align-items: center;
+    position: relative;
+}
+
+.lo-fi-UX-pagination .rectangle {
+    background-color: #5f6d7e;
+    border-radius: 5px;
+    height: 8px;
+    position: relative;
+    width: 8px;
+}
+
+.lo-fi-UX-pagination .div {
+    background-color: #e5e8eb;
+    border-radius: 5px;
+    height: 8px;
+    position: relative;
+    width: 8px;
+}
+
+.lo-fi-UX-pagination .wireframe-button {
+    align-items: flex-start;
+    border: 1px solid;
+    border-color: #7c8b9d;
+    border-radius: 30px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.lo-fi-UX-pagination .button-instance {
+    background-color: #e5e8eb !important;
+    border: 1px solid !important;
+    border-color: #7c8b9d !important;
+    border-radius: unset !important;
+    height: 40px !important;
+    width: 40px !important;
+}
+
+.lo-fi-UX-pagination .instance-node {
+    background-color: #e5e8eb !important;
+    border: 1px solid !important;
+    border-color: #7c8b9d !important;
+    border-radius: unset !important;
+    height: 40px !important;
+    margin-left: -1px !important;
+    width: 40px !important;
+}
+
+.lo-fi-UX-pagination .button-2 {
+    margin-right: -18px !important;
+}
+
+.lo-fi-UX-pagination .button-3 {
+    background-color: unset !important;
+    display: flex !important;
+    width: 87px !important;
+}
+
+.lo-fi-UX-pagination .pagination {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.lo-fi-UX-pagination .pagination-base {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    padding: 0px 16px;
+    position: relative;
+    width: 40px;
+}
+
+.lo-fi-UX-pagination .text {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-left: -16px;
+    margin-right: -16px;
+    position: relative;
+    width: 40px;
+}
+
+.lo-fi-UX-pagination .text-wrapper {
+    align-self: stretch;
+    height: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.lo-fi-UX-pagination .text-2 {
+    background-color: #7c8b9d;
+    border-radius: 50px;
+    height: 10px;
+    left: 11px;
+    position: relative;
+    width: 17px;
+}
+
+.lo-fi-UX-pagination .text-3 {
+    color: #5f6d7e;
+    font-family: "Inter", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+    line-height: 20px;
+    margin-left: -2px;
+    margin-right: -2px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.lo-fi-UX-pagination .div-wrapper {
+    align-items: center;
+    background-color: #e5e8eb;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    padding: 0px 16px;
+    position: relative;
+    width: 40px;
+}
+
+.lo-fi-UX-pagination .wireframe-button-wrapper {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 16px;
+    position: relative;
+}
+
+.lo-fi-UX-pagination .lo-fi-text-wrapper {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    padding: 0px 16px;
+    position: relative;
+    width: 80px;
+}
+
+.lo-fi-UX-pagination .lo-fi-text {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 6px;
+    position: relative;
+}
+
+.lo-fi-UX-pagination .text-4 {
+    align-self: stretch;
+    background-color: #d1d9e2;
+    border-radius: 50px;
+    height: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.lo-fi-UX-pagination.variant-button {
+    display: inline-flex;
+    gap: 16px;
+}
+
+.lo-fi-UX-pagination.variant-text {
+    display: flex;
+    justify-content: space-between;
+    width: 1048px;
+}
+
+.lo-fi-UX-pagination.variant-simple {
+    display: flex;
+    justify-content: space-between;
+    width: 384px;
+}
+
+.lo-fi-UX-pagination.variant-slide {
+    display: inline-flex;
+    gap: 12px;
+}

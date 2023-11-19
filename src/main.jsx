@@ -15,6 +15,7 @@ import { SpeakingSkill } from "./screens/SpeakingSkill";
 import { ListeningSkillResult } from "./screens/ListeningSkill/Result/ListeningSkillResult";
 import { SpeakingSkillResult } from "./screens/SpeakingSkill/Result";
 import { Toaster } from "react-hot-toast";
+import { SplashScreen } from "./screens/Splash/Splash";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/skill-builder/speaking/result",
     element: <SpeakingSkillResult />,
+  },
+  {
+    path: "/splash",
+    element: <SplashScreen />,
   }
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
