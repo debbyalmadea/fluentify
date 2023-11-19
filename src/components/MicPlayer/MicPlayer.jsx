@@ -30,15 +30,45 @@ export const MicPlayer = (props) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [speed, setSpeed] = useState(1);
     const { transcript, resetTranscript, SpeechRecognition } = props;
-
+    const [initial, setInitial] = useState(true)
     const getResponse = () => {
+        if (initial) {
+            return "Hi, welcome to Fluentify! I am glad you are here. What should we talk about today?"
+        }
+        if (transcript === undefined || transcript.length === 0) {
+            return "I am sorry, I did not hear anything. Can you repeat that?"
+        }
         for (const [key, value] of Object.entries(pairs)) {
             if (transcript.toLowerCase().includes(key)) {
                 return value;
             }
         }
-        return ""
+        return "I am sorry, I am just a prototype. I didn't quite get that."
     }
+
+    useEffect(() => {
+        const clickPlayButton = () => {
+            if (initial) {
+                const playButton = document.querySelector('.rs-play');
+                if (playButton) {
+                    console.log('Play button found. Clicking...');
+                    playButton.click();
+
+                } else {
+                    console.error('Play button not found.');
+                }
+                setInitial(false);
+            }
+        };
+
+        const timeoutId = setTimeout(() => {
+            clickPlayButton();
+        }, 1000);
+
+        return () => {
+            clearTimeout(timeoutId);
+        };
+    }, []);
 
     useEffect(() => {
         if (isPlaying) {
