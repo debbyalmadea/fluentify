@@ -1,42 +1,252 @@
-.listening-question {
-  display: flex;
-  width: 100%;
-  padding-bottom: 0px;
-  flex-direction: column;
+.essay {
   align-items: center;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
-  }
-  
-  .listening-question .questions {
-    align-items: flex-start;
-    align-self: stretch;
-    background-color: var(--white);
-    border-radius: 5px;
-    box-shadow: 0px 1px 2px #1018280a;
-    display: flex;
+  padding: 0px 0px 40px;
+  position: relative;
+  width: 100%;
+}
+
+/* CORRECT STATE */
+
+.essay.state-correct {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--slate-200);
+}
+
+.essay .correct-answer-field {
+  display: flex;
+padding: 16px 20px;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+border-radius: 5px;
+border: 1px solid var(--fluentifysuccess-500, #22C55E);
+background: var(--fluentifysuccess-50, #F0FDF4);
+
+/* Shadow/XSM */
+box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+}
+
+.essay .correct-answer-field .jawaban-kamu-benar {
+  display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.essay .correct-answer-field .jawaban-kamu-benar p {
+  color: var(--fluentifysuccess-600, #16A34A);
+
+/* Fluentify Caption/medium */
+font-family: Nunito;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+
+.essay .correct-answer-field .answer {
+  align-self: stretch;
+  color: var(--fluentifysuccess-600, #16A34A);
+
+/* Fluentify/Text/p1 */
+font-family: Nunito;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+
+/* WRONG STATE */
+
+.essay.state-wrong {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--slate-200);
+}
+
+
+.essay .wrong-answer-field {
+  display: flex;
+padding: 16px 20px;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+border-radius: 5px;
+border: 1px solid var(--fluentifydanger-500,#DC2626);
+background: var(--fluentifydanger-50, #FEE2E2);
+
+/* Shadow/XSM */
+box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+}
+
+.essay .wrong-answer-field .jawaban-kamu-salah {
+  display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.essay .wrong-answer-field .jawaban-kamu-salah p {
+  color: var(--fluentifydanger-600, #B91C1C);
+
+/* Fluentify Caption/medium */
+font-family: Nunito;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+
+.essay .wrong-answer-field .answer {
+  align-self: stretch;
+  color: var(--fluentifydanger-600, #B91C1C);
+
+/* Fluentify/Text/p1 */
+font-family: Nunito;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+
+.essay .solution-text {
+  align-self: stretch;
+  color: #000;
+
+/* Fluentify/Text/p1 */
+font-family: Nunito;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+
+.essay .solution-answer-field {
+  display: flex;
+padding: 16px 20px;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+border-radius: 5px;
+border: 1px solid var(--fluentify-neutral-400, #D1D9E2);
+background: var(--white, #FFF);
+}
+
+.essay .solution-answer-field img {
+  width: 24.408px;
+height: 18.614px;
+}
+
+.essay .solution-answer-field .answer {
+  align-self: stretch;
+  color: var(--black, #000);
+
+/* Fluentify/Text/p1 */
+font-family: Nunito;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+
+/* 
+ 
+  .essay .frame {
     flex: 0 0 auto;
-    flex-direction: column;
-    gap: 16px;
-    padding: 24px;
     position: relative;
-    width: 100%;
   }
   
-  .listening-question .div {
-    color: var(--fluentifyprimary);
-    font-family: var(--fluentify-text-bold-font-family);
-    font-size: var(--fluentify-text-bold-font-size);
-    font-style: var(--fluentify-text-bold-font-style);
-    font-weight: var(--fluentify-text-bold-font-weight);
-    letter-spacing: var(--fluentify-text-bold-letter-spacing);
-    line-height: var(--fluentify-text-bold-line-height);
+  .essay .check-fill-instance {
+    height: 16px !important;
+    width: 16px !important;
+  }
+  
+  .essay .instance-node {
+    height: 15px !important;
+    width: 15px !important;
+  }
+  
+  .essay .jawaban-kamu-benar {
     margin-top: -1px;
     position: relative;
     white-space: nowrap;
     width: fit-content;
   }
   
-  .listening-question .p {
+  .essay .lorem-ipsum-dolor {
+    align-self: stretch;
+    position: relative;
+  }
+  
+  .essay .button-2 {
+    align-self: stretch !important;
+    display: flex !important;
+    width: 100% !important;
+  }
+  
+  .essay .answer-field-2 {
+    align-items: flex-start;
+    align-self: stretch;
+    background-color: var(--fluentifydanger-50);
+    border: 1px solid;
+    border-color: var(--fluentifydanger-500);
+    border-radius: 5px;
+    box-shadow: var(--shadow-XSM);
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .essay .frame-2 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 12px;
+    position: relative;
+  }
+  
+  .essay .close-cross-fill {
+    height: 16px !important;
+    position: relative !important;
+    width: 16px !important;
+  }
+  
+  .essay .text-wrapper-2 {
+    color: var(--fluentifydanger-600);
+    font-family: var(--fluentify-caption-medium-font-family);
+    font-size: var(--fluentify-caption-medium-font-size);
+    font-style: var(--fluentify-caption-medium-font-style);
+    font-weight: var(--fluentify-caption-medium-font-weight);
+    letter-spacing: var(--fluentify-caption-medium-letter-spacing);
+    line-height: var(--fluentify-caption-medium-line-height);
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .essay .p {
+    align-self: stretch;
+    color: var(--fluentifydanger-600);
+    font-family: var(--fluentify-text-p1-font-family);
+    font-size: var(--fluentify-text-p1-font-size);
+    font-style: var(--fluentify-text-p1-font-style);
+    font-weight: var(--fluentify-text-p1-font-weight);
+    letter-spacing: var(--fluentify-text-p1-letter-spacing);
+    line-height: var(--fluentify-text-p1-line-height);
+    position: relative;
+  }
+  
+  .essay .text-wrapper-3 {
     align-self: stretch;
     color: #000000;
     font-family: var(--fluentify-text-p1-font-family);
@@ -48,226 +258,201 @@
     position: relative;
   }
   
-  .listening-question .questions-2 {
+  .essay .answer-field-3 {
     align-items: flex-start;
     align-self: stretch;
-    background-color: #f8fafc;
+    background-color: var(--white);
     border: 1px solid;
-    border-color: #d1d9e2;
+    border-color: var(--fluentifyneutral-400);
     border-radius: 5px;
-    box-shadow: 0px 1px 2px #1018280a;
     display: flex;
     flex: 0 0 auto;
     flex-direction: column;
-    gap: 24px;
-    padding: 24px;
+    gap: 16px;
+    padding: 16px 20px;
     position: relative;
     width: 100%;
   }
   
-  .listening-question .frame {
-    align-items: center;
+  .essay .group {
+    height: 18.61px;
+    position: relative;
+    width: 24.41px;
+  }
+  
+  .essay .text-wrapper-4 {
     align-self: stretch;
-    display: flex;
-    flex: 0 0 auto;
-    justify-content: space-between;
+    color: var(--black);
+    font-family: var(--fluentify-text-p1-font-family);
+    font-size: var(--fluentify-text-p1-font-size);
+    font-style: var(--fluentify-text-p1-font-style);
+    font-weight: var(--fluentify-text-p1-font-weight);
+    letter-spacing: var(--fluentify-text-p1-letter-spacing);
+    line-height: var(--fluentify-text-p1-line-height);
     position: relative;
-    width: 100%;
   }
   
-  .listening-question .text-instance {
-    flex: 0 0 auto !important;
-  }
-  
-  .listening-question .instance-node {
-    font-family: var(--text-xs-semi-bold-font-family) !important;
-    font-size: var(--text-xs-semi-bold-font-size) !important;
-    font-style: var(--text-xs-semi-bold-font-style) !important;
-    font-weight: var(--text-xs-semi-bold-font-weight) !important;
-    letter-spacing: var(--text-xs-semi-bold-letter-spacing) !important;
-    line-height: var(--text-xs-semi-bold-line-height) !important;
-  }
-  
-  .listening-question .button-instance {
-    background-color: unset !important;
-    border-radius: 6px !important;
-    height: 24px !important;
-    width: 24px !important;
-  }
-  
-  .listening-question .lo-fi-text-instance {
-    align-self: stretch !important;
-    flex: 0 0 auto !important;
-    width: 100% !important;
-  }
-  
-  .listening-question .text-2 {
-    width: 251px !important;
-  }
-  
-  .listening-question .text-3 {
-    width: 128px !important;
-  }
-  
-  .listening-question .questions-3 {
+  .essay .ketik-topik-dalam-wrapper {
     align-items: flex-start;
     align-self: stretch;
-    background-color: var(--green-50);
+    background-color: var(--white);
     border: 1px solid;
-    border-color: var(--green-500);
+    border-color: var(--fluentifyneutral-400);
     border-radius: 5px;
-    box-shadow: 0px 1px 2px #1018280a;
+    box-shadow: var(--shadow-XSM);
     display: flex;
-    flex: 0 0 auto;
     flex-direction: column;
     gap: 24px;
-    padding: 24px;
+    height: 80px;
+    padding: 16px 20px;
     position: relative;
     width: 100%;
   }
   
-  .listening-question .frame-2 {
-    align-items: center;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 12px;
-    position: relative;
-  }
-  
-  .listening-question .check-fill-instance {
-    height: 16px !important;
-    width: 16px !important;
-  }
-  
-  .listening-question .check-fill-2 {
-    height: 15px !important;
-    width: 15px !important;
-  }
-  
-  .listening-question .text-wrapper-2 {
-    color: var(--green-500);
-    font-family: var(--text-xs-regular-font-family);
-    font-size: var(--text-xs-regular-font-size);
-    font-style: var(--text-xs-regular-font-style);
-    font-weight: var(--text-xs-regular-font-weight);
-    letter-spacing: var(--text-xs-regular-letter-spacing);
-    line-height: var(--text-xs-regular-line-height);
+  .essay .ketik-topik-dalam {
+    color: #d1d9e2;
+    font-family: var(--fluentify-input-placeholder-font-family);
+    font-size: var(--fluentify-input-placeholder-font-size);
+    font-style: var(--fluentify-input-placeholder-font-style);
+    font-weight: var(--fluentify-input-placeholder-font-weight);
+    letter-spacing: var(--fluentify-input-placeholder-letter-spacing);
+    line-height: var(--fluentify-input-placeholder-line-height);
     margin-top: -1px;
     position: relative;
+    text-align: center;
     white-space: nowrap;
     width: fit-content;
   }
   
-  .listening-question .text-4 {
-    background-color: var(--green-500) !important;
-  }
-  
-  .listening-question .text-5 {
-    background-color: var(--green-500) !important;
-    width: 251px !important;
-  }
-  
-  .listening-question .text-6 {
-    background-color: var(--green-500) !important;
-    width: 128px !important;
-  }
-  
-  .listening-question .questions-4 {
-    align-items: flex-start;
-    align-self: stretch;
-    background-color: var(--red-50);
-    border: 1px solid;
-    border-color: var(--red-500);
-    border-radius: 5px;
-    box-shadow: 0px 1px 2px #1018280a;
-    display: flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    gap: 24px;
-    padding: 24px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .listening-question .close-cross-fill {
-    height: 16px !important;
-    position: relative !important;
-    width: 16px !important;
-  }
-  
-  .listening-question .text-wrapper-3 {
-    color: var(--red-500);
-    font-family: var(--text-xs-regular-font-family);
-    font-size: var(--text-xs-regular-font-size);
-    font-style: var(--text-xs-regular-font-style);
-    font-weight: var(--text-xs-regular-font-weight);
-    letter-spacing: var(--text-xs-regular-letter-spacing);
-    line-height: var(--text-xs-regular-line-height);
-    margin-top: -1px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  .listening-question .text-7 {
-    background-color: var(--red-500) !important;
-  }
-  
-  .listening-question .text-8 {
-    background-color: var(--red-500) !important;
-    width: 251px !important;
-  }
-  
-  .listening-question .text-9 {
-    background-color: var(--red-500) !important;
-    width: 128px !important;
-  }
-  
-  .listening-question .div-wrapper {
-    align-items: center;
-    align-self: stretch;
-    display: flex;
-    flex: 0 0 auto;
-    gap: 10px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .listening-question .text-wrapper-4 {
-    color: #000000;
-    font-family: var(--text-xs-regular-font-family);
-    font-size: var(--text-xs-regular-font-size);
-    font-style: var(--text-xs-regular-font-style);
-    font-weight: var(--text-xs-regular-font-weight);
-    letter-spacing: var(--text-xs-regular-letter-spacing);
-    line-height: var(--text-xs-regular-line-height);
-    margin-top: -1px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  .listening-question .frame-3 {
-    align-items: flex-start;
-    align-self: stretch;
-    display: flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    gap: 12px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .listening-question .button-2 {
-    align-self: stretch !important;
-    background-color: #e5e8eb !important;
-    display: flex !important;
-    width: 100% !important;
-  }
-  
-  .listening-question .vuesax-linear-flag {
+  .essay .vuesax-linear-flag {
     height: 20px !important;
     position: relative !important;
     width: 20px !important;
   }
   
+  .essay .state-wrong {
+    width: fit-content;
+  }
+  
+  .essay .state-correct {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .essay .state-default {
+    color: var(--fluentifyprimary);
+    font-family: var(--fluentify-text-bold-font-family);
+    font-size: var(--fluentify-text-bold-font-size);
+    font-style: var(--fluentify-text-bold-font-style);
+    font-weight: var(--fluentify-text-bold-font-weight);
+    letter-spacing: var(--fluentify-text-bold-letter-spacing);
+    line-height: var(--fluentify-text-bold-line-height);
+    margin-top: -1px;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .essay .state-0-wrong {
+    background-color: var(--white);
+    border-color: var(--fluentifyneutral-400);
+    box-shadow: var(--grey);
+    padding: 24px;
+  }
+  
+  .essay .state-0-correct {
+    background-color: var(--fluentifysuccess-50);
+    border-color: var(--fluentifysuccess-500);
+    box-shadow: var(--shadow-XSM);
+    padding: 16px 20px;
+  }
+  
+  .essay .state-0-default {
+    background-color: var(--fluentifysuccess-50);
+    border-color: var(--fluentifysuccess-500);
+    box-shadow: var(--shadow-XSM);
+    padding: 16px 20px;
+  }
+  
+  .essay .answer-field.state-0-wrong .frame {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .essay .answer-field.state-0-correct .frame {
+    align-items: center;
+    display: inline-flex;
+    gap: 12px;
+  }
+  
+  .essay .answer-field.state-0-default .frame {
+    align-items: center;
+    display: inline-flex;
+  }
+  
+  .essay .answer-field.state-0-wrong .jawaban-kamu-benar {
+    color: var(--fluentifyprimary);
+    font-family: var(--fluentify-text-bold-font-family);
+    font-size: var(--fluentify-text-bold-font-size);
+    font-style: var(--fluentify-text-bold-font-style);
+    font-weight: var(--fluentify-text-bold-font-weight);
+    letter-spacing: var(--fluentify-text-bold-letter-spacing);
+    line-height: var(--fluentify-text-bold-line-height);
+  }
+  
+  .essay .answer-field.state-0-correct .jawaban-kamu-benar {
+    color: var(--fluentifysuccess-600);
+    font-family: var(--fluentify-caption-medium-font-family);
+    font-size: var(--fluentify-caption-medium-font-size);
+    font-style: var(--fluentify-caption-medium-font-style);
+    font-weight: var(--fluentify-caption-medium-font-weight);
+    letter-spacing: var(--fluentify-caption-medium-letter-spacing);
+    line-height: var(--fluentify-caption-medium-line-height);
+  }
+  
+  .essay .answer-field.state-0-default .jawaban-kamu-benar {
+    color: var(--fluentifysuccess-600);
+    font-family: var(--fluentify-caption-medium-font-family);
+    font-size: var(--fluentify-caption-medium-font-size);
+    font-style: var(--fluentify-caption-medium-font-style);
+    font-weight: var(--fluentify-caption-medium-font-weight);
+    letter-spacing: var(--fluentify-caption-medium-letter-spacing);
+    line-height: var(--fluentify-caption-medium-line-height);
+  }
+  
+  .essay .answer-field.state-0-wrong .lorem-ipsum-dolor {
+    color: #000000;
+    font-family: var(--fluentify-subtitles-subtitle-2-font-family);
+    font-size: var(--fluentify-subtitles-subtitle-2-font-size);
+    font-style: var(--fluentify-subtitles-subtitle-2-font-style);
+    font-weight: var(--fluentify-subtitles-subtitle-2-font-weight);
+    letter-spacing: var(--fluentify-subtitles-subtitle-2-letter-spacing);
+    line-height: var(--fluentify-subtitles-subtitle-2-line-height);
+  }
+  
+  .essay .answer-field.state-0-correct .lorem-ipsum-dolor {
+    color: var(--fluentifysuccess-600);
+    font-family: var(--fluentify-text-p1-font-family);
+    font-size: var(--fluentify-text-p1-font-size);
+    font-style: var(--fluentify-text-p1-font-style);
+    font-weight: var(--fluentify-text-p1-font-weight);
+    letter-spacing: var(--fluentify-text-p1-letter-spacing);
+    line-height: var(--fluentify-text-p1-line-height);
+  }
+  
+  .essay .answer-field.state-0-default .lorem-ipsum-dolor {
+    color: var(--fluentifysuccess-600);
+    font-family: var(--fluentify-text-p1-font-family);
+    font-size: var(--fluentify-text-p1-font-size);
+    font-style: var(--fluentify-text-p1-font-style);
+    font-weight: var(--fluentify-text-p1-font-weight);
+    letter-spacing: var(--fluentify-text-p1-letter-spacing);
+    line-height: var(--fluentify-text-p1-line-height);
+  }
+   */

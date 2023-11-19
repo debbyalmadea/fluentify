@@ -10,6 +10,7 @@ import "./style.css";
 import { VuesaxLinearHome } from "../../icons/VuesaxLinearHome";
 import { VuesaxLinearMessages } from "../../icons/VuesaxLinearMessages";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const BottomNavigation = ({ screen, className }) => {
   const [originalPosition, setOriginalPosition] = useState(0);
@@ -44,14 +45,15 @@ export const BottomNavigation = ({ screen, className }) => {
             color={screen === "home" ? "#2563EB" : "white"}
             strokeColor={screen === "home" ? "white" : "#D1D9E2"}
           />
-          <div
+          <Link
+            to={"/"}
             style={{
               color: screen === "home" ? "#2563EB" : "#D1D9E2",
             }}
             className={`div screen-${screen}`}
           >
             Home
-          </div>
+          </Link>
         </div>
         <div className="navigation-base">
           <VuesaxLinearDiagram

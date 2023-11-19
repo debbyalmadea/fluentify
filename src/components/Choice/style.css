@@ -25,16 +25,17 @@
     position: relative;
   }
   
+  /* SELECTED STATE */
   .choice.selected {
     background-color: var(--fluentifyprimary-100);
     border-color: var(--fluentifyprimary);
     box-shadow: 0px 0px 5px #2563eb40;
   }
   
+  /* WRONG STATE */
   .choice.wrong {
     background-color: var(--fluentifydanger-50);
     border-color: var(--fluentifydanger-500);
-    box-shadow: 0px 0px 5px #2563eb40;
   }
   
   .choice.correct {

@@ -12,6 +12,7 @@ import {
   ListeningSkillQuestions,
 } from "./screens/ListeningSkill";
 import { SpeakingSkill } from "./screens/SpeakingSkill";
+import { ListeningSkillResult } from "./screens/ListeningSkill/Result/ListeningSkillResult";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/skill-builder/speaking",
     element: <SpeakingSkill />,
+  },
+  {
+    path: "/skill-builder/listening/:id/result",
+    element: <ListeningSkillResult />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
