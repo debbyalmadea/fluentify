@@ -80,7 +80,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/skill-builder/reading/text-revisit/:id",
-    element: <ReadingSkillText revisit={true}/>,
+    element: <ReadingSkillText revisit={true} />,
   },
   {
     path: "/skill-builder/reading/:id/question/:number",
@@ -124,8 +124,16 @@ const router = createBrowserRouter([
     element: <SpeakingSkillResult url="/initial/result" />,
   },
   {
+    path: "/initial/result/writing",
+    element: <WritingSkillResult url="/initial/result" />
+  },
+  {
     path: "/initial/result/listening",
-    element: <ListeningSkillResult url="/initial/result" />,
+    element: <ListeningSkillResult url="/initial/result" />
+  },
+  {
+    path: "/initial/result/reading",
+    element: <ReadingSkillResult url="/initial/result" />
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

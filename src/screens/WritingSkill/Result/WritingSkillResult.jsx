@@ -13,8 +13,7 @@ import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
 import { Modal } from "../../../components/Modal";
 import { AnswerField } from "../../../components/AnswerField";
 
-
-export const WritingSkillResult = () => {
+export const WritingSkillResult = ({ url }) => {
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
 
@@ -79,11 +78,11 @@ export const WritingSkillResult = () => {
       </Modal>
       <div className="reading-result">
         <div className="body">
-          <Header title="Writing Builder: Result" backUrl="/" />
+          <Header title="Writing Builder: Result" backUrl={url ?? "/"} />
           <div className="main">
             <div className="container">
 
-         
+
               <div className="above-the-fold">
                 <div className="questions-3">
                   <img
@@ -94,14 +93,14 @@ export const WritingSkillResult = () => {
                   <p className="text-wrapper-7">{data.topic}</p>
                 </div>
                 <Question
-                    flag={"default"}
-                    number={1}
-                    total={1}
-                    question={"Predominant mode of learning in education"}
-                  /> 
-                  <div className="answer">
-                    <p className="div">Lorem ipsum</p>
-                  </div>   
+                  flag={"default"}
+                  number={1}
+                  total={1}
+                  question={"Predominant mode of learning in education"}
+                />
+                <div className="answer">
+                  <p className="div">Lorem ipsum</p>
+                </div>
                 <p className="section-title">Hasil</p>
                 <div className="low-fi-mobile-cards">
                   <div
@@ -125,81 +124,81 @@ export const WritingSkillResult = () => {
                   </div>
                 </div>
                 <div className="low-fi-mobile-cards">
-                <div className="low-fi-small-cards">
+                  <div className="low-fi-small-cards">
                     <div style={{
-                          width: "300px",
-                          display: "flex",
-                          flexDirection: "row",
-                          justifyContent: "space-between",
-                          alignItems: "center"
+                      width: "300px",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      alignItems: "center"
+                    }}>
+                      <div style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
                       }}>
-                        <div style = {{
-                          display: "flex",
-                          flexDirection: "row",
-                          alignItems: "center",
-                        }}>
-                          <div style={{ width: "48px", height: "48px", marginRight: "16px" }}>
-                            <CircleProgressBar value={data.score} />
-                          </div>
-                          <div className="text-wrapper-9">Idea</div>
+                        <div style={{ width: "48px", height: "48px", marginRight: "16px" }}>
+                          <CircleProgressBar value={data.score} />
+                        </div>
+                        <div className="text-wrapper-9">Idea</div>
                       </div>
                       <div className="text-wrapper-9">{data.point} poin</div>
-                      </div>
                     </div>
-                    <div className="low-fi-small-cards">
-                    <div style={{
-                          width: "300px",
-                          display: "flex",
-                          flexDirection: "row",
-                          justifyContent: "space-between",
-                          alignItems: "center"
-                      }}>
-                        <div style = {{
-                          display: "flex",
-                          flexDirection: "row",
-                          alignItems: "center",
-                        }}>
-                          <div style={{ width: "48px", height: "48px", marginRight: "16px" }}>
-                            <CircleProgressBar value={data.score} />
-                          </div>
-                          <div className="text-wrapper-9">Grammar</div>
-                      </div>
-                      <div className="text-wrapper-9">{data.point} poin</div>
-                      </div>
-                    </div>
-                    <div className="low-fi-small-cards">
-                    <div style={{
-                          width: "300px",
-                          display: "flex",
-                          flexDirection: "row",
-                          justifyContent: "space-between",
-                          alignItems: "center"
-                      }}>
-                        <div style = {{
-                          display: "flex",
-                          flexDirection: "row",
-                          alignItems: "center",
-                        }}>
-                          <div style={{ width: "48px", height: "48px", marginRight: "16px" }}>
-                            <CircleProgressBar value={data.score} />
-                          </div>
-                          <div className="text-wrapper-9">Lexical</div>
-                      </div>
-                      <div className="text-wrapper-9">{data.point} poin</div>
-                      </div>
-                    </div>
-
                   </div>
+                  <div className="low-fi-small-cards">
+                    <div style={{
+                      width: "300px",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      alignItems: "center"
+                    }}>
+                      <div style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                      }}>
+                        <div style={{ width: "48px", height: "48px", marginRight: "16px" }}>
+                          <CircleProgressBar value={data.score} />
+                        </div>
+                        <div className="text-wrapper-9">Grammar</div>
+                      </div>
+                      <div className="text-wrapper-9">{data.point} poin</div>
+                    </div>
+                  </div>
+                  <div className="low-fi-small-cards">
+                    <div style={{
+                      width: "300px",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      alignItems: "center"
+                    }}>
+                      <div style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                      }}>
+                        <div style={{ width: "48px", height: "48px", marginRight: "16px" }}>
+                          <CircleProgressBar value={data.score} />
+                        </div>
+                        <div className="text-wrapper-9">Lexical</div>
+                      </div>
+                      <div className="text-wrapper-9">{data.point} poin</div>
+                    </div>
+                  </div>
+
+                </div>
               </div>
 
               <div className="answers-container">
                 <p className="section-title">Jawaban</p>
                 <div className="container">
-                    <div className="solution-answer-field">
-                      <img className="group" alt="Group" src="/img/group-12.png" />
-                      <p className="answer">Great Job!</p>
-        
-                    </div>
+                  <div className="solution-answer-field">
+                    <img className="group" alt="Group" src="/img/group-12.png" />
+                    <p className="answer">Great Job!</p>
+
+                  </div>
 
                 </div>
               </div>

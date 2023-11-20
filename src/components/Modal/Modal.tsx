@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Close } from "../../icons/Close";
 import "./style.css";
-export const Modal = ({ children, open, setOpen }) => {
+export const Modal = ({ children, open, setOpen, noClose }) => {
   useEffect(() => {
     const root = document.getElementById("root");
 
@@ -20,12 +20,12 @@ export const Modal = ({ children, open, setOpen }) => {
       });
     }
   }, []);
-  return open ? (
+  return (open) ? (
     <div id="modal-background" className="modal-background">
       <div id="modal" className="modal">
-        <button className="modal-close" onClick={() => setOpen(false)}>
+        {!noClose && (<button className="modal-close" onClick={() => setOpen(false)}>
           <Close />
-        </button>
+        </button>)}
         {children}
       </div>
     </div>
