@@ -18,7 +18,7 @@ import { SpeakingSkillResult } from "./screens/SpeakingSkill/Result";
 import { Toaster } from "react-hot-toast";
 import { SplashScreen } from "./screens/Splash/Splash";
 import { Login } from "./screens/Login/Login";
-
+import { Register } from "./screens/Register";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -59,6 +59,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />
   }
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
