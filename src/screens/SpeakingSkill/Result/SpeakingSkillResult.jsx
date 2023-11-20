@@ -89,7 +89,7 @@ export const SpeakingSkillResult = ({ url }) => {
           <Header title="Speaking Builder: Result" backUrl={url ?? "/"} />
           <div className="main">
             <div className="container">
-              <div className="above-the-fold">
+              <div className="above-the-fold slide-in">
                 <div className="questions-3">
                   <img
                     className="group-3"
@@ -121,7 +121,7 @@ export const SpeakingSkillResult = ({ url }) => {
                   </div>
                 </div>
               </div>
-              <div className="audio-player-container">
+              <div className="audio-player-container slide-in">
                 <p className="section-title">Rekaman Pembicaraan</p>
                 <AudioPlayer />
               </div>
