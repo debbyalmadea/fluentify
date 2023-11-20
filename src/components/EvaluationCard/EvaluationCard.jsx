@@ -9,10 +9,7 @@ export const EvaluationCard = ({
       <div className="solution-answer-field">
         <img className="group" alt="Group" src="/img/group-12.png" />
         {/* <p className="answer">{correct_answer}</p> */}
-        <p className="answer">
-          <span style={{ fontWeight: "bolder" }}>Penjelasan: </span>
-          {evaluation_text}
-        </p>
+        <p className="answer" dangerouslySetInnerHTML={{ __html: `<span style="font-weight: bolder;">Penjelasan: </span>${evaluation_text.replace(/\n/g, '<br />')}` }} />
       </div>
 
       <Button

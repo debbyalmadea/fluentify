@@ -19,6 +19,8 @@ import { Toaster } from "react-hot-toast";
 import { SplashScreen } from "./screens/Splash/Splash";
 import { Login } from "./screens/Login/Login";
 import { Register } from "./screens/Register";
+import { InitialResult } from "./screens/InitialAssessment/Result";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -63,6 +65,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />
+  },
+  {
+    path: "/initial/result",
+    element: <InitialResult />
   }
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
