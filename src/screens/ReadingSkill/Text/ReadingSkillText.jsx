@@ -24,7 +24,7 @@ export const ReadingSkillText = ({ revisit }) => {
         <div className="main">
           <div className="text">
             <div className="judul">{textData.title}</div>
-            <p className="isi">
+            <p className="isi slide-in">
               {textData.text}
             </p>
           </div>
