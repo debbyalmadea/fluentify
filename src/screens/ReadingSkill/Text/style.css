@@ -1,0 +1,96 @@
+.reading-text {
+  align-items: flex-start;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.reading-text .body {
+  align-items: flex-start;
+  align-self: stretch;
+  background: linear-gradient(180deg, rgb(29, 78, 216) 0%, rgba(29, 78, 216, 0.73) 100%);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+}
+
+.reading-text .main {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 15px 15px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  padding: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.reading-text .text {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: var(--grey);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 24px 85px 24px;
+  min-height: 80vh;
+  position: relative;
+  white-space: pre-line;
+  width: 100%;
+}
+
+.reading-text .judul {
+  color: var(--fluentifyprimary);
+  font-family: var(--fluentify-text-bold-font-family);
+  font-size: var(--fluentify-text-bold-font-size);
+  font-style: var(--fluentify-text-bold-font-style);
+  font-weight: var(--fluentify-text-bold-font-weight);
+  letter-spacing: var(--fluentify-text-bold-letter-spacing);
+  line-height: var(--fluentify-text-bold-line-height);
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.reading-text .isi {
+  align-self: stretch;
+  color: var(--black);
+  font-family: var(--fluentify-text-p1-font-family);
+  font-size: var(--fluentify-text-p1-font-size);
+  font-style: var(--fluentify-text-p1-font-style);
+  font-weight: var(--fluentify-text-p1-font-weight);
+  letter-spacing: var(--fluentify-text-p1-letter-spacing);
+  line-height: var(--fluentify-text-p1-line-height);
+  position: relative;
+}
+
+.reading-text .footer {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 16px 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.reading-text .button-instance {
+  align-self: stretch !important;
+  display: flex !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+}

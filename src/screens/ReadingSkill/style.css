@@ -1,0 +1,82 @@
+.reading-skill {
+  align-items: flex-start;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.reading-skill .body {
+  align-items: flex-start;
+  align-self: stretch;
+  background: linear-gradient(180deg, rgb(29, 78, 216) 0%, rgba(29, 78, 216, 0.73) 100%);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+}
+
+.reading-skill .main {
+  align-items: center;
+  align-self: stretch;
+  background-color: #ffffff;
+  border-radius: 15px 15px 0px 0px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.reading-skill .judul {
+  align-self: stretch;
+  color: var(--fluentifyprimary);
+  font-family: var(--fluentify-text-bold-font-family);
+  font-size: var(--fluentify-text-bold-font-size);
+  font-style: var(--fluentify-text-bold-font-style);
+  font-weight: var(--fluentify-text-bold-font-weight);
+  letter-spacing: var(--fluentify-text-bold-letter-spacing);
+  line-height: var(--fluentify-text-bold-line-height);
+  position: relative;
+}
+
+.reading-skill .div {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.reading-skill .footer {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 16px 40px;
+  position: relative;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.reading-skill .design-component-instance-node {
+  align-self: stretch !important;
+  display: flex !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+}
+
