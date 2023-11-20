@@ -44,7 +44,7 @@ export const MultipleChoice = ({
     return "default";
   }
   return (
-    <div className={`multiple-choice state-${state}`}>
+    <div className={`multiple-choice state-${state} slide-in`}>
       <Question
         flag={state !== "default"}
         number={number}

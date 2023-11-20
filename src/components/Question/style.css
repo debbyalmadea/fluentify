@@ -12,7 +12,7 @@
   background: var(--white, #fff);
 }
 
-.question .text-wrapper {
+.question-text-wrapper {
   color: var(--fluentify-primary, #2563eb);
   text-align: start;
   /* Fluentify/Text/bold */
@@ -23,7 +23,7 @@
   line-height: 22px; /* 157.143% */
 }
 
-.question .div {
+.question-div {
   align-self: stretch;
   color: #000;
 
@@ -45,12 +45,10 @@
 /* FEEDBACK MODAL */
 .feedback-modal.modal-content {
   align-items: flex-start;
-}
-
-.feedback-modal .modal-title,
-.modal-text {
+} 
+.feedback-modal-title, .feedback-modal-text {
   text-align: start;
-}
+} 
 
 .feedback-modal .modal-footer {
   flex-direction: column;

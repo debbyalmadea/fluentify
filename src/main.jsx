@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import 'regenerator-runtime'
+import "regenerator-runtime";
 import "./index.css";
 import { Home } from "./screens/Home";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -13,17 +13,22 @@ import {
 } from "./screens/ListeningSkill";
 import { SpeakingSkill } from "./screens/SpeakingSkill";
 import { WritingSkill } from "./screens/WritingSkill";
-import { WritingSkillResult } from "./screens/WritingSkill/Result/WritingSkillResult"
+import { WritingSkillResult } from "./screens/WritingSkill/Result/WritingSkillResult";
 import { ListeningSkillResult } from "./screens/ListeningSkill/Result/ListeningSkillResult";
 import { ProgressTracker } from "./screens/ProgressTracker";
 import { Leaderboard } from "./screens/Leaderboard/Leaderboard";
 import { SpeakingSkillResult } from "./screens/SpeakingSkill/Result";
 import { Toaster } from "react-hot-toast";
 import { SplashScreen } from "./screens/Splash/Splash";
+import { ChatBot, ChatBotResult } from "./screens/ChatBot";
 import { Login } from "./screens/Login/Login";
 import { Register } from "./screens/Register";
 import { InitialResult } from "./screens/InitialAssessment/Result";
 import { InitialAssessment } from "./screens/InitialAssessment";
+import { ReadingSkill } from "./screens/ReadingSkill";
+import { ReadingSkillText } from "./screens/ReadingSkill/Text";
+import { ReadingSkillQuestions } from "./screens/ReadingSkill/Questions/ReadingSkillQuestions";
+import { ReadingSkillResult } from "./screens/ReadingSkill/Result/ReadingSkillResult";
 
 const router = createBrowserRouter([
   {
@@ -71,32 +76,61 @@ const router = createBrowserRouter([
     element: <SpeakingSkillResult />,
   },
   {
+    path: "/skill-builder/reading",
+    element: <ReadingSkill />,
+  },
+  {
+    path: "/skill-builder/reading/text/:id",
+    element: <ReadingSkillText />,
+  },
+  {
+    path: "/skill-builder/reading/text-revisit/:id",
+    element: <ReadingSkillText revisit={true}/>,
+  },
+  {
+    path: "/skill-builder/reading/:id/question/:number",
+    element: <ReadingSkillQuestions />,
+  },
+  {
+    path: "/skill-builder/reading/:id/result",
+    element: <ReadingSkillResult />,
+  },
+  {
+    path: "/skill-builder/reading/:id/result",
+    element: <ReadingSkillResult />,
+  },
+  {
     path: "/splash",
     element: <SplashScreen />,
   },
   {
-    path: "/login",
-    element: <Login />,
+    path: "/chat-bot",
+    element: <ChatBot />,
   },
   {
+    path: "/chat-bot/result",
+    element: <ChatBotResult />,
+  },
+  { path: "/login", element: <Login /> },
+  {
     path: "/register",
-    element: <Register />
+    element: <Register />,
   },
   {
     path: "/initial",
-    element: <InitialAssessment />
+    element: <InitialAssessment />,
   },
   {
     path: "/initial/result",
-    element: <InitialResult />
+    element: <InitialResult />,
   },
   {
     path: "/initial/result/speaking",
-    element: <SpeakingSkillResult url="/initial/result" />
+    element: <SpeakingSkillResult url="/initial/result" />,
   },
   {
     path: "/initial/result/listening",
-    element: <ListeningSkillResult url="/initial/result" />
+    element: <ListeningSkillResult url="/initial/result" />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

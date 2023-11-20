@@ -1,0 +1,16 @@
+
+.chats {
+    align-items: flex-start;
+    align-self: stretch;
+    background-color: var(--fluentifyneutral-100);
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px 20px;
+    position: relative;
+    width: 100%;
+    overflow-y: scroll;
+    max-height: 800px;
+    min-height: 800px;
+  }

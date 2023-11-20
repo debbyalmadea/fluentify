@@ -6,6 +6,8 @@
   padding: 0px 0px 40px;
   position: relative;
   width: 100%;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
 }
 
 /* CORRECT STATE */
@@ -48,7 +50,7 @@ font-weight: 500;
 line-height: 16px; /* 133.333% */
 }
 
-.essay .correct-answer-field .answer {
+.essay .correct-answer-field p {
   align-self: stretch;
   color: var(--fluentifysuccess-600, #16A34A);
 
@@ -101,7 +103,7 @@ font-weight: 500;
 line-height: 16px; /* 133.333% */
 }
 
-.essay .wrong-answer-field .answer {
+.essay .wrong-answer-field p {
   align-self: stretch;
   color: var(--fluentifydanger-600, #B91C1C);
 
@@ -142,7 +144,7 @@ background: var(--white, #FFF);
 height: 18.614px;
 }
 
-.essay .solution-answer-field .answer {
+.essay .solution-answer-field p {
   align-self: stretch;
   color: var(--black, #000);
 

@@ -90,7 +90,7 @@ export const ListeningSkillQuestions = () => {
                 {number}/{data.total}
               </div>
             </div>
-            <div className="container">
+            <div className="container slide-in">
               {question.type === "multiple_choice" ? (
                 <MultipleChoice
                   number={number}

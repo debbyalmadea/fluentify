@@ -1,0 +1,139 @@
+{
+    "topic": "Travel",
+    "score": 60,
+    "max_score": 100,
+    "point": 8,
+    "total_correct": 3,
+    "total_incorrect": 2,
+    "total_unanswered": 0,
+    "questions": [
+        {
+            "id": 1,
+            "type": "multiple_choice",
+            "question": "What is the capital of France?",
+            "answers": [
+                {
+                    "id": 1,
+                    "value": "A",
+                    "label": "Paris",
+                    "isCorrect": true
+                },
+                {
+                    "id": 2,
+                    "value": "B",
+                    "label": "London",
+                    "isCorrect": false
+                },
+                {
+                    "id": 3,
+                    "value": "C",
+                    "label": "Berlin",
+                    "isCorrect": false
+                },
+                {
+                    "id": 4,
+                    "value": "D",
+                    "label": "Madrid",
+                    "isCorrect": false
+                }
+            ],
+            "user_answer": "A",
+            "correct_answer": "B",
+            "correct_answer_label": "Paris",
+            "is_correct": false,
+            "explanation": "Paris is the capital of France"
+        }, 
+        {
+                "id": 2,
+                "type": "essay",
+                "question": "What is the capital of France?",
+                "answers": [],
+                "user_answer": "Paris",
+                "correct_answer": "Paris",
+                "is_correct": true,
+                "explanation": "Paris is the capital of France"
+        },
+        {
+            "id": 3,
+            "type": "multiple_choice",
+            "question": "What is the capital of France?",
+            "answers": [
+                {
+                    "id": 1,
+                    "value": "A",
+                    "label": "Paris",
+                    "isCorrect": true
+                },
+                {
+                    "id": 2,
+                    "value": "B",
+                    "label": "London",
+                    "isCorrect": false
+                },
+                {
+                    "id": 3,
+                    "value": "C",
+                    "label": "Berlin",
+                    "isCorrect": false
+                },
+                {
+                    "id": 4,
+                    "value": "D",
+                    "label": "Madrid",
+                    "isCorrect": false
+                }
+            ],
+            "user_answer": "C",
+            "correct_answer": "C",
+            "is_correct": true,
+            "correct_answer_label": "Berlin",
+            "explanation": "Paris is the capital of France"
+        }, 
+        {
+                "id": 4,
+                "type": "essay",
+                "question": "What is the capital of France?",
+                "answers": [],
+                "user_answer": "Jakarta",
+                "correct_answer": "Paris",
+                "is_correct": false,
+                "explanation": "Paris is the capital of France"
+        },
+        {
+            "id": 5,
+            "type": "multiple_choice",
+            "question": "What is the capital of France?",
+            "answers": [
+                {
+                    "id": 1,
+                    "value": "A",
+                    "label": "Paris",
+                    "isCorrect": true
+                },
+                {
+                    "id": 2,
+                    "value": "B",
+                    "label": "London",
+                    "isCorrect": false
+                },
+                {
+                    "id": 3,
+                    "value": "C",
+                    "label": "Berlin",
+                    "isCorrect": false
+                },
+                {
+                    "id": 4,
+                    "value": "D",
+                    "label": "Madrid",
+                    "isCorrect": false
+                }
+            ],
+            "user_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "explanation": "Paris is the capital of France"
+        }
+    ],
+    "total": 5
+}

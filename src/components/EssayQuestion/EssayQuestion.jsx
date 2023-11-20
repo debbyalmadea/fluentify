@@ -28,7 +28,7 @@ export const EssayQuestion = ({
   };
   console.log(user_answer);
   return (
-    <div className={`essay state-${state} ${className}`}>
+    <div className={`essay state-${state} ${className} slide-in`}>
       <Question
         flag={state !== "default"}
         number={number}
@@ -49,7 +49,7 @@ export const EssayQuestion = ({
             <CheckFill />
             <p>Jawaban kamu benar</p>
           </div>
-          <p className="answer">{user_answer}</p>
+          <p>{user_answer}</p>
         </div>
       )}
 
@@ -60,13 +60,13 @@ export const EssayQuestion = ({
               <CloseCrossFill />
               <p>Jawaban kamu salah</p>
             </div>
-            <p className="answer">{user_answer}</p>
+            <p>{user_answer}</p>
           </div>
           <p className="solution-text">Jawaban benar</p>
           <div className="solution-answer-field">
             <img className="group" alt="Group" src="/img/group-12.png" />
-            <p className="answer">{correct_answer}</p>
-            <p className="answer">
+            <p>{correct_answer}</p>
+            <p>
               <span style={{ fontWeight: "bolder" }}>Penjelasan: </span>
               {explanation}
             </p>

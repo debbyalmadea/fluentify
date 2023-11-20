@@ -1,14 +1,10 @@
 import { Button } from "../../../components/Button";
-import { CheckFill } from "../../../icons/CheckFill";
-import { EssayQuestion } from "../../../components/EssayQuestion";
 import { Header } from "../../../components/Header";
 // import { MultipleChoice } from "../../../components/MultipleChoice";
-import { CloseCrossFill } from "../../../icons/CloseCrossFill";
 import { VuesaxLinearFlag } from "../../../icons/VuesaxLinearFlag";
 import "./style.css";
 import { CircleProgressBar } from "../../../components/CircleProgressBar";
 import { AudioPlayer } from "../../../components/AudioPlayer";
-import { MultipleChoice } from "../../../components/MultipleChoice";
 import { useState } from "react";
 import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
 import { Modal } from "../../../components/Modal";
@@ -17,6 +13,7 @@ import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { EvaluationCard } from "../../../components/EvaluationCard";
 import data from "../../../data/listening_skill_results.json";
+import * as PropTypes from "prop-types";
 
 export const SpeakingSkillResult = ({ url }) => {
   const [open, setOpen] = useState(false);
@@ -33,7 +30,7 @@ export const SpeakingSkillResult = ({ url }) => {
           </div>
           <div className="modal-header">
             <p
-              className="modal-title"
+              className="feedback-modal-title modal-title"
               style={{
                 textAlign: "start",
               }}
@@ -42,7 +39,7 @@ export const SpeakingSkillResult = ({ url }) => {
             </p>
           </div>
           <div className="modal-body">
-            <p className="modal-text">
+            <p className="feedback-modal-text modal-text">
               Apa keluhanmu untuk pembelajaran ini?
               {/* <span style={{ fontWeight: "bolder" }}>{data.topic}</span> */}
             </p>
@@ -130,7 +127,11 @@ export const SpeakingSkillResult = ({ url }) => {
               </div>
               <div className="answers-container">
                 <p className="section-title">Umpan Balik</p>
-                <EvaluationCard evaluation_text={"Kamu berhasil menyelesaikan tes ini dengan baik! Percakapan berjalan dengan lancar, layaknya penutur asli."} />
+                <EvaluationCard
+                  evaluation_text={
+                    "Kamu berhasil menyelesaikan tes ini dengan baik! Percakapan berjalan dengan lancar, layaknya penutur asli."
+                  }
+                />
               </div>
             </div>
           </div>
@@ -151,8 +152,8 @@ export const SpeakingSkillResult = ({ url }) => {
               text="Selesai"
               type="default"
               onClick={() => {
-                toast.success("Selamat, latihan berhasil diselesaikan!")
-                navigate("/")
+                toast.success("Selamat, latihan berhasil diselesaikan!");
+                navigate("/");
               }}
             />
           </div>
@@ -160,4 +161,8 @@ export const SpeakingSkillResult = ({ url }) => {
       </div>
     </>
   );
+};
+
+SpeakingSkillResult.propTypes = {
+  url: PropTypes.string,
 };

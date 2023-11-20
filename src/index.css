@@ -426,4 +426,39 @@ body {
 
 textarea:focus {
   outline: var(--fluentifyprimary) auto 1px;
+
+/* Fluentify Input/placeholder */
+font-family: Nunito !important;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 157.143% */
+}
+
+
+@keyframes slide-in {
+  100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+  100% { -webkit-transform: translateX(0%); }
+}
+
+.slide-in {
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+}
+
+.body {
+  margin-bottom: 40px;
+}
+
+.main {
+  margin-top: 80px;
+
 }

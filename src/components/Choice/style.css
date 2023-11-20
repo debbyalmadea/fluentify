@@ -14,13 +14,13 @@
     width: 100%;
   }
   
-  .choice .text-wrapper {
+  .choice .choice-text-wrapper {
     position: relative;
     white-space: nowrap;
     width: fit-content;
   }
   
-  .choice .div {
+  .choice .choice-div {
     flex: 1;
     position: relative;
   }
@@ -48,7 +48,7 @@
     background: var(--white, #FFF);
   }
   
-  .choice.selected .text-wrapper {
+  .choice.selected .choice-text-wrapper {
     color: var(--fluentifyprimary);
     font-family: "Nunito-Bold", Helvetica;
     font-size: 16px;
@@ -57,7 +57,7 @@
     line-height: 24px;
   }
   
-  .choice.wrong .text-wrapper {
+  .choice.wrong .choice-text-wrapper {
     color: var(--fluentifydanger-600);
     font-family: "Nunito-Bold", Helvetica;
     font-size: 16px;
@@ -66,7 +66,7 @@
     line-height: 24px;
   }
   
-  .choice.correct .text-wrapper {
+  .choice.correct .choice-text-wrapper {
     color: var(--fluentifysuccess-600);
     font-family: "Nunito-Bold", Helvetica;
     font-size: 16px;
@@ -75,7 +75,7 @@
     line-height: 24px;
   }
   
-  .choice.default .text-wrapper {
+  .choice.default .choice-text-wrapper {
     color: var(--black);
     font-family: var(--fluentify-text-p1-font-family);
     font-size: var(--fluentify-text-p1-font-size);
@@ -85,7 +85,7 @@
     line-height: var(--fluentify-text-p1-line-height);
   }
   
-  .choice.selected .div {
+  .choice.selected .choice-div {
     color: var(--fluentifyprimary);
     font-family: "Nunito-Bold", Helvetica;
     font-size: 16px;
@@ -94,7 +94,7 @@
     line-height: 24px;
   }
   
-  .choice.wrong .div {
+  .choice.wrong .choice-div {
     color: var(--fluentifydanger-600);
     font-family: "Nunito-Bold", Helvetica;
     font-size: 16px;
@@ -103,7 +103,7 @@
     line-height: 24px;
   }
   
-  .choice.correct .div {
+  .choice.correct .choice-div {
     color: var(--fluentifysuccess-600);
     font-family: "Nunito-Bold", Helvetica;
     font-size: 16px;
@@ -112,7 +112,7 @@
     line-height: 24px;
   }
   
-  .choice.default .div {
+  .choice.default .choice-div {
     color: var(--black);
     font-family: var(--fluentify-text-p1-font-family);
     font-size: var(--fluentify-text-p1-font-size);

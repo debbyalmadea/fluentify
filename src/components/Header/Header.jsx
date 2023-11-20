@@ -16,11 +16,13 @@ export const Header = ({
   title,
   showAlert = false,
   backUrl = "..",
+  warningText,
 }) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
+    if (!showAlert) return;
     const handleBackButton = (event) => {
       event.preventDefault();
       setOpen(true);
@@ -34,7 +36,7 @@ export const Header = ({
     return () => {
       window.removeEventListener("popstate", handleBackButton);
     };
-  }, []);
+  }, [showAlert]);
   return (
     <>
       {showAlert && (
@@ -53,8 +55,8 @@ export const Header = ({
                   textAlign: "center",
                 }}
               >
-                Jika keluar, sesi latihan akan dihentikan dan kemajuan kamu
-                tidak tersimpan
+                {warningText ??
+                  "Jika keluar, sesi latihan akan dihentikan dan kemajuan kamu tidak tersimpan"}
               </p>
             </div>
             <div className="modal-footer">
@@ -114,4 +116,5 @@ Header.propTypes = {
   title: PropTypes.string,
   showAlert: PropTypes.bool,
   backUrl: PropTypes.string,
+  warningText: PropTypes.string,
 };

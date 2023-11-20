@@ -7,7 +7,7 @@ import { setTopic } from "../../actions";
 
 const _Home = ({ topic }) => {
   return (
-    <div className="home">
+    <div id="screen" className="home">
       <div className="frame">
         <div className="frame-2">
           <div className="frame-3">
@@ -18,7 +18,7 @@ const _Home = ({ topic }) => {
             <div className="avatar" />
           </div>
         </div>
-        <div className="frame-wrapper">
+        <div className="frame-wrapper slide-in">
           <div className="frame-4">
             <div className="topic">
               <div className="text-wrapper-3">{topic}</div>
@@ -39,16 +39,14 @@ const _Home = ({ topic }) => {
             <div className="text-wrapper-4">Pilih Kategori</div>
             <div className="categories-container">
               <div className="frame-5">
-                <div className="div-2">
+                <Link to={"/skill-builder/writing"} className="div-2">
                   <img
                     className="freepik-speech"
                     alt="Freepik speech"
                     src="/img/freepik-speech-bubble-inject-252.png"
                   />
-                  <Link to={"/skill-builder/writing"} className="div-2">
-                    <div className="text-wrapper-5">Writing</div>
-                  </Link>
-                </div>
+                  <div className="text-wrapper-5">Writing</div>
+                </Link>
                 <Link to={"/skill-builder/listening"} className="div-2">
                   <img className="group" alt="Group" src="/img/group-8.png" />
                   <div className="text-wrapper-5">Listening</div>
@@ -56,14 +54,14 @@ const _Home = ({ topic }) => {
                 </Link>
               </div>
               <div className="frame-5">
-                <div className="div-2">
+                <Link to={"/skill-builder/reading"} className="div-2">
                   <img
-                    className="group-2"
-                    alt="Group"
-                    src="/img/group-10.png"
-                  />
+                      className="group-2"
+                      alt="Group"
+                      src="/img/group-10.png"
+                    />
                   <div className="text-wrapper-5">Reading</div>
-                </div>
+                </Link>
                 <Link to={"/skill-builder/speaking"} className="div-2">
                   <img
                     className="freepik-speech-2"

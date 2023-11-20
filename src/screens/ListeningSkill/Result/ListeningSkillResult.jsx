@@ -14,11 +14,15 @@ import { useState } from "react";
 import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
 import { Modal } from "../../../components/Modal";
 import { AnswerField } from "../../../components/AnswerField";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 import { EvaluationCard } from "../../../components/EvaluationCard";
+import * as PropTypes from "prop-types";
+
 export const ListeningSkillResult = ({ url }) => {
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
-
+  const navigate = useNavigate();
   return (
     <>
       {sent && <FeedbackSentModal open={sent} setOpen={setSent} />}
@@ -29,7 +33,7 @@ export const ListeningSkillResult = ({ url }) => {
           </div>
           <div className="modal-header">
             <p
-              className="modal-title"
+              className="feedback-modal-title modal-title"
               style={{
                 textAlign: "start",
               }}
@@ -38,7 +42,7 @@ export const ListeningSkillResult = ({ url }) => {
             </p>
           </div>
           <div className="modal-body">
-            <p className="modal-text">
+            <p className="feedback-modal-text modal-text">
               Apa keluhanmu untuk topik
               <span style={{ fontWeight: "bolder" }}>{data.topic}</span>
             </p>
@@ -83,7 +87,7 @@ export const ListeningSkillResult = ({ url }) => {
           <Header title="Listening Builder: Result" backUrl={url ?? "/"} />
           <div className="main">
             <div className="container">
-              <div className="above-the-fold">
+              <div className="above-the-fold slide-in">
                 <div className="questions-3">
                   <img
                     className="group-3"
@@ -138,7 +142,7 @@ export const ListeningSkillResult = ({ url }) => {
                   </div>
                 </div>
               </div>
-              <div className="audio-player-container">
+              <div className="audio-player-container slide-in">
                 <p className="section-title">Audio</p>
                 <AudioPlayer />
               </div>
@@ -170,7 +174,11 @@ export const ListeningSkillResult = ({ url }) => {
               </div>
               <div className="answers-container">
                 <p className="section-title">Umpan Balik</p>
-                <EvaluationCard evaluation_text={"Kamu berhasil menyelesaikan tes ini dengan baik! Sepertinya kamu mengalami kesalahan karena tidak memahami peribahasa yang digunakan. Mari kita perbanyak latihan di bagian itu!"} />
+                <EvaluationCard
+                  evaluation_text={
+                    "Kamu berhasil menyelesaikan tes ini dengan baik! Sepertinya kamu mengalami kesalahan karena tidak memahami peribahasa yang digunakan. Mari kita perbanyak latihan di bagian itu!"
+                  }
+                />
               </div>
               {/* <MultipleChoice
               buttonIcon={
@@ -206,8 +214,8 @@ export const ListeningSkillResult = ({ url }) => {
               text="Selesai"
               type="default"
               onClick={() => {
-                toast.success("Selamat, latihan berhasil diselesaikan!")
-                navigate("/")
+                toast.success("Selamat, latihan berhasil diselesaikan!");
+                navigate("/");
               }}
             />
           </div>
@@ -215,4 +223,8 @@ export const ListeningSkillResult = ({ url }) => {
       </div>
     </>
   );
+};
+
+ListeningSkillResult.propTypes = {
+  url: PropTypes.string,
 };
