@@ -12,8 +12,11 @@ import { useState } from "react";
 import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
 import { Modal } from "../../../components/Modal";
 import { AnswerField } from "../../../components/AnswerField";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 export const WritingSkillResult = () => {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
 
