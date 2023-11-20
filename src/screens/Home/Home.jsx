@@ -45,7 +45,9 @@ const _Home = ({ topic }) => {
                     alt="Freepik speech"
                     src="/img/freepik-speech-bubble-inject-252.png"
                   />
-                  <div className="text-wrapper-5">Writing</div>
+                  <Link to={"/skill-builder/writing"} className="div-2">
+                    <div className="text-wrapper-5">Writing</div>
+                  </Link>
                 </div>
                 <Link to={"/skill-builder/listening"} className="div-2">
                   <img className="group" alt="Group" src="/img/group-8.png" />
