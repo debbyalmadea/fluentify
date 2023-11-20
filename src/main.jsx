@@ -69,7 +69,15 @@ const router = createBrowserRouter([
   {
     path: "/initial/result",
     element: <InitialResult />
-  }
+  },
+  {
+    path: "/initial/result/speaking",
+    element: <SpeakingSkillResult url="/initial/result" />
+  },
+  {
+    path: "/initial/result/listening",
+    element: <ListeningSkillResult url="/initial/result" />
+  },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 import { EvaluationCard } from "../../../components/EvaluationCard";
 import data from "../../../data/listening_skill_results.json";
 
-export const SpeakingSkillResult = () => {
+export const SpeakingSkillResult = ({ url }) => {
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
   const navigate = useNavigate();
@@ -89,7 +89,7 @@ export const SpeakingSkillResult = () => {
       </Modal>
       <div className="reading-result">
         <div className="body">
-          <Header title="Speaking Builder: Result" backUrl="/" />
+          <Header title="Speaking Builder: Result" backUrl={url ?? "/"} />
           <div className="main">
             <div className="container">
               <div className="above-the-fold">

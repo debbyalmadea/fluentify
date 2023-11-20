@@ -144,6 +144,7 @@ export const InitialResult = () => {
                     category="Listening"
                     level="Intermediate"
                     value={20}
+                    onClick={() => navigate("/initial/result/listening")}
                   />
                 </div>
                 <div
@@ -155,7 +156,7 @@ export const InitialResult = () => {
                   }}
                 >
                   <Expertise category="Reading" level="Advanced" value={80} />
-                  <Expertise category="Speaking" level="Novice" value={40} />
+                  <Expertise category="Speaking" level="Novice" value={40} onClick={() => navigate("/initial/result/speaking")} />
                 </div>
               </div>
               <div className="answers-container">

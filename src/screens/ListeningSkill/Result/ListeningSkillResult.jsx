@@ -15,7 +15,7 @@ import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
 import { Modal } from "../../../components/Modal";
 import { AnswerField } from "../../../components/AnswerField";
 import { EvaluationCard } from "../../../components/EvaluationCard";
-export const ListeningSkillResult = () => {
+export const ListeningSkillResult = ({ url }) => {
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
 
@@ -80,7 +80,7 @@ export const ListeningSkillResult = () => {
       </Modal>
       <div className="reading-result">
         <div className="body">
-          <Header title="Listening Builder: Result" backUrl="/" />
+          <Header title="Listening Builder: Result" backUrl={url ?? "/"} />
           <div className="main">
             <div className="container">
               <div className="above-the-fold">
