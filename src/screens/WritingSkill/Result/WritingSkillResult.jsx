@@ -81,7 +81,7 @@ export const WritingSkillResult = () => {
       </Modal>
       <div className="reading-result">
         <div className="body">
-          <Header title="Writing Builder: Result" backUrl="/" />
+          <Header title="Writing Builder: Result" backUrl={url ?? "/"} />
           <div className="main">
             <div className="container">
               <div className="above-the-fold slide-in">

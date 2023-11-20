@@ -10,18 +10,19 @@ import { useSelector } from "react-redux";
 import { Question } from "../../../assets/illusts/Question";
 import { Modal } from "../../../components/Modal";
 // import { useSelector } from "react-redux";
-
-export const ListeningSkillQuestions = () => {
+import { useSearchParams } from "react-router-dom";
+export const ListeningSkillQuestions = ({ url }) => {
   // const reduxAnswers = useSelector((state) => state.answers);
-  console.log(data);
   const { number } = useParams();
   const question = data.questions[number - 1];
-  console.log(question);
   const progressBarRef = useRef();
   const navigate = useNavigate();
   const reduxAnswers = useSelector((state) => state.answers);
   const totalAnswered = Object.keys(reduxAnswers).length;
   const [open, setOpen] = useState(false);
+  let [searchParams, setSearchParams] = useSearchParams();
+  let init = searchParams.get("init");
+
 
   useEffect(() => {
     progressBarRef.current.max = data.total;
@@ -56,7 +57,12 @@ export const ListeningSkillQuestions = () => {
               className="modal-button"
               onClick={() => {
                 setOpen(false);
+                if (init && init.length !== 0 && init != "null") {
+                  navigate("/initial/result");
+                  return;
+                }
                 navigate("/skill-builder/listening/1/result");
+                return;
               }}
               type="default"
               text="Lanjut!"
@@ -80,7 +86,7 @@ export const ListeningSkillQuestions = () => {
             backUrl={
               number == 1
                 ? "/"
-                : `/skill-builder/listening/1/question/${+number - 1}`
+                : `/skill-builder/listening/1/question/${+number - 1}?init=` + init
             }
           />
           <div className="main">
@@ -144,7 +150,7 @@ export const ListeningSkillQuestions = () => {
                   text="Kembali"
                   onClick={() => {
                     navigate(
-                      `/skill-builder/listening/1/question/${+number - 1}`
+                      `/skill-builder/listening/1/question/${+number - 1}?init=` + init
                     );
                   }}
                 />
@@ -169,7 +175,7 @@ export const ListeningSkillQuestions = () => {
                   text="Kembali"
                   onClick={() => {
                     navigate(
-                      `/skill-builder/listening/1/question/${+number - 1}`
+                      `/skill-builder/listening/1/question/${+number - 1}?init=` + init
                     );
                   }}
                 />
@@ -182,7 +188,7 @@ export const ListeningSkillQuestions = () => {
                 text="Lanjutkan"
                 onClick={() => {
                   navigate(
-                    `/skill-builder/listening/1/question/${+number + 1}`
+                    `/skill-builder/listening/1/question/${+number + 1}?init=` + init
                   );
                 }}
               />
