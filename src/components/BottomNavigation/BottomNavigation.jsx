@@ -9,34 +9,9 @@ import { VuesaxLinearDiagram } from "../../icons/VuesaxLinearDiagram";
 import "./style.css";
 import { VuesaxLinearHome } from "../../icons/VuesaxLinearHome";
 import { VuesaxLinearMessages } from "../../icons/VuesaxLinearMessages";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export const BottomNavigation = ({ screen, className }) => {
-  const [originalPosition, setOriginalPosition] = useState(0);
-  useEffect(() => {
-    if (!originalPosition) {
-      setOriginalPosition(window.innerHeight);
-    }
-    const handleResize = () => {
-      const footer = document.getElementById("bottom-navigation");
-      console.log(footer);
-      if (footer) {
-        // Update bottom padding of the content when the keyboard is visible
-        footer.style.display =
-          window.innerHeight < originalPosition ? "none" : "inline-flex";
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("orientationchange", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("orientationchange", handleResize);
-    };
-  }, [originalPosition]);
-
   return (
     <div id="bottom-navigation" className={`bottom-navigation ${className}`}>
       <div className="container">
@@ -60,13 +35,13 @@ export const BottomNavigation = ({ screen, className }) => {
           />
           <div className={`div screen-${screen}`}>Progress</div>
         </Link>
-        <div className="navigation-base">
+        <Link to={"/leaderboard"} className="navigation-base">
           <VuesaxLinearChart
             color={screen === "leaderboard" ? "#2563EB" : "white"}
             strokeColor={screen === "leaderboard" ? "white" : "#D1D9E2"}
           />
           <div className={`div screen-0-${screen}`}>Leaderboard</div>
-        </div>
+        </Link>
         <Link to={"/chat-bot"} className="navigation-base">
           <VuesaxLinearMessages
             color={screen === "chat-bot" ? "#2563EB" : "white"}

@@ -28,6 +28,7 @@ import { ReadingSkill } from "./screens/ReadingSkill";
 import { ReadingSkillText } from "./screens/ReadingSkill/Text";
 import { ReadingSkillQuestions } from "./screens/ReadingSkill/Questions/ReadingSkillQuestions";
 import { ReadingSkillResult } from "./screens/ReadingSkill/Result/ReadingSkillResult";
+import { Leaderboard } from "./screens/Leaderboard/Leaderboard";
 
 const router = createBrowserRouter([
   {
@@ -80,7 +81,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/skill-builder/reading/text-revisit/:id",
-    element: <ReadingSkillText revisit={true}/>,
+    element: <ReadingSkillText revisit={true} />,
   },
   {
     path: "/skill-builder/reading/:id/question/:number",
@@ -126,6 +127,10 @@ const router = createBrowserRouter([
   {
     path: "/initial/result/listening",
     element: <ListeningSkillResult url="/initial/result" />,
+  },
+  {
+    path: "/leaderboard",
+    element: <Leaderboard />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -1,0 +1,551 @@
+.leaderboard {
+  align-items: flex-start;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.leaderboard .body {
+  align-items: flex-start;
+  align-self: stretch;
+  background: linear-gradient(180deg, rgb(29, 78, 216) 0%, rgba(29, 78, 216, 0.73) 100%);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.leaderboard .header-instance {
+  background-color: transparent !important;
+  flex: 0 0 auto !important;
+}
+
+.leaderboard .design-component-instance-node {
+  align-self: unset !important;
+  width: 343px !important;
+}
+
+.leaderboard .main {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  border-radius: 15px 15px 0px 0px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px 0px 0px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 90px;
+}
+
+.leaderboard-dropdown-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.leaderboard .frame {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0px 16px;
+  position: relative;
+  width: 100%;
+}
+
+.leaderboard .select-daily-monthly {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px;
+  position: relative;
+}
+
+.leaderboard .low-fi-button {
+  background-color: var(--fluentifyprimary-600) !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  width: 100px !important;
+}
+
+.leaderboard .button-instance {
+  font-family: var(--fluentify-ctas-medium-font-family) !important;
+  font-size: var(--fluentify-ctas-medium-font-size) !important;
+  font-style: var(--fluentify-ctas-medium-font-style) !important;
+  font-weight: var(--fluentify-ctas-medium-font-weight) !important;
+  height: unset !important;
+  letter-spacing: var(--fluentify-ctas-medium-letter-spacing) !important;
+  line-height: var(--fluentify-ctas-medium-line-height) !important;
+  margin-left: -1px !important;
+  margin-right: -1px !important;
+  margin-top: -2px !important;
+  white-space: unset !important;
+  width: fit-content !important;
+}
+
+.leaderboard .low-fi-button-2 {
+  background-color: var(--fluentifyprimary-100) !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  width: 100px !important;
+}
+
+.leaderboard .low-fi-button-3 {
+  color: var(--fluentifyprimary-600) !important;
+  font-family: var(--fluentify-ctas-medium-font-family) !important;
+  font-size: var(--fluentify-ctas-medium-font-size) !important;
+  font-style: var(--fluentify-ctas-medium-font-style) !important;
+  font-weight: var(--fluentify-ctas-medium-font-weight) !important;
+  height: unset !important;
+  letter-spacing: var(--fluentify-ctas-medium-letter-spacing) !important;
+  line-height: var(--fluentify-ctas-medium-line-height) !important;
+  margin-left: -12.5px !important;
+  margin-right: -12.5px !important;
+  margin-top: -2px !important;
+  white-space: unset !important;
+  width: fit-content !important;
+}
+
+.leaderboard .low-fi-button-4 {
+  background-color: var(--fluentifyinfo-100) !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  width: 100px !important;
+}
+
+.leaderboard .low-fi-button-5 {
+  color: var(--fluentifyprimary-600) !important;
+  font-family: var(--fluentify-ctas-medium-font-family) !important;
+  font-size: var(--fluentify-ctas-medium-font-size) !important;
+  font-style: var(--fluentify-ctas-medium-font-style) !important;
+  font-weight: var(--fluentify-ctas-medium-font-weight) !important;
+  height: unset !important;
+  letter-spacing: var(--fluentify-ctas-medium-letter-spacing) !important;
+  line-height: var(--fluentify-ctas-medium-line-height) !important;
+  margin-left: -4.5px !important;
+  margin-right: -4.5px !important;
+  margin-top: -2px !important;
+  white-space: unset !important;
+  width: fit-content !important;
+}
+
+.leaderboard .dropdown {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
+}
+
+.leaderboard .search {
+  align-items: center;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--fluentifyneutral-400);
+  border-radius: 12px;
+  box-shadow: 0px 1px 2px #1018280d;
+  display: flex;
+  height: 46px;
+  justify-content: space-between;
+  padding: 8px 20px;
+  position: relative;
+  width: 134px;
+}
+
+.leaderboard .text-wrapper-4 {
+  color: var(--black);
+  font-family: var(--fluentify-text-p1-font-family);
+  font-size: var(--fluentify-text-p1-font-size);
+  font-style: var(--fluentify-text-p1-font-style);
+  font-weight: var(--fluentify-text-p1-font-weight);
+  letter-spacing: var(--fluentify-text-p1-letter-spacing);
+  line-height: var(--fluentify-text-p1-line-height);
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.leaderboard .chevron-down-regular {
+  height: 20px !important;
+  position: relative !important;
+  width: 20px !important;
+}
+
+.leaderboard .group {
+  height: 242px;
+  position: relative;
+  width: 270px;
+}
+
+.leaderboard .podiums {
+  align-items: flex-end;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+}
+
+.leaderboard .element-position {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+}
+
+.leaderboard .detail {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 7px;
+  position: relative;
+}
+
+.leaderboard .avatar {
+  background-image: url(../../../public/img/avatar-10.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 50px;
+  height: 48px;
+  position: relative;
+  width: 48px;
+}
+
+.leaderboard .frame-2 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.leaderboard .text-wrapper-5 {
+  color: #000000;
+  font-family: var(--fluentify-text-bold-font-family);
+  font-size: var(--fluentify-text-bold-font-size);
+  font-style: var(--fluentify-text-bold-font-style);
+  font-weight: var(--fluentify-text-bold-font-weight);
+  letter-spacing: var(--fluentify-text-bold-letter-spacing);
+  line-height: var(--fluentify-text-bold-line-height);
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.leaderboard .text-wrapper-6 {
+  color: var(--black);
+  font-family: var(--fluentify-caption-medium-font-family);
+  font-size: var(--fluentify-caption-medium-font-size);
+  font-style: var(--fluentify-caption-medium-font-style);
+  font-weight: var(--fluentify-caption-medium-font-weight);
+  letter-spacing: var(--fluentify-caption-medium-letter-spacing);
+  line-height: var(--fluentify-caption-medium-line-height);
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.leaderboard .podium {
+  background-color: var(--fluentifyprimary-500);
+  border-color: #d1d9e2;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px #1018280d;
+  height: 116px;
+  position: relative;
+  width: 90px;
+}
+
+.leaderboard .element-st-position {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+}
+
+.leaderboard .avatar-2 {
+  background-image: url(../../../public/img/avatar-9.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 50px;
+  height: 48px;
+  position: relative;
+  width: 48px;
+}
+
+.leaderboard .podium-2 {
+  background-color: var(--fluentifyprimary);
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px #1018280d;
+  height: 139px;
+  position: relative;
+  width: 90px;
+}
+
+.leaderboard .avatar-3 {
+  background-image: url(../../../public/img/avatar-8.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 50px;
+  height: 48px;
+  position: relative;
+  width: 48px;
+}
+
+.leaderboard .podium-3 {
+  background-color: var(--fluentifyprimary-400);
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px #1018280d;
+  height: 94px;
+  position: relative;
+  width: 90px;
+}
+
+.leaderboard .tabel {
+  align-items: flex-start;
+  align-self: stretch;
+  border-color: #e5e8eb;
+  border-top-style: solid;
+  border-top-width: 1px;
+  display: flex;
+  flex: 0 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+.leaderboard .column {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 57px;
+}
+
+.leaderboard .table-cell {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--fluentifyprimary-100);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #d1d9e2;
+  display: flex;
+  gap: 16px;
+  height: 64px;
+  justify-content: center;
+  padding: 12px 24px;
+  position: relative;
+  width: 100%;
+}
+
+.leaderboard .text-wrapper-7 {
+  color: #000000;
+  font-family: var(--fluentify-text-p2-font-family);
+  font-size: var(--fluentify-text-p2-font-size);
+  font-style: var(--fluentify-text-p2-font-style);
+  font-weight: var(--fluentify-text-p2-font-weight);
+  letter-spacing: var(--fluentify-text-p2-letter-spacing);
+  line-height: var(--fluentify-text-p2-line-height);
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.leaderboard .element {
+  color: #000000;
+  font-family: var(--fluentify-text-p2-font-family);
+  font-size: var(--fluentify-text-p2-font-size);
+  font-style: var(--fluentify-text-p2-font-style);
+  font-weight: var(--fluentify-text-p2-font-weight);
+  letter-spacing: var(--fluentify-text-p2-letter-spacing);
+  line-height: var(--fluentify-text-p2-line-height);
+  margin-left: -4px;
+  margin-right: -4px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.leaderboard .div-wrapper-owner {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--fluentifyprimary);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #d1d9e2;
+  display: flex;
+  gap: 16px;
+  height: 64px;
+  justify-content: center;
+  padding: 12px 24px;
+  left: 0;
+}
+
+.leaderboard .element-2 {
+  color: var(--white);
+  font-family: var(--fluentify-text-bold-font-family);
+  font-size: var(--fluentify-text-bold-font-size);
+  font-style: var(--fluentify-text-bold-font-style);
+  font-weight: var(--fluentify-text-bold-font-weight);
+  letter-spacing: var(--fluentify-text-bold-letter-spacing);
+  line-height: var(--fluentify-text-bold-line-height);
+  margin-left: -8.5px;
+  margin-right: -8.5px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.leaderboard .column-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 207px;
+  background-color: white;
+}
+
+.leaderboard .table-cell-2 {
+  align-items: center;
+  align-self: stretch;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #d1d9e2;
+  display: flex;
+  gap: 16px;
+  height: 64px;
+  padding: 12px 24px;
+  position: relative;
+  width: 100%;
+}
+
+.leaderboard .img {
+  height: 32px;
+  position: relative;
+  width: 32px;
+}
+
+.leaderboard .text-wrapper-8 {
+  color: #000000;
+  font-family: var(--fluentify-text-bold-font-family);
+  font-size: var(--fluentify-text-bold-font-size);
+  font-style: var(--fluentify-text-bold-font-style);
+  font-weight: var(--fluentify-text-bold-font-weight);
+  letter-spacing: var(--fluentify-text-bold-letter-spacing);
+  line-height: var(--fluentify-text-bold-line-height);
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.leaderboard .table-cell-owner {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--fluentifyprimary);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--fluentifyneutral-400);
+  display: flex;
+  gap: 16px;
+  height: 64px;
+  padding: 12px 24px;
+}
+
+.leaderboard .avatar-4 {
+  align-items: center;
+  background-image: url(../../../public/img/avatar.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 50px;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  position: relative;
+  width: 32px;
+}
+
+.leaderboard .text {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  position: relative;
+}
+
+.leaderboard .text-wrapper-9 {
+  color: var(--white);
+  font-family: var(--fluentify-text-bold-font-family);
+  font-size: var(--fluentify-text-bold-font-size);
+  font-style: var(--fluentify-text-bold-font-style);
+  font-weight: var(--fluentify-text-bold-font-weight);
+  letter-spacing: var(--fluentify-text-bold-letter-spacing);
+  line-height: var(--fluentify-text-bold-line-height);
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.leaderboard .column-3 {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+
+.leaderboard .text-wrapper-10 {
+  color: var(--white);
+  font-family: var(--fluentify-text-bold-font-family);
+  font-size: var(--fluentify-text-bold-font-size);
+  font-style: var(--fluentify-text-bold-font-style);
+  font-weight: var(--fluentify-text-bold-font-weight);
+  letter-spacing: var(--fluentify-text-bold-letter-spacing);
+  line-height: var(--fluentify-text-bold-line-height);
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.leaderboard .bottom-navigation-instance {
+  flex: 0 0 auto !important;
+}
+
+.leaderboard .vuesax-linear {
+  height: 24px !important;
+  position: relative !important;
+  width: 24px !important;
+}
+
+.leaderboard-footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: fixed;
+  bottom: 74px;
+}
