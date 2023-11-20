@@ -6,9 +6,9 @@ import { Turtle } from "../../icons/Turtle";
 import Speech from 'react-speech';
 
 const pairs = {
-    "hi": "Hi, welcome to Fluentify! How can I assist you today?",
-    "hello": "Hi, welcome to Fluentify! How can I assist you today?",
-    "name": "I'm Sally, your chatbot assistant companion! What's your name?",
+    // "hi": "Hi, I am Fluenty! How can I assist you today?",
+    "hello": "Hi, I am Fluenty! How can I assist you today?",
+    "name": "I'm Fluenty, your chatbot assistant companion! What's your name?",
     "education": "Education is the key to success! Let's see, what motivates you to learn English?",
     "fluent": "Becoming fluent is a fantastic goal! What specific aspects of the language would you like to focus on?",
     "grammar": "Grammar is an essential part of language learning. Do you have any grammar-related questions?",
@@ -39,7 +39,7 @@ export const MicPlayer = (props) => {
     const [initial, setInitial] = useState(true)
     const getResponse = () => {
         if (initial) {
-            return "Hi, welcome to Fluentify! I am glad you are here. What should we talk about today?"
+            return "Hi, welcome to Fluentify! I see you have chosen travel as a topic. May I know why?"
         }
         if (transcript === undefined || transcript.length === 0) {
             return "I am sorry, I did not hear anything. Can you repeat that?"
@@ -49,7 +49,7 @@ export const MicPlayer = (props) => {
                 return value;
             }
         }
-        return "I am sorry, I am just a prototype. I didn't quite get that."
+        return "I am sorry, I am just a prototype and can't quite answer that."
     }
 
     useEffect(() => {
