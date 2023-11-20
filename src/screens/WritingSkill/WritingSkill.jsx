@@ -75,14 +75,26 @@ export const WritingSkill = () => {
           </div>
         </div>
         <footer className="footer">
-          <Button
-            className="design-component-instance-node"
-            hierachy="primary"
-            size="large"
-            type="default"
-            text="Selesai"
-            onClick={() => setOpen(true)}
-          />
+            <Button
+              className="design-component-instance-node"
+              hierachy="secondary"
+              size="large"
+              type="default"
+              text="Tanya Bot"
+              onClick={() => {
+                navigate("/skill-builder/writing/tanya-bot");
+              }}
+            />
+            <Button
+              className="design-component-instance-node"
+              hierachy="primary"
+              size="large"
+              type="default"
+              text="Selesai"
+              onClick={() => setOpen(true)}
+            />
+
+
         </footer>
 
       </div>
