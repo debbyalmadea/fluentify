@@ -8,6 +8,7 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import * as PropTypes from "prop-types";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { Expertise } from "../../components/ExpertiseProgress/Expertise";
 
 const FilterCategory = ({ selectedCategory, onChange }) => {
   return (
@@ -150,6 +151,32 @@ export const ProgressTracker = () => {
             </div>
             <div className="expertise">
               <p className="section-title">Keahlian</p>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  width: "100%",
+                }}
+              >
+                <Expertise category="Writing" level="Novice" value={50} />
+                <Expertise
+                  category="Listening"
+                  level="Intermediate"
+                  value={20}
+                />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  width: "100%",
+                }}
+              >
+                <Expertise category="Reading" level="Advanced" value={80} />
+                <Expertise category="Speaking" level="Expert" value={60} />
+              </div>
             </div>
             <div className="history">
               <p className="section-title">Riwayat</p>
