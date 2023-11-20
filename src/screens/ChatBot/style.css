@@ -60,7 +60,7 @@
   flex: 0 0 auto !important;
 }
 
-.chat-bot-chat .footer {
+.chat-bot-chat .chat-bot-footer {
   align-items: center;
   align-self: stretch;
   background-color: transparent;

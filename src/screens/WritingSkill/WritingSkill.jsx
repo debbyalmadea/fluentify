@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Question } from "../../assets/illusts/Question";
 
-import './style.css';
+import "./style.css";
 import { EssayQuestion } from "../../components/EssayQuestion";
 import { useSearchParams } from "react-router-dom";
 
@@ -15,6 +15,8 @@ export const WritingSkill = () => {
   let [searchParams, setSearchParams] = useSearchParams();
   let init = searchParams.get("init");
 
+  console.log(setSearchParams);
+
   return (
     <>
       <Modal open={open} setOpen={setOpen}>
@@ -23,7 +25,11 @@ export const WritingSkill = () => {
             <Question />
           </div>
           <div className="modal-header">
-            <p className="modal-title">{init === null || init === undefined ? "Lanjut ke hasil?" : "Ke bagian selanjutnya?"}</p>
+            <p className="modal-title">
+              {init === null || init === undefined
+                ? "Lanjut ke hasil?"
+                : "Ke bagian selanjutnya?"}
+            </p>
           </div>
           <div className="modal-body">
             <p className="modal-text">
@@ -67,36 +73,32 @@ export const WritingSkill = () => {
               <EssayQuestion
                 number={1}
                 total={1}
-                question='online education, predominant mode of learning in education'
-                state={"default"}>
-
-              </EssayQuestion>
+                question="online education, predominant mode of learning in education"
+                state={"default"}
+              ></EssayQuestion>
             </div>
           </div>
         </div>
         <footer className="footer">
-            <Button
-              className="design-component-instance-node"
-              hierachy="secondary"
-              size="large"
-              type="default"
-              text="Tanya Bot"
-              onClick={() => {
-                navigate("/skill-builder/writing/tanya-bot");
-              }}
-            />
-            <Button
-              className="design-component-instance-node"
-              hierachy="primary"
-              size="large"
-              type="default"
-              text="Selesai"
-              onClick={() => setOpen(true)}
-            />
-
-
+          <Button
+            className="design-component-instance-node"
+            hierachy="secondary"
+            size="large"
+            type="default"
+            text="Tanya Bot"
+            onClick={() => {
+              navigate("/skill-builder/writing/tanya-bot");
+            }}
+          />
+          <Button
+            className="design-component-instance-node"
+            hierachy="primary"
+            size="large"
+            type="default"
+            text="Selesai"
+            onClick={() => setOpen(true)}
+          />
         </footer>
-
       </div>
     </>
   );

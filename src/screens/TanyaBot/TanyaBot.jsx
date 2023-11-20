@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { AnswerField } from "../../components/AnswerField";
-import { BottomNavigation } from "../../components/BottomNavigation";
 import { Button } from "../../components/Button";
 import { Chats } from "../../components/Chats/Chats";
 import { Header } from "../../components/Header";
@@ -9,6 +8,7 @@ import { Modal } from "../../components/Modal";
 import { Warning } from "../../assets/illusts";
 import { Question } from "../../assets/illusts/Question";
 import { useNavigate } from "react-router-dom";
+import * as PropTypes from "prop-types";
 
 const chatsDummy = [
   {
@@ -60,12 +60,13 @@ const chatsDummy = [
   // {"user": "Chat Bot", "text": "You're welcome! I'm here to help anytime. Have a great day ahead!"}
 ];
 
-export const TanyaBot = ({backUrl}) => {
+export const TanyaBot = ({ backUrl }) => {
   const [chats, setChats] = useState(chatsDummy);
   const [inputText, setInputText] = useState("");
   const [openResetModal, setOpenResetModal] = useState(false);
   const [openContinueModal, setOpenContinueModal] = useState(false);
   const navigate = useNavigate();
+  console.log(inputText);
   return (
     <>
       <Modal open={openResetModal} setOpen={setOpenResetModal}>
@@ -156,19 +157,12 @@ export const TanyaBot = ({backUrl}) => {
       </Modal>
       <div className="chat-bot-chat">
         <div className="body">
-          <Header
-            title="Tanya Bot"
-            showAlert
-            backUrl={backUrl}
-            warningText={
-              "Jika keluar, percakapan yang telah kamu lakukan tidak tersimpan"
-            }
-          />
+          <Header title="Tanya Bot" backUrl={backUrl} />
           <div className="main">
             <Chats chats={chats} />
           </div>
         </div>
-        <footer className="footer">
+        <footer className="tanya-bot-footer">
           <div className="message-input">
             <button onClick={() => setOpenResetModal(true)}>
               <img className="icon" alt="Icon" src="/img/icon-1.svg" />
@@ -212,4 +206,8 @@ export const TanyaBot = ({backUrl}) => {
       </div>
     </>
   );
+};
+
+TanyaBot.propTypes = {
+  backUrl: PropTypes.string,
 };

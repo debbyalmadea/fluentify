@@ -66,6 +66,8 @@ export const ChatBot = () => {
   const [openResetModal, setOpenResetModal] = useState(false);
   const [openContinueModal, setOpenContinueModal] = useState(false);
   const navigate = useNavigate();
+
+  console.log(inputText);
   return (
     <>
       <Modal open={openResetModal} setOpen={setOpenResetModal}>
@@ -167,7 +169,7 @@ export const ChatBot = () => {
             <Chats chats={chats} />
           </div>
         </div>
-        <footer className="footer">
+        <footer className="chat-bot-footer">
           <div className="message-input">
             <button onClick={() => setOpenResetModal(true)}>
               <img className="icon" alt="Icon" src="/img/icon-1.svg" />
