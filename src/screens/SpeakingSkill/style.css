@@ -1,0 +1,94 @@
+.listening-skill {
+    align-items: flex-start;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+.listening-skill .body {
+    align-items: flex-start;
+    align-self: stretch;
+    background: linear-gradient(180deg, rgb(29, 78, 216) 0%, rgba(29, 78, 216, 0.73) 100%);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+}
+
+.listening-skill .main {
+    align-items: center;
+    align-self: stretch;
+    background-color: #ffffff;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 20px;
+    justify-content: start;
+    padding: 50% 0px 0px 0px;
+    position: relative;
+    width: 100%;
+}
+
+.listening-skill .footer {
+    align-items: center;
+    align-self: stretch;
+    background-color: transparent;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 16px 40px;
+    position: relative;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.listening-skill .design-component-instance-node {
+    align-self: stretch !important;
+    display: flex !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+}
+
+.freepik-robot-inject {
+    height: 225px;
+    left: 125px;
+    position: absolute;
+    top: 100px;
+    width: 187px;
+}
+
+.group {
+    background-image: url(https://cdn.animaapp.com/projects/6556e0dedaf633747531ba10/releases/6559e2c60f6fdccac35426d4/img/freepik--sparkles--inject-2@2x.png);
+    background-size: 100% 100%;
+    height: 300px;
+    width: 75%;
+}
+
+
+.user-input-textbox {
+    position: absolute;
+    top: 350px;
+    left: 55px;
+    width: 300px;
+    height: 100px;
+    z-index: 1;
+    padding: 10px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+    color: black;
+    overflow-y: scroll;
+}

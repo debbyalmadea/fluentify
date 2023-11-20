@@ -1,0 +1,1 @@
+export { SpeakingSkillResult } from "./SpeakingSkillResult";
