@@ -14,21 +14,22 @@ import { Modal } from "../../../components/Modal";
 export const ReadingSkillQuestions = () => {
   // const reduxAnswers = useSelector((state) => state.answers);
   console.log(data);
-  const { number } = useParams();
-  const question = data.questions[number - 1];
+  const { id, number } = useParams();
+  const question = data.datas[id - 1].questions[number - 1];
   console.log(question);
   const progressBarRef = useRef();
+  const dataTotal = data.datas[id - 1].total;
   const navigate = useNavigate();
   const reduxAnswers = useSelector((state) => state.answers);
   const totalAnswered = Object.keys(reduxAnswers).length;
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    progressBarRef.current.max = data.total;
+    progressBarRef.current.max = dataTotal;
     progressBarRef.current.value = totalAnswered;
     progressBarRef.current.style.setProperty(
       "--range-progress",
-      `${(progressBarRef.current.value / data.total) * 100}%`
+      `${(progressBarRef.current.value / dataTotal) * 100}%`
     );
   }, [totalAnswered]);
 
@@ -56,7 +57,7 @@ export const ReadingSkillQuestions = () => {
               className="modal-button"
               onClick={() => {
                 setOpen(false);
-                navigate("/skill-builder/reading/1/result");
+                navigate(`/skill-builder/reading/${id}/result`);
               }}
               type="default"
               text="Lanjut!"
@@ -78,22 +79,22 @@ export const ReadingSkillQuestions = () => {
             title="Reading Builder: Question"
             backUrl={
               number == 1
-                ? "/skill-builder/reading/text/1"
-                : `/skill-builder/reading/1/question/${+number - 1}`
+                ? `/skill-builder/reading/text/${id}`
+                : `/skill-builder/reading/${id}/question/${+number - 1}`
             }
           />
           <div className="main">
             <div className="progress">
               <input type="range" ref={progressBarRef} />
               <div className="text-wrapper-2">
-                {number}/{data.total}
+                {number}/{dataTotal}
               </div>
             </div>
             <div className="container">
               {question.type === "multiple_choice" ? (
                 <MultipleChoice
                   number={number}
-                  total={data.total}
+                  total={dataTotal}
                   question={question.question}
                   answers={question.answers}
                   questionId={question.id}
@@ -101,7 +102,7 @@ export const ReadingSkillQuestions = () => {
               ) : (
                 <EssayQuestion
                   number={number}
-                  total={data.total}
+                  total={dataTotal}
                   question={question.question}
                   questionId={question.id}
                   state={"default"}
@@ -111,7 +112,7 @@ export const ReadingSkillQuestions = () => {
           </div>
         </div>
         <footer className="footer">
-          {data.total == number ? (
+          {dataTotal == number ? (
             <>
               <Button
                 className="design-component-instance-node"
@@ -121,7 +122,7 @@ export const ReadingSkillQuestions = () => {
                 text="Kembali"
                 onClick={() => {
                   navigate(
-                    `/skill-builder/reading/1/question/${+number - 1}`
+                    `/skill-builder/reading/${id}/question/${+number - 1}`
                   );
                 }}
               />
@@ -145,7 +146,7 @@ export const ReadingSkillQuestions = () => {
                   text="Kembali"
                   onClick={() => {
                     navigate(
-                      `/skill-builder/reading/text/1`
+                      `/skill-builder/reading/text/${id}`
                     );
                   }}
                 /> 
@@ -158,7 +159,7 @@ export const ReadingSkillQuestions = () => {
                   text="Kembali"
                   onClick={() => {
                     navigate(
-                      `/skill-builder/reading/1/question/${+number - 1}`
+                      `/skill-builder/reading/${id}/question/${+number - 1}`
                     );
                   }}
                 />
@@ -171,7 +172,7 @@ export const ReadingSkillQuestions = () => {
                 text="Lanjutkan"
                 onClick={() => {
                   navigate(
-                    `/skill-builder/reading/1/question/${+number + 1}`
+                    `/skill-builder/reading/${id}/question/${+number + 1}`
                   );
                 }}
               />

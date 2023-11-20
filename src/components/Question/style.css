@@ -33,6 +33,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 24px; /* 133.333% */
+  white-space: unset;
 }
 
 .question .flag {

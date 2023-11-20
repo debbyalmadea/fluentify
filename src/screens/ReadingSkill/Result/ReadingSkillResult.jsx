@@ -8,16 +8,20 @@ import { VuesaxLinearFlag } from "../../../icons/VuesaxLinearFlag";
 import "./style.css";
 import { CircleProgressBar } from "../../../components/CircleProgressBar";
 import data from "../../../data/reading_skill_results.json";
-import textData from "../../../data/reading_skill_text.json";
+import textDataJSON from "../../../data/reading_skill_text.json";
 import { MultipleChoice } from "../../../components/MultipleChoice";
 import { useState } from "react";
 import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
 import { Modal } from "../../../components/Modal";
 import { AnswerField } from "../../../components/AnswerField";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
+import { EvaluationCard } from "../../../components/EvaluationCard";
 
 export const ReadingSkillResult = () => {
+  const { id } = useParams();
+  const resultData = data.datas[id - 1];
+  const textData = textDataJSON.datas[id - 1];
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
@@ -43,7 +47,7 @@ export const ReadingSkillResult = () => {
           <div className="modal-body">
             <p className="modal-text">
               Apa keluhanmu untuk topik
-              <span style={{ fontWeight: "bolder" }}>{data.topic}</span>
+              <span style={{ fontWeight: "bolder" }}>{resultData.topic}</span>
             </p>
             <div className="checkboxes">
               <label className="container">
@@ -93,7 +97,7 @@ export const ReadingSkillResult = () => {
                     alt="Group"
                     src="/img/group-14.png"
                   />
-                  <p className="text-wrapper-7">{data.topic}</p>
+                  <p className="text-wrapper-7">{resultData.topic}</p>
                 </div>
                 <div className="low-fi-mobile-cards">
                   <div
@@ -102,7 +106,7 @@ export const ReadingSkillResult = () => {
                       height: "100px",
                     }}
                   >
-                    <CircleProgressBar value={data.score} />
+                    <CircleProgressBar value={resultData.score} />
                   </div>
                   <div className="point-container">
                     <div className="text-wrapper-8">Kamu mendapatkan</div>
@@ -112,7 +116,7 @@ export const ReadingSkillResult = () => {
                         width: "fit-content",
                       }}
                     >
-                      <div className="text-wrapper-9">{data.point} poin</div>
+                      <div className="text-wrapper-9">{resultData.point} poin</div>
                     </div>
                   </div>
                   <div className="container-2">
@@ -123,19 +127,19 @@ export const ReadingSkillResult = () => {
                         iconClassName="check-fill-3"
                       />
                       <div className="text-wrapper-10">
-                        {data.total_correct}/{data.total} Benar
+                        {data.total_correct}/{resultData.total} Benar
                       </div>
                     </div>
                     <div className="div-2">
                       <div className="dot-fill-fill" />
                       <div className="text-wrapper-11">
-                        {data.total_unanswered}/{data.total} Kosong
+                        {resultData.total_unanswered}/{resultData.total} Kosong
                       </div>
                     </div>
                     <div className="div-2">
                       <CloseCrossFill />
                       <div className="text-wrapper-12">
-                        {data.total_incorrect}/{data.total} Salah
+                        {resultData.total_incorrect}/{resultData.total} Salah
                       </div>
                     </div>
                   </div>
@@ -156,7 +160,7 @@ export const ReadingSkillResult = () => {
                     type="default"
                     text="Baca teks"
                     onClick={() =>
-                      navigate("/skill-builder/reading/text-revisit/1")
+                      navigate(`/skill-builder/reading/text-revisit/${id}`)
                     }
                   />
                 </div>
@@ -164,13 +168,13 @@ export const ReadingSkillResult = () => {
               <div className="answers-container">
                 <p className="section-title">Jawaban</p>
                 <div className="container">
-                  {data.questions.map((question, index) =>
+                  {resultData.questions.map((question, index) =>
                     question.type === "multiple_choice" ? (
                       <MultipleChoice
                         key={index}
                         {...question}
                         number={index + 1}
-                        total={data.total}
+                        total={resultData.total}
                         questionId={question.id}
                         state={question.is_correct ? "correct" : "wrong"}
                       />
@@ -180,12 +184,20 @@ export const ReadingSkillResult = () => {
                         {...question}
                         number={index + 1}
                         questionId={question.id}
-                        total={data.total}
+                        total={resultData.total}
                         state={question.is_correct ? "correct" : "wrong"}
                       />
                     )
                   )}
                 </div>
+              </div>
+              <div className="answers-container">
+                <p className="section-title">Umpan Balik</p>
+                  <EvaluationCard
+                    evaluation_text={
+                      "Kamu berhasil menyelesaikan tes ini dengan baik! Sepertinya kamu mengalami kesalahan karena tidak memahami peribahasa yang digunakan. Mari kita perbanyak latihan di bagian itu!"
+                    }
+                  />
               </div>
               {/* <MultipleChoice
               buttonIcon={

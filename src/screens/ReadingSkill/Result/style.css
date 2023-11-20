@@ -300,8 +300,12 @@ line-height: 16px; /* 133.333% */
   line-height: var(--fluentify-text-bold-line-height);
   margin-top: -1px;
   position: relative;
-  white-space: nowrap;
   width: fit-content;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .reading-skill-result .isi {

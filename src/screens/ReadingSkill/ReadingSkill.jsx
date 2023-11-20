@@ -36,8 +36,8 @@ export const ReadingSkill = () => {
           size="large"
           type="default"
           text="Lanjutkan"
-          onClick={() => navigate("/skill-builder/reading/text/1")}
-        />
+          onClick={() => navigate(`/skill-builder/reading/text/${selectedType + 1}`)}
+          />
       </footer>
     </div>
   );

@@ -3,9 +3,11 @@ import { Button } from "../../../components/Button";
 import { Header } from "../../../components/Header";
 import "./style.css";
 import data from "../../../data/reading_skill_text.json";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const ReadingSkillText = ({ revisit }) => {
+  const { id } = useParams();
+  const textData = data.datas[id - 1];
   const navigate = useNavigate();
 
   return (
@@ -14,12 +16,17 @@ export const ReadingSkillText = ({ revisit }) => {
         <Header
           showAlert={!revisit}
           title="Reading Builder: Text"
-          backUrl={revisit ? "/skill-builder/reading/1/result" : "/"}
+          backUrl= {
+            revisit ? "/skill-builder/reading/1/result" 
+            : "/skill-builder/reading"
+          }
         />
         <div className="main">
           <div className="text">
-            <div className="judul">{data.title}</div>
-            <p className="isi slide-in">{data.text}</p>
+            <div className="judul">{textData.title}</div>
+            <p className="isi">
+              {textData.text}
+            </p>
           </div>
         </div>
       </div>
@@ -32,8 +39,8 @@ export const ReadingSkillText = ({ revisit }) => {
           text="Lanjutkan"
           onClick={() => {
             const nextPage = revisit
-              ? "/skill-builder/reading/1/result"
-              : "/skill-builder/reading/1/question/1";
+              ? `/skill-builder/reading/${id}/result`
+              : `/skill-builder/reading/${id}/question/1`;
             navigate(nextPage);
           }}
         />

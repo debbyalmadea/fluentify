@@ -1,139 +1,476 @@
 {
-    "topic": "Travel",
-    "score": 60,
-    "max_score": 100,
-    "point": 8,
-    "total_correct": 3,
-    "total_incorrect": 2,
-    "total_unanswered": 0,
-    "questions": [
+    "datas" : [
         {
-            "id": 1,
-            "type": "multiple_choice",
-            "question": "What is the capital of France?",
-            "answers": [
+            "topic": "Travel",
+            "score": 60,
+            "max_score": 100,
+            "point": 8,
+            "total_correct": 3,
+            "total_incorrect": 2,
+            "total_unanswered": 0,
+            "questions": [
                 {
                     "id": 1,
-                    "value": "A",
-                    "label": "Paris",
-                    "isCorrect": true
-                },
+                    "type": "multiple_choice",
+                    "question": "Which country emphasizes \"Gross National Happiness\" as a measure of success?",
+                    "answers": [
+                        {
+                            "id": 1,
+                            "value": "A",
+                            "label": "Bhutan",
+                            "isCorrect": true
+                        },
+                        {
+                            "id": 2,
+                            "value": "B",
+                            "label": "Faroe Islands",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 3,
+                            "value": "C",
+                            "label": "Italy",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 4,
+                            "value": "D",
+                            "label": "Colombia",
+                            "isCorrect": false
+                        }
+                    ],
+                    "user_answer": "A",
+                    "correct_answer": "A",
+                    "correct_answer_label": "Bhutan",
+                    "is_correct": true,
+                    "explanation": "Bhutan is the country that country emphasizes \"Gross National Happiness\""
+                }, 
                 {
                     "id": 2,
-                    "value": "B",
-                    "label": "London",
-                    "isCorrect": false
+                    "type": "multiple_choice",
+                    "question": "Which destination is known for its rolling hills of coffee plantations",
+                    "answers": [
+                        {
+                            "id": 1,
+                            "value": "A",
+                            "label": "Slovenia",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 2,
+                            "value": "B",
+                            "label": "Puglia, Italy",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 3,
+                            "value": "C",
+                            "label": "Colombia's Coffee Region",
+                            "isCorrect": true
+                        },
+                        {
+                            "id": 4,
+                            "value": "D",
+                            "label": "The Faroe Islands",
+                            "isCorrect": false
+                        }
+                    ],
+                    "user_answer": "C",
+                    "correct_answer": "C",
+                    "correct_answer_label": "Colombia's Coffee Region",
+                    "is_correct": true,
+                    "explanation": "Most of Colombia's people like coffee"
                 },
                 {
                     "id": 3,
-                    "value": "C",
-                    "label": "Berlin",
-                    "isCorrect": false
+                    "type": "multiple_choice",
+                    "question": "Where can you find Lake Bled, known for its emerald-green waters?",
+                    "answers": [
+                        {
+                            "id": 1,
+                            "value": "A",
+                            "label": "Bhutan",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 2,
+                            "value": "B",
+                            "label": "Slovenia",
+                            "isCorrect": true
+                        },
+                        {
+                            "id": 3,
+                            "value": "C",
+                            "label": "Faroe Islands",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 4,
+                            "value": "D",
+                            "label": "Colombia's Coffee Region",
+                            "isCorrect": false
+                        }
+                    ],
+                    "user_answer": "C",
+                    "correct_answer": "B",
+                    "correct_answer_label": "Slovenia",
+                    "is_correct": false,
+                    "explanation": "In Slovenia there is a emerald-green water known"
                 },
                 {
                     "id": 4,
-                    "value": "D",
-                    "label": "Madrid",
-                    "isCorrect": false
+                    "type": "multiple_choice",
+                    "question": "Which region is often referred to as Europe's Best-Kept Secret?",
+                    "answers": [
+                        {
+                            "id": 1,
+                            "value": "A",
+                            "label": "Puglia, Italy",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 2,
+                            "value": "B",
+                            "label": "Bhutan",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 3,
+                            "value": "C",
+                            "label": "Slovenia",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 4,
+                            "value": "D",
+                            "label": "Faroe Islands",
+                            "isCorrect": true
+                        }
+                    ],
+                    "user_answer": "C",
+                    "correct_answer": "D",
+                    "correct_answer_label": "Faroe Islands",
+                    "is_correct": false,
+                    "explanation": "Faroe Islands often refered as Europe's Best-Kept Secret because of the dramatic cliffs, cascading waterfalls, and lush greenery"
+                },
+                {
+                    "id": 5,
+                    "type": "essay",
+                    "question": "What impact might exploring offbeat destinations have on individuals and the way they perceive travel?",
+                    "answers": [],
+                    "user_answer": "Discuss with examples from the article and your own travel experiences, if any.",
+                    "correct_answer": "Discuss with examples from the article and your own travel experiences",
+                    "is_correct": true,
+                    "explanation": "When discussing that example you can learn more about that destination"
                 }
             ],
-            "user_answer": "A",
-            "correct_answer": "B",
-            "correct_answer_label": "Paris",
-            "is_correct": false,
-            "explanation": "Paris is the capital of France"
-        }, 
-        {
-                "id": 2,
-                "type": "essay",
-                "question": "What is the capital of France?",
-                "answers": [],
-                "user_answer": "Paris",
-                "correct_answer": "Paris",
-                "is_correct": true,
-                "explanation": "Paris is the capital of France"
+            "total": 5
         },
         {
-            "id": 3,
-            "type": "multiple_choice",
-            "question": "What is the capital of France?",
-            "answers": [
+            "topic": "Travel",
+            "score": 80,
+            "max_score": 100,
+            "point": 10,
+            "total_correct": 3,
+            "total_incorrect": 2,
+            "total_unanswered": 0,
+            "questions": [
                 {
                     "id": 1,
-                    "value": "A",
-                    "label": "Paris",
-                    "isCorrect": true
+                    "type": "multiple_choice",
+                    "question": "Where was the lost city located?",
+                    "answers": [
+                        {
+                            "id": 1,
+                            "value": "A",
+                            "label": "In the middle of a dense jungle",
+                            "isCorrect": true
+                        },
+                        {
+                            "id": 2,
+                            "value": "B",
+                            "label": "Hidden deep within a remote mountain range",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 3,
+                            "value": "C",
+                            "label": "Submerged beneath the vast expanse of the ocean",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 4,
+                            "value": "D",
+                            "label": "Concealed amidst the bustling streets of a modern metropolis",
+                            "isCorrect": false
+                        }
+                    ],
+                    "user_answer": "A",
+                    "correct_answer": "A",
+                    "correct_answer_label": "In the middle of a dense jungle",
+                    "is_correct": true,
+                    "explanation": "The city located at middle of the jungle as explained in the first paragraph"
                 },
                 {
                     "id": 2,
-                    "value": "B",
-                    "label": "London",
-                    "isCorrect": false
+                    "type": "multiple_choice",
+                    "question": "How did the protagonist feel when he first arrived at the lost city",
+                    "answers": [
+                        {
+                            "id": 1,
+                            "value": "A",
+                            "label": "Overwhelmed by a sense of awe and wonder",
+                            "isCorrect": true
+                        },
+                        {
+                            "id": 2,
+                            "value": "B",
+                            "label": "Filled with trepidation and uncertainty",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 3,
+                            "value": "C",
+                            "label": "Indifferent to his surroundings",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 4,
+                            "value": "D",
+                            "label": "Overcome by a surge of excitement and anticipation",
+                            "isCorrect": false
+                        }
+                    ],
+                    "user_answer": "A",
+                    "correct_answer": "A",
+                    "correct_answer_label": "Overwhelmed by a sense of awe and wonder",
+                    "is_correct": true,
+                    "explanation": "The beauty of the city make protagonist Overwhelmed by a sense of awe and wonder"
                 },
                 {
                     "id": 3,
-                    "value": "C",
-                    "label": "Berlin",
-                    "isCorrect": false
+                    "type": "essay",
+                    "question": "What made the lost city so interesting?",
+                    "answers": [],
+                    "user_answer": "It was an ancient city that had been lost for centuries.",
+                    "correct_answer": "It was an ancient city",
+                    "is_correct": true,
+                    "explanation": "Ancient city feels more interesting than visiting ordinary cities"
                 },
                 {
                     "id": 4,
-                    "value": "D",
-                    "label": "Madrid",
-                    "isCorrect": false
+                    "type": "essay",
+                    "question": "What did the protagonist learn about himself and the world during his time in the lost city?",
+                    "answers": [],
+                    "user_answer": "the beauty of ancient city makes protagonist more creative",
+                    "correct_answer": "The protagonist learned about himself that he was a brave and adventurous person. He also learned about the world that there are many beautiful and mysterious things waiting to be discovered.",
+                    "is_correct": false,
+                    "explanation": "The protagonist learned about himself that he was a brave and adventurous person. He also learned about the world that there are many beautiful and mysterious things waiting to be discovered."
+                },
+                {
+                    "id": 5,
+                    "type": "essay",
+                    "question": "What message does the story want to convey?",
+                    "answers": [],
+                    "user_answer": "The story convey valuable experience about travelling",
+                    "correct_answer": "The message that the story wants to convey is that travel can be a very valuable experience. Through travel, we can learn about ourselves, about the world, and about others.",
+                    "is_correct": true,
+                    "explanation": "The message that the story wants to convey is that travel can be a very valuable experience. Through travel, we can learn about ourselves, about the world, and about others."
                 }
             ],
-            "user_answer": "C",
-            "correct_answer": "C",
-            "is_correct": true,
-            "correct_answer_label": "Berlin",
-            "explanation": "Paris is the capital of France"
-        }, 
-        {
-                "id": 4,
-                "type": "essay",
-                "question": "What is the capital of France?",
-                "answers": [],
-                "user_answer": "Jakarta",
-                "correct_answer": "Paris",
-                "is_correct": false,
-                "explanation": "Paris is the capital of France"
+            "total": 5
         },
         {
-            "id": 5,
-            "type": "multiple_choice",
-            "question": "What is the capital of France?",
-            "answers": [
+            "topic": "Travel",
+            "score": 100,
+            "max_score": 100,
+            "point": 12,
+            "total_correct": 5,
+            "total_incorrect": 0,
+            "total_unanswered": 0,
+            "questions": [
                 {
                     "id": 1,
-                    "value": "A",
-                    "label": "Paris",
-                    "isCorrect": true
+                    "type": "multiple_choice",
+                    "question": "What was the main reason behind Mia's journey?",
+                    "answers": [
+                        {
+                            "id": 1,
+                            "value": "A",
+                            "label": "To explore famous tourist destinations.",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 2,
+                            "value": "B",
+                            "label": "To experience different cultures and make unexpected discoveries.",
+                            "isCorrect": true
+                        },
+                        {
+                            "id": 3,
+                            "value": "C",
+                            "label": "To relax and unwind in serene natural landscapes.",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 4,
+                            "value": "D",
+                            "label": "To visit specific places mentioned in a guidebook.",
+                            "isCorrect": false
+                        }
+                    ],
+                    "user_answer": "B",
+                    "correct_answer": "B",
+                    "correct_answer_label": "To experience different cultures and make unexpected discoveries.",
+                    "is_correct": true,
+                    "explanation": "She want to experience different cultures and make unexpected discoveries."
                 },
                 {
                     "id": 2,
-                    "value": "B",
-                    "label": "London",
-                    "isCorrect": false
+                    "type": "multiple_choice",
+                    "question": "Where did Mia experience the mesmerizing sight of golden sand dunes?",
+                    "answers": [
+                        {
+                            "id": 1,
+                            "value": "A",
+                            "label": "Marrakech",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 2,
+                            "value": "B",
+                            "label": "A quaint village",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 3,
+                            "value": "C",
+                            "label": "The Sahara Desert",
+                            "isCorrect": true
+                        },
+                        {
+                            "id": 4,
+                            "value": "D",
+                            "label": "Bali's rice fields",
+                            "isCorrect": false
+                        }
+                    ],
+                    "user_answer": "C",
+                    "correct_answer": "C",
+                    "correct_answer_label": "The Sahara Desert",
+                    "is_correct": true,
+                    "explanation": "The golden dunes located in Sahara Desert."
                 },
                 {
                     "id": 3,
-                    "value": "C",
-                    "label": "Berlin",
-                    "isCorrect": false
+                    "type": "multiple_choice",
+                    "question": "What did Mia discover in the hidden courtyard of Marrakech?",
+                    "answers": [
+                        {
+                            "id": 1,
+                            "value": "A",
+                            "label": "A market selling exotic spices.",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 2,
+                            "value": "B",
+                            "label": "A group of musicians playing enchanting melodies.",
+                            "isCorrect": true
+                        },
+                        {
+                            "id": 3,
+                            "value": "C",
+                            "label": "Street performers showcasing traditional dances.",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 4,
+                            "value": "D",
+                            "label": "Artisans crafting intricate souvenirs.",
+                            "isCorrect": false
+                        }
+                    ],
+                    "user_answer": "B",
+                    "correct_answer": "B",
+                    "correct_answer_label": "A group of musicians playing enchanting melodies.",
+                    "is_correct": true,
+                    "explanation": "Marrakech is well known as the city of musicians."
                 },
                 {
                     "id": 4,
-                    "value": "D",
-                    "label": "Madrid",
-                    "isCorrect": false
+                    "type": "multiple_choice",
+                    "question": "What lesson did Mia learn from her journey?",
+                    "answers": [
+                        {
+                            "id": 1,
+                            "value": "A",
+                            "label": "The importance of sticking to planned itineraries.",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 2,
+                            "value": "B",
+                            "label": "The significance of immersing oneself in local cultures.",
+                            "isCorrect": true
+                        },
+                        {
+                            "id": 3,
+                            "value": "C",
+                            "label": "The necessity of traveling with a large group for safety.",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 4,
+                            "value": "D",
+                            "label": "The value of luxurious accommodations during travel.",
+                            "isCorrect": false
+                        }
+                    ],
+                    "user_answer": "B",
+                    "correct_answer": "B",
+                    "correct_answer_label": "The significance of immersing oneself in local cultures.",
+                    "is_correct": true,
+                    "explanation": "Mia learn so much from the local culture"
+                },
+                {
+                    "id": 5,
+                    "type": "multiple_choice",
+                    "question": "How did Mia feel upon returning home after her journey?",
+                    "answers": [
+                        {
+                            "id": 1,
+                            "value": "A",
+                            "label": "Exhausted and ready for a long break.",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 2,
+                            "value": "B",
+                            "label": "Disappointed and regretful about the trip.",
+                            "isCorrect": false
+                        },
+                        {
+                            "id": 3,
+                            "value": "C",
+                            "label": "Inspired and eager to plan her next adventure.",
+                            "isCorrect": true
+                        },
+                        {
+                            "id": 4,
+                            "value": "D",
+                            "label": "Relieved to be back in familiar surroundings.",
+                            "isCorrect": false
+                        }
+                    ],
+                    "user_answer": "C",
+                    "correct_answer": "C",
+                    "correct_answer_label": "Inspired and eager to plan her next adventure.",
+                    "is_correct": true,
+                    "explanation": "Mia wants to go on new adventure as explained in the last paragraph"
                 }
             ],
-            "user_answer": "B",
-            "correct_answer": "B",
-            "is_correct": true,
-            "explanation": "Paris is the capital of France"
+            "total": 5
         }
-    ],
-    "total": 5
+    ]
 }
