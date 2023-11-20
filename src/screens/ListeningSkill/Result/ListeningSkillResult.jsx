@@ -87,7 +87,7 @@ export const ListeningSkillResult = ({ url }) => {
           <Header title="Listening Builder: Result" backUrl={url ?? "/"} />
           <div className="main">
             <div className="container">
-              <div className="above-the-fold">
+              <div className="above-the-fold slide-in">
                 <div className="questions-3">
                   <img
                     className="group-3"
@@ -142,7 +142,7 @@ export const ListeningSkillResult = ({ url }) => {
                   </div>
                 </div>
               </div>
-              <div className="audio-player-container">
+              <div className="audio-player-container slide-in">
                 <p className="section-title">Audio</p>
                 <AudioPlayer />
               </div>

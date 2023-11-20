@@ -8,7 +8,7 @@ import { Listening } from "../../icons/Listening/Listening";
 import { VuesaxLinearMicrophone } from "../../icons/VuesaxLinearMicrophone";
 import { Reading } from "../../icons/Reading/Reading";
 import { Speaking } from "../../icons/Speaking";
-
+import "./style.css";
 const COLOR = {
   NOVICE: "#22C55E",
   INTERMEDIATE: "#F97316",
@@ -47,8 +47,9 @@ export const Expertise = ({ category, level, value, onClick }) => {
         alignItems: "center",
         gap: "10px",
         flex: "1 0 0",
-        ...(onClick && { cursor: "pointer" })
+        ...(onClick && { cursor: "pointer" }),
       }}
+      className="expertise-slide-in slide-in"
       onClick={onClick}
     >
       <div
@@ -150,7 +151,7 @@ export const Expertise = ({ category, level, value, onClick }) => {
       >
         {level}
       </p>
-    </div >
+    </div>
   );
 };
 
@@ -163,4 +164,5 @@ Expertise.propTypes = {
   category: PropTypes.string,
   level: PropTypes.string,
   value: PropTypes.number,
+  onClick: PropTypes.func,
 };
