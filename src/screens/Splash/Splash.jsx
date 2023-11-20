@@ -28,6 +28,7 @@ const pages = {
 
 
 export const SplashScreen = () => {
+    const navigate = useNavigate();
     const [ind, setInd] = useState(0);
 
     const handleButtonClick = () => {
@@ -84,7 +85,9 @@ export const SplashScreen = () => {
                             hierachy={"primary"}
                             size={"large"}
                             className="modal-button"
-                            onClick={handleButtonClick}
+                            onClick={() => {
+                                navigate("/login")
+                            }}
                             type="default"
                             text="Mulai Perjalanan!"
                         />

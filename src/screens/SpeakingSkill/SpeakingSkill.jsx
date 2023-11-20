@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
+import botspek from "../../../public/img/botspek.png";
 
 export const SpeakingSkillAudio = () => {
   const [open, setOpen] = useState(false);
@@ -62,19 +63,12 @@ export const SpeakingSkillAudio = () => {
             <img
               className="freepik-robot-inject"
               alt="Freepik robot inject"
-              src="https://cdn.animaapp.com/projects/6556e0dedaf633747531ba10/releases/6559e2c60f6fdccac35426d4/img/freepik--robot--inject-2.png"
+              src={botspek}
             />
             <textarea
               className="user-input-textbox"
               placeholder={`You said:`}
               value={transcript}
-              style={{
-                fontFamily: "Nunito",
-                fontSize: "14px",
-                fontStyle: "normal",
-                fontWeight: "500",
-                lineHeight: "22px",
-              }}
               readOnly
             />
           </div>

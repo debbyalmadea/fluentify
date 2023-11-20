@@ -1,28 +1,23 @@
 import { Button } from "../../../components/Button";
-import { CheckFill } from "../../../icons/CheckFill";
 import { EssayQuestion } from "../../../components/EssayQuestion";
+import { Question } from "../../../components/Question";
 import { Header } from "../../../components/Header";
 // import { MultipleChoice } from "../../../components/MultipleChoice";
-import { CloseCrossFill } from "../../../icons/CloseCrossFill";
 import { VuesaxLinearFlag } from "../../../icons/VuesaxLinearFlag";
 import "./style.css";
 import { CircleProgressBar } from "../../../components/CircleProgressBar";
-import { AudioPlayer } from "../../../components/AudioPlayer";
 import data from "../../../data/listening_skill_results.json";
 import { MultipleChoice } from "../../../components/MultipleChoice";
 import { useState } from "react";
 import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
 import { Modal } from "../../../components/Modal";
 import { AnswerField } from "../../../components/AnswerField";
-import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
-import { EvaluationCard } from "../../../components/EvaluationCard";
-import * as PropTypes from "prop-types";
 
-export const ListeningSkillResult = ({ url }) => {
+
+export const WritingSkillResult = () => {
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
-  const navigate = useNavigate();
+
   return (
     <>
       {sent && <FeedbackSentModal open={sent} setOpen={setSent} />}
@@ -33,16 +28,16 @@ export const ListeningSkillResult = ({ url }) => {
           </div>
           <div className="modal-header">
             <p
-              className="feedback-modal-title modal-title"
+              className="modal-title"
               style={{
                 textAlign: "start",
               }}
             >
-              Listening Skill Builder
+              Writing Skill Builder
             </p>
           </div>
           <div className="modal-body">
-            <p className="feedback-modal-text modal-text">
+            <p className="modal-text">
               Apa keluhanmu untuk topik
               <span style={{ fontWeight: "bolder" }}>{data.topic}</span>
             </p>
@@ -84,9 +79,11 @@ export const ListeningSkillResult = ({ url }) => {
       </Modal>
       <div className="reading-result">
         <div className="body">
-          <Header title="Listening Builder: Result" backUrl={url ?? "/"} />
+          <Header title="Writing Builder: Result" backUrl="/" />
           <div className="main">
             <div className="container">
+
+         
               <div className="above-the-fold">
                 <div className="questions-3">
                   <img
@@ -96,6 +93,16 @@ export const ListeningSkillResult = ({ url }) => {
                   />
                   <p className="text-wrapper-7">{data.topic}</p>
                 </div>
+                <Question
+                    flag={"default"}
+                    number={1}
+                    total={1}
+                    question={"Predominant mode of learning in education"}
+                  /> 
+                  <div className="answer">
+                    <p className="div">Lorem ipsum</p>
+                  </div>   
+                <p className="section-title">Hasil</p>
                 <div className="low-fi-mobile-cards">
                   <div
                     style={{
@@ -116,85 +123,86 @@ export const ListeningSkillResult = ({ url }) => {
                       <div className="text-wrapper-9">{data.point} poin</div>
                     </div>
                   </div>
-                  <div className="container-2">
-                    <div className="div-2">
-                      <CheckFill
-                        className="check-fill-2"
-                        icon="/img/icon.svg"
-                        iconClassName="check-fill-3"
-                      />
-                      <div className="text-wrapper-10">
-                        {data.total_correct}/{data.total} Benar
-                      </div>
-                    </div>
-                    <div className="div-2">
-                      <div className="dot-fill-fill" />
-                      <div className="text-wrapper-11">
-                        {data.total_unanswered}/{data.total} Kosong
-                      </div>
-                    </div>
-                    <div className="div-2">
-                      <CloseCrossFill />
-                      <div className="text-wrapper-12">
-                        {data.total_incorrect}/{data.total} Salah
-                      </div>
-                    </div>
-                  </div>
                 </div>
+                <div className="low-fi-mobile-cards">
+                <div className="low-fi-small-cards">
+                    <div style={{
+                          width: "300px",
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                          alignItems: "center"
+                      }}>
+                        <div style = {{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
+                        }}>
+                          <div style={{ width: "48px", height: "48px", marginRight: "16px" }}>
+                            <CircleProgressBar value={data.score} />
+                          </div>
+                          <div className="text-wrapper-9">Idea</div>
+                      </div>
+                      <div className="text-wrapper-9">{data.point} poin</div>
+                      </div>
+                    </div>
+                    <div className="low-fi-small-cards">
+                    <div style={{
+                          width: "300px",
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                          alignItems: "center"
+                      }}>
+                        <div style = {{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
+                        }}>
+                          <div style={{ width: "48px", height: "48px", marginRight: "16px" }}>
+                            <CircleProgressBar value={data.score} />
+                          </div>
+                          <div className="text-wrapper-9">Grammar</div>
+                      </div>
+                      <div className="text-wrapper-9">{data.point} poin</div>
+                      </div>
+                    </div>
+                    <div className="low-fi-small-cards">
+                    <div style={{
+                          width: "300px",
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                          alignItems: "center"
+                      }}>
+                        <div style = {{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
+                        }}>
+                          <div style={{ width: "48px", height: "48px", marginRight: "16px" }}>
+                            <CircleProgressBar value={data.score} />
+                          </div>
+                          <div className="text-wrapper-9">Lexical</div>
+                      </div>
+                      <div className="text-wrapper-9">{data.point} poin</div>
+                      </div>
+                    </div>
+
+                  </div>
               </div>
-              <div className="audio-player-container">
-                <p className="section-title">Audio</p>
-                <AudioPlayer />
-              </div>
+
               <div className="answers-container">
                 <p className="section-title">Jawaban</p>
                 <div className="container">
-                  {data.questions.map((question, index) =>
-                    question.type === "multiple_choice" ? (
-                      <MultipleChoice
-                        key={index}
-                        {...question}
-                        number={index + 1}
-                        total={data.total}
-                        questionId={question.id}
-                        state={question.is_correct ? "correct" : "wrong"}
-                      />
-                    ) : (
-                      <EssayQuestion
-                        key={index}
-                        {...question}
-                        number={index + 1}
-                        questionId={question.id}
-                        total={data.total}
-                        state={question.is_correct ? "correct" : "wrong"}
-                      />
-                    )
-                  )}
+                    <div className="solution-answer-field">
+                      <img className="group" alt="Group" src="/img/group-12.png" />
+                      <p className="answer">Great Job!</p>
+        
+                    </div>
+
                 </div>
               </div>
-              <div className="answers-container">
-                <p className="section-title">Umpan Balik</p>
-                <EvaluationCard
-                  evaluation_text={
-                    "Kamu berhasil menyelesaikan tes ini dengan baik! Sepertinya kamu mengalami kesalahan karena tidak memahami peribahasa yang digunakan. Mari kita perbanyak latihan di bagian itu!"
-                  }
-                />
-              </div>
-              {/* <MultipleChoice
-              buttonIcon={
-                <VuesaxLinearFlag className="vuesax-linear-flag-2-3" />
-              }
-              className="design-component-instance-node-2"
-              state="correct"
-            />
-            <MultipleChoice
-              className="design-component-instance-node-2"
-              group="/img/group-12.png"
-              override={
-                <VuesaxLinearFlag className="vuesax-linear-flag-2-3" />
-              }
-              state="wrong"
-            /> */}
             </div>
           </div>
         </div>
@@ -214,8 +222,8 @@ export const ListeningSkillResult = ({ url }) => {
               text="Selesai"
               type="default"
               onClick={() => {
-                toast.success("Selamat, latihan berhasil diselesaikan!");
-                navigate("/");
+                toast.success("Selamat, latihan berhasil diselesaikan!")
+                navigate("/")
               }}
             />
           </div>
@@ -223,8 +231,4 @@ export const ListeningSkillResult = ({ url }) => {
       </div>
     </>
   );
-};
-
-ListeningSkillResult.propTypes = {
-  url: PropTypes.string,
 };

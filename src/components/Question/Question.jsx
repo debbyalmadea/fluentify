@@ -83,10 +83,10 @@ export const Question = ({
         </div>
       </Modal>
       <div className="question">
-        <div className="text-wrapper">
+        <div className="question-text-wrapper">
           Soal {number}/{total}
         </div>
-        <p className="div">{question}</p>
+        <p className="question-div">{question}</p>
         {flag && (
           <button className="flag" onClick={() => setOpen(true)}>
             <VuesaxLinearFlag />

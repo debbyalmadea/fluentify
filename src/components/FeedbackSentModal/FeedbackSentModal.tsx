@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal } from "../Modal";
 
-export const FeedbackSentModal = ({ open, setOpen }) => {
+export const FeedbackSentModal = ({ open, setOpen, text }) => {
   return (
     <Modal open={open} setOpen={setOpen}>
       <div className="modal-content">
@@ -117,11 +117,12 @@ export const FeedbackSentModal = ({ open, setOpen }) => {
           </svg>
         </div>
         <div className="modal-header">
-          <p className="modal-title">Feedback berhasil dikirim!</p>
+          <p className="modal-title">
+            {(text === undefined) ? "Feedback berhasil dikirim!" : "Link Reset Password Terkirim!"}</p>
         </div>
         <div className="modal-body">
           <p className="modal-text">
-            Terimakasih atas feedback yang diberikan!
+            {(text === undefined) ? "Terimakasih atas feedback yang diberikan!" : text}
           </p>
         </div>
       </div>

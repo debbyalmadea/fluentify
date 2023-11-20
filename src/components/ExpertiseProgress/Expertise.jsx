@@ -37,7 +37,7 @@ const ACCENT_COLOR = {
   EXPERT: "#EF4444",
 };
 
-export const Expertise = ({ category, level, value }) => {
+export const Expertise = ({ category, level, value, onClick }) => {
   return (
     <div
       style={{
@@ -47,7 +47,9 @@ export const Expertise = ({ category, level, value }) => {
         alignItems: "center",
         gap: "10px",
         flex: "1 0 0",
+        ...(onClick && { cursor: "pointer" })
       }}
+      onClick={onClick}
     >
       <div
         style={{
@@ -148,7 +150,7 @@ export const Expertise = ({ category, level, value }) => {
       >
         {level}
       </p>
-    </div>
+    </div >
   );
 };
 

@@ -39,14 +39,14 @@ const _Home = ({ topic }) => {
             <div className="text-wrapper-4">Pilih Kategori</div>
             <div className="categories-container">
               <div className="frame-5">
-                <div className="div-2">
+                <Link to={"/skill-builder/writing"} className="div-2">
                   <img
                     className="freepik-speech"
                     alt="Freepik speech"
                     src="/img/freepik-speech-bubble-inject-252.png"
                   />
                   <div className="text-wrapper-5">Writing</div>
-                </div>
+                </Link>
                 <Link to={"/skill-builder/listening"} className="div-2">
                   <img className="group" alt="Group" src="/img/group-8.png" />
                   <div className="text-wrapper-5">Listening</div>

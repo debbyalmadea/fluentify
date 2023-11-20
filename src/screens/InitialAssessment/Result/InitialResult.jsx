@@ -1,10 +1,14 @@
 import { Button } from "../../../components/Button";
+import { CheckFill } from "../../../icons/CheckFill";
+import { EssayQuestion } from "../../../components/EssayQuestion";
 import { Header } from "../../../components/Header";
 // import { MultipleChoice } from "../../../components/MultipleChoice";
+import { CloseCrossFill } from "../../../icons/CloseCrossFill";
 import { VuesaxLinearFlag } from "../../../icons/VuesaxLinearFlag";
 import "./style.css";
 import { CircleProgressBar } from "../../../components/CircleProgressBar";
 import { AudioPlayer } from "../../../components/AudioPlayer";
+import { MultipleChoice } from "../../../components/MultipleChoice";
 import { useState } from "react";
 import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
 import { Modal } from "../../../components/Modal";
@@ -13,9 +17,9 @@ import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { EvaluationCard } from "../../../components/EvaluationCard";
 import data from "../../../data/listening_skill_results.json";
-import * as PropTypes from "prop-types";
+import { Expertise } from "../../../components/ExpertiseProgress/Expertise";
 
-export const SpeakingSkillResult = ({ url }) => {
+export const InitialResult = () => {
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
   const navigate = useNavigate();
@@ -30,17 +34,17 @@ export const SpeakingSkillResult = ({ url }) => {
           </div>
           <div className="modal-header">
             <p
-              className="feedback-modal-title modal-title"
+              className="modal-title"
               style={{
                 textAlign: "start",
               }}
             >
-              Writing Skill Builder
+              Initial Assessment
             </p>
           </div>
           <div className="modal-body">
-            <p className="feedback-modal-text modal-text">
-              Apa keluhanmu untuk pembelajaran ini?
+            <p className="modal-text">
+              Apa keluhanmu untuk tes awal ini?
               {/* <span style={{ fontWeight: "bolder" }}>{data.topic}</span> */}
             </p>
             <div className="checkboxes">
@@ -50,7 +54,7 @@ export const SpeakingSkillResult = ({ url }) => {
                 <span className="checkmark"></span>
               </label>
               <label className="container">
-                <p>Bot kurang interaktif</p>
+                <p>Jawaban yang diberikan salah</p>
                 <input type="checkbox" />
                 <span className="checkmark"></span>
               </label>
@@ -86,7 +90,7 @@ export const SpeakingSkillResult = ({ url }) => {
       </Modal>
       <div className="reading-result">
         <div className="body">
-          <Header title="Speaking Builder: Result" backUrl={url ?? "/"} />
+          <Header title="Initial Assessment: Result" backUrl="/" />
           <div className="main">
             <div className="container">
               <div className="above-the-fold">
@@ -96,9 +100,9 @@ export const SpeakingSkillResult = ({ url }) => {
                     alt="Group"
                     src="/img/group-14.png"
                   />
-                  <p className="text-wrapper-7">{data.topic}</p>
+                  <p className="text-wrapper-7">Initial Assessment</p>
                 </div>
-                <p className="section-title">Hasil</p>
+                {/* <p className="section-title">Hasil</p>
                 <div className="low-fi-mobile-cards">
                   <div
                     style={{
@@ -119,19 +123,45 @@ export const SpeakingSkillResult = ({ url }) => {
                       <div className="text-wrapper-9">{10} poin</div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
-              <div className="audio-player-container">
-                <p className="section-title">Rekaman Pembicaraan</p>
+              {/* <div className="audio-player-container">
+                <p className="section-title middle">Kamu telah diklasifikasikan sebagai: </p>
                 <AudioPlayer />
+              </div> */}
+              <div className="expertise">
+                <p className="section-title">Kamu telah diklasifikan sebagai:</p>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
+                  <Expertise category="Writing" level="Novice" value={50} />
+                  <Expertise
+                    category="Listening"
+                    level="Intermediate"
+                    value={20}
+                    onClick={() => navigate("/initial/result/listening")}
+                  />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
+                  <Expertise category="Reading" level="Advanced" value={80} />
+                  <Expertise category="Speaking" level="Novice" value={40} onClick={() => navigate("/initial/result/speaking")} />
+                </div>
               </div>
               <div className="answers-container">
                 <p className="section-title">Umpan Balik</p>
-                <EvaluationCard
-                  evaluation_text={
-                    "Kamu berhasil menyelesaikan tes ini dengan baik! Percakapan berjalan dengan lancar, layaknya penutur asli."
-                  }
-                />
+                <EvaluationCard evaluation_text={"Selamat atas penyelesaian tes bahasa Inggrismu! \n\n Pencapaianmu menunjukkan kemampuan yang solid, dengan tingkat keahlian menulis pemula (50%), mendengarkan menengah (20%), membaca tingkat lanjut (80%), dan berbicara pemula (40%). \n\n Meskipun masih ada ruang untuk perbaikan, fondasi yang baik terlihat, dan dengan konsistensi dalam latihan, potensimu untuk meningkatkan kemampuan berbahasa Inggrismu sangat besar. \n\n Terus pertahankan semangat belajarmu, dan selamat atas pencapaian yang luar biasa ini!"} />
               </div>
             </div>
           </div>
@@ -152,8 +182,8 @@ export const SpeakingSkillResult = ({ url }) => {
               text="Selesai"
               type="default"
               onClick={() => {
-                toast.success("Selamat, latihan berhasil diselesaikan!");
-                navigate("/");
+                toast.success("Selamat, latihan berhasil diselesaikan!")
+                navigate("/")
               }}
             />
           </div>
@@ -161,8 +191,4 @@ export const SpeakingSkillResult = ({ url }) => {
       </div>
     </>
   );
-};
-
-SpeakingSkillResult.propTypes = {
-  url: PropTypes.string,
 };

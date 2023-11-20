@@ -48,7 +48,7 @@ font-weight: 500;
 line-height: 16px; /* 133.333% */
 }
 
-.essay .correct-answer-field p {
+.essay .correct-answer-field .answer {
   align-self: stretch;
   color: var(--fluentifysuccess-600, #16A34A);
 
@@ -101,7 +101,7 @@ font-weight: 500;
 line-height: 16px; /* 133.333% */
 }
 
-.essay .wrong-answer-field p {
+.essay .wrong-answer-field .answer {
   align-self: stretch;
   color: var(--fluentifydanger-600, #B91C1C);
 
@@ -142,7 +142,7 @@ background: var(--white, #FFF);
 height: 18.614px;
 }
 
-.essay .solution-answer-field p {
+.essay .solution-answer-field .answer {
   align-self: stretch;
   color: var(--black, #000);
 

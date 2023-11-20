@@ -163,7 +163,9 @@ export const ChatBot = () => {
               "Jika keluar, percakapan yang telah kamu lakukan tidak tersimpan"
             }
           />
-          <Chats chats={chats} />
+          <div className="main">
+            <Chats chats={chats} />
+          </div>
         </div>
         <footer className="footer">
           <div className="message-input">

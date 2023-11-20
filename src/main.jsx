@@ -12,12 +12,18 @@ import {
   ListeningSkillQuestions,
 } from "./screens/ListeningSkill";
 import { SpeakingSkill } from "./screens/SpeakingSkill";
+import { WritingSkill } from "./screens/WritingSkill";
+import { WritingSkillResult } from "./screens/WritingSkill/Result/WritingSkillResult";
 import { ListeningSkillResult } from "./screens/ListeningSkill/Result/ListeningSkillResult";
 import { ProgressTracker } from "./screens/ProgressTracker";
 import { SpeakingSkillResult } from "./screens/SpeakingSkill/Result";
 import { Toaster } from "react-hot-toast";
 import { SplashScreen } from "./screens/Splash/Splash";
 import { ChatBot, ChatBotResult } from "./screens/ChatBot";
+import { Login } from "./screens/Login/Login";
+import { Register } from "./screens/Register";
+import { InitialResult } from "./screens/InitialAssessment/Result";
+import { InitialAssessment } from "./screens/InitialAssessment";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +33,14 @@ const router = createBrowserRouter([
   {
     path: "/ubah-topik",
     element: <UbahTopik />,
+  },
+  {
+    path: "/skill-builder/writing",
+    element: <WritingSkill />,
+  },
+  {
+    path: "/skill-builder/writing/result",
+    element: <WritingSkillResult />,
   },
   {
     path: "/skill-builder/listening",
@@ -63,6 +77,27 @@ const router = createBrowserRouter([
   {
     path: "/chat-bot/result",
     element: <ChatBotResult />,
+  },
+  { path: "/login", element: <Login /> },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/initial",
+    element: <InitialAssessment />,
+  },
+  {
+    path: "/initial/result",
+    element: <InitialResult />,
+  },
+  {
+    path: "/initial/result/speaking",
+    element: <SpeakingSkillResult url="/initial/result" />,
+  },
+  {
+    path: "/initial/result/listening",
+    element: <ListeningSkillResult url="/initial/result" />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

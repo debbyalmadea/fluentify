@@ -122,12 +122,12 @@ export const AudioPlayer = () => {
         </div>
       </div>
       <div className="slidebar">
-        <div className="div">
+        <div className="audio-player-div">
           {(timeProgress ? Math.floor(timeProgress / 60) : 0)
             .toString()
             .padStart(2, "0")}
           :
-          {(timeProgress ? Math.floor(timeProgress) : 0)
+          {(timeProgress ? Math.floor(timeProgress) % 60 : 0)
             .toString()
             .padStart(2, "0")}
         </div>
@@ -137,11 +137,14 @@ export const AudioPlayer = () => {
           defaultValue="0"
           onChange={handleProgressChange}
         />
-        <div className="div">
+        <div className="audio-player-div">
           {(duration ? Math.floor(duration / 60) : 0)
             .toString()
             .padStart(2, "0")}
-          :{(duration ? Math.floor(duration) : 0).toString().padStart(2, "0")}
+          :
+          {(duration ? Math.floor(duration) % 60 : 0)
+            .toString()
+            .padStart(2, "0")}
         </div>
       </div>
     </div>
