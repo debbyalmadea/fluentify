@@ -37,7 +37,7 @@ export const Register = () => {
                     <Header title="Fluentify" backUrl="/login" />
                     <div className="main">
                         <div className="container">
-                            <div className="above-the-fold">
+                            <div className="above-the-fold slide-in">
                                 <div className="questions-3">
                                     <p className="text-wrapper-7">Mari bergabung!</p>
                                 </div>

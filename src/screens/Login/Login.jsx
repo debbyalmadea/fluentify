@@ -100,7 +100,7 @@ export const Login = () => {
                     <Header title="Fluentify" backUrl="/splash" />
                     <div className="main">
                         <div className="container">
-                            <div className="above-the-fold">
+                            <div className="above-the-fold slide-in">
                                 <div className="questions-3">
                                     <p className="text-wrapper-7">Selamat Datang!</p>
                                 </div>
@@ -128,7 +128,7 @@ export const Login = () => {
                                     hierachy="primary"
                                     size="large"
                                     type="default"
-                                    onClick={() => { toast.success("Selamat datang, " + username + "!"); navigate("/") }}
+                                    onClick={() => { toast.success("Selamat datang, " + username); navigate("/") }}
                                     text="Login"
                                 />
                             </div>

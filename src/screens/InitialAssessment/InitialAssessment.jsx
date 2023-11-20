@@ -68,7 +68,7 @@ export const InitialAssessment = () => {
                     <Header title="Initial Assessment" backUrl="/" />
                     <div className="main">
                         <div className="container">
-                            <div className="above-the-fold">
+                            <div className="above-the-fold slide-in">
                                 <div className="questions-3">
                                     <img
                                         className="group-3"
