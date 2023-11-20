@@ -14,7 +14,7 @@ import { useState } from "react";
 import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
 import { Modal } from "../../../components/Modal";
 import { AnswerField } from "../../../components/AnswerField";
-
+import { EvaluationCard } from "../../../components/EvaluationCard";
 export const ListeningSkillResult = () => {
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
@@ -167,6 +167,10 @@ export const ListeningSkillResult = () => {
                     )
                   )}
                 </div>
+              </div>
+              <div className="answers-container">
+                <p className="section-title">Umpan Balik</p>
+                <EvaluationCard evaluation_text={"Kamu berhasil menyelesaikan tes ini dengan baik! Sepertinya kamu mengalami kesalahan karena tidak memahami peribahasa yang digunakan. Mari kita perbanyak latihan di bagian itu!"} />
               </div>
               {/* <MultipleChoice
               buttonIcon={
