@@ -426,4 +426,11 @@ body {
 
 textarea:focus {
   outline: var(--fluentifyprimary) auto 1px;
+
+/* Fluentify Input/placeholder */
+font-family: Nunito !important;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 157.143% */
 }
