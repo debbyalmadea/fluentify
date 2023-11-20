@@ -54,14 +54,14 @@ const _Home = ({ topic }) => {
                 </Link>
               </div>
               <div className="frame-5">
-                <div className="div-2">
+                <Link to={"/skill-builder/reading"} className="div-2">
                   <img
-                    className="group-2"
-                    alt="Group"
-                    src="/img/group-10.png"
-                  />
+                      className="group-2"
+                      alt="Group"
+                      src="/img/group-10.png"
+                    />
                   <div className="text-wrapper-5">Reading</div>
-                </div>
+                </Link>
                 <Link to={"/skill-builder/speaking"} className="div-2">
                   <img
                     className="freepik-speech-2"

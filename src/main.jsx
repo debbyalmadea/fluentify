@@ -24,6 +24,10 @@ import { Login } from "./screens/Login/Login";
 import { Register } from "./screens/Register";
 import { InitialResult } from "./screens/InitialAssessment/Result";
 import { InitialAssessment } from "./screens/InitialAssessment";
+import { ReadingSkill } from "./screens/ReadingSkill";
+import { ReadingSkillText } from "./screens/ReadingSkill/Text";
+import { ReadingSkillQuestions } from "./screens/ReadingSkill/Questions/ReadingSkillQuestions";
+import { ReadingSkillResult } from "./screens/ReadingSkill/Result/ReadingSkillResult";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +69,30 @@ const router = createBrowserRouter([
   {
     path: "/skill-builder/speaking/result",
     element: <SpeakingSkillResult />,
+  },
+  {
+    path: "/skill-builder/reading",
+    element: <ReadingSkill />,
+  },
+  {
+    path: "/skill-builder/reading/text/:id",
+    element: <ReadingSkillText />,
+  },
+  {
+    path: "/skill-builder/reading/text-revisit/:id",
+    element: <ReadingSkillText revisit={true}/>,
+  },
+  {
+    path: "/skill-builder/reading/:id/question/:number",
+    element: <ReadingSkillQuestions />,
+  },
+  {
+    path: "/skill-builder/reading/:id/result",
+    element: <ReadingSkillResult />,
+  },
+  {
+    path: "/skill-builder/reading/:id/result",
+    element: <ReadingSkillResult />,
   },
   {
     path: "/splash",

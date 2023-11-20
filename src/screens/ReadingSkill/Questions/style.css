@@ -1,0 +1,166 @@
+.reading-skill-question {
+    align-items: flex-start;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .reading-skill-question .body {
+    align-items: flex-start;
+    align-self: stretch;
+    background: linear-gradient(180deg, rgb(29, 78, 216) 0%, rgba(29, 78, 216, 0.73) 100%);
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+  
+  .reading-skill-question .main {
+    align-items: flex-start;
+    align-self: stretch;
+    background-color: var(--white);
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+  
+  .reading-skill-question .progress {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 12px;
+    padding: 24px 16px;
+    position: relative;
+    width: 100%;
+  }
+  
+  
+  .reading-skill-question .text-wrapper-2 {
+    color: #000000;
+    font-family: var(--text-xs-regular-font-family);
+    font-size: var(--text-xs-regular-font-size);
+    font-style: var(--text-xs-regular-font-style);
+    font-weight: var(--text-xs-regular-font-weight);
+    letter-spacing: var(--text-xs-regular-letter-spacing);
+    line-height: var(--text-xs-regular-line-height);
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .reading-skill-question .container {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 40px;
+    padding: 16px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .reading-skill-question .essay {
+    flex: 0 0 auto !important;
+    padding: 0px 0px 40px !important;
+  }
+  
+  .reading-skill-question .footer {
+    align-items: center;
+    align-self: stretch;
+    background-color: #ffffff;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px 16px 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+    /* =========================
+Custom Input range 
+=============================*/
+
+/* Input range - chrome and safari */
+  .reading-skill-question input[type="range"] {
+  --range-progress: 0;
+  -webkit-appearance: none;
+  position: relative;
+  background:var(--fluentifyneutral-400);
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Input range - firefox */
+  .reading-skill-question input[type="range"]::-moz-range-track {
+  position: relative;
+  background:var(--fluentifyneutral-400);
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* played progress length - Chrome & safari*/
+  .reading-skill-question input[type="range"]::before {
+  content: '';
+  height: 8px;
+  background: var(--fluentifyprimary);
+  width: var(--range-progress);
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* played progress length - firefox */
+  .reading-skill-question input[type="range"]::-moz-range-progress {
+  background: var(--fluentifyprimary);
+  border-radius: 5px;
+  height: 8px;
+}
+
+/* slider thumb - chrome and safari */
+  .reading-skill-question input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--fluentifyprimary);
+  cursor: pointer;
+  position: relative;
+}
+
+/* dragging thumb - chrome and safari */
+  .reading-skill-question input[type="range"]:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+/* slider thumb - firefox */
+  .reading-skill-question input[type="range"]::-moz-range-thumb {
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  background: var(--fluentifyprimary);
+  cursor: pointer;
+  border: transparent;
+  position: relative;
+}
+/* dragging thumb - firefox */
+  .reading-skill-question input[type="range"]:active::-moz-range-thumb {
+  transform: scale(1.2);
+}
