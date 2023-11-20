@@ -1,0 +1,1 @@
+export { TanyaBot } from "./TanyaBot";
