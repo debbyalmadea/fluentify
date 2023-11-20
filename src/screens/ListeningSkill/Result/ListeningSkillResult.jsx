@@ -43,7 +43,7 @@ export const ListeningSkillResult = ({ url }) => {
           </div>
           <div className="modal-body">
             <p className="feedback-modal-text modal-text">
-              Apa keluhanmu untuk topik
+              Apa keluhanmu untuk topik{" "}
               <span style={{ fontWeight: "bolder" }}>{data.topic}</span>
             </p>
             <div className="checkboxes">

@@ -46,12 +46,16 @@ export const ReadingSkillResult = () => {
           </div>
           <div className="modal-body">
             <p className="modal-text">
-              Apa keluhanmu untuk topik
-              <span style={{ fontWeight: "bolder" }}>{resultData.topic}</span>
+              Apa keluhanmu untuk topik{" "}
+              <span style={{ fontWeight: "bolder" }}>
+                {" " + resultData.topic}
+              </span>
             </p>
             <div className="checkboxes">
               <label className="container">
                 <p>Soal yang diberikan tidak sesuai topik</p>
+                <p>Teks tidak sesuai dengan topik</p>
+                <p>Teks yang diberikan sulit dimengerti</p>
                 <input type="checkbox" />
                 <span className="checkmark"></span>
               </label>
@@ -95,7 +99,7 @@ export const ReadingSkillResult = () => {
                   <img
                     className="group-3"
                     alt="Group"
-                    src="/img/group-14.png"
+                    src="/img/group-10.png"
                   />
                   <p className="text-wrapper-7">{resultData.topic}</p>
                 </div>
@@ -116,7 +120,9 @@ export const ReadingSkillResult = () => {
                         width: "fit-content",
                       }}
                     >
-                      <div className="text-wrapper-9">{resultData.point} poin</div>
+                      <div className="text-wrapper-9">
+                        {resultData.point} poin
+                      </div>
                     </div>
                   </div>
                   <div className="container-2">
@@ -127,7 +133,7 @@ export const ReadingSkillResult = () => {
                         iconClassName="check-fill-3"
                       />
                       <div className="text-wrapper-10">
-                        {data.total_correct}/{resultData.total} Benar
+                        {resultData.total_correct}/{resultData.total} Benar
                       </div>
                     </div>
                     <div className="div-2">
@@ -147,15 +153,26 @@ export const ReadingSkillResult = () => {
               </div>
               <div className="text-container">
                 <p className="section-title">Teks</p>
-                <div className="container">
-                  <div className="main">
+                <div
+                  style={{
+                    paddingBottom: "40px",
+                    borderBottom: "1px solid #E0E0E0",
+                  }}
+                >
+                  <div
+                    className="low-fi-mobile-cards"
+                    style={{
+                      padding: "24px",
+                      marginBottom: "20px",
+                    }}
+                  >
                     <div className="text">
                       <div className="judul">{textData.title}</div>
                       <p className="isi">{textData.text}</p>
                     </div>
                   </div>
                   <Button
-                    hierachy="primary"
+                    hierachy="secondary"
                     size="large"
                     type="default"
                     text="Baca teks"
@@ -193,11 +210,11 @@ export const ReadingSkillResult = () => {
               </div>
               <div className="answers-container">
                 <p className="section-title">Umpan Balik</p>
-                  <EvaluationCard
-                    evaluation_text={
-                      "Kamu berhasil menyelesaikan tes ini dengan baik! Sepertinya kamu mengalami kesalahan karena tidak memahami peribahasa yang digunakan. Mari kita perbanyak latihan di bagian itu!"
-                    }
-                  />
+                <EvaluationCard
+                  evaluation_text={
+                    "Kamu berhasil menyelesaikan tes ini dengan baik! Sepertinya kamu mengalami kesalahan karena tidak memahami peribahasa yang digunakan. Mari kita perbanyak latihan di bagian itu!"
+                  }
+                />
               </div>
               {/* <MultipleChoice
               buttonIcon={

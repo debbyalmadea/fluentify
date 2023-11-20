@@ -1,9 +1,9 @@
-import React from "react";
 import { Button } from "../../../components/Button";
 import { Header } from "../../../components/Header";
 import "./style.css";
 import data from "../../../data/reading_skill_text.json";
 import { useNavigate, useParams } from "react-router-dom";
+import * as PropTypes from "prop-types";
 
 export const ReadingSkillText = ({ revisit }) => {
   const { id } = useParams();
@@ -16,17 +16,23 @@ export const ReadingSkillText = ({ revisit }) => {
         <Header
           showAlert={!revisit}
           title="Reading Builder: Text"
-          backUrl= {
-            revisit ? "/skill-builder/reading/1/result" 
-            : "/skill-builder/reading"
+          backUrl={
+            revisit
+              ? "/skill-builder/reading/1/result"
+              : "/skill-builder/reading"
           }
         />
         <div className="main">
           <div className="text">
-            <div className="judul">{textData.title}</div>
-            <p className="isi slide-in">
-              {textData.text}
-            </p>
+            <div
+              className="judul"
+              style={{
+                whiteSpace: "unset",
+              }}
+            >
+              {textData.title}
+            </div>
+            <p className="isi slide-in">{textData.text}</p>
           </div>
         </div>
       </div>
@@ -47,4 +53,8 @@ export const ReadingSkillText = ({ revisit }) => {
       </footer>
     </div>
   );
+};
+
+ReadingSkillText.propTypes = {
+  revisit: PropTypes.bool,
 };

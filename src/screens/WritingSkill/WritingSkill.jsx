@@ -32,7 +32,12 @@ export const WritingSkill = () => {
             </p>
           </div>
           <div className="modal-body">
-            <p className="modal-text">
+            <p
+              className="modal-text"
+              style={{
+                textAlign: "center",
+              }}
+            >
               Kamu tidak bisa balik ke bagian ini, jadi pastikan kamu sudah
               menjawab bagian ini dengan baik!
             </p>
@@ -73,7 +78,7 @@ export const WritingSkill = () => {
               <EssayQuestion
                 number={1}
                 total={1}
-                question="online education, predominant mode of learning in education"
+                question="If you won a million dollar lottery, would you still be in school?"
                 state={"default"}
               ></EssayQuestion>
             </div>

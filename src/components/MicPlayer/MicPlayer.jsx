@@ -6,15 +6,19 @@ import { Turtle } from "../../icons/Turtle";
 import Speech from 'react-speech';
 
 const pairs = {
-    "hi": "Hi, welcome to Fluentify! How can I assist you today?",
-    "hello": "Hi, welcome to Fluentify! How can I assist you today?",
-    "name": "I'm Sally, your chatbot assistant companion! What's your name?",
+    // "hi": "Hi, I am Fluenty! How can I assist you today?",
+    "hello": "Hi, I am Fluenty! How can I assist you today?",
+    "name": "I'm Fluenty, your chatbot assistant companion! What's your name?",
     "education": "Education is the key to success! Let's see, what motivates you to learn English?",
     "fluent": "Becoming fluent is a fantastic goal! What specific aspects of the language would you like to focus on?",
     "grammar": "Grammar is an essential part of language learning. Do you have any grammar-related questions?",
     "vocabulary": "Building vocabulary is crucial! Do you have a favorite method for learning new words?",
     "pronunciation": "Pronunciation matters! Is there a specific sound or word you find challenging to pronounce?",
     "travel": "Travel broadens the mind! Are you planning a trip soon? If so, where?",
+    "paris": "Paris is a beautiful city! What are you most excited to see there?",
+    "tower": "The Eiffel Tower is a must-see! What other attractions are you planning to visit?",
+    "food": "French cuisine is delicious! What type of food do you enjoy eating?",
+    "pasta": "Pasta is one of my favorite dishes! What's your favorite type of pasta?",
     "destination": "Choosing a destination is exciting! What type of places do you enjoy visiting?",
     "business": "In the world of business, knowledge about language is power. Are there any business-related topics you'd like to discuss?",
     "meetings": "Effective communication in meetings is key. Any specific challenges you face during business meetings?",
@@ -35,7 +39,7 @@ export const MicPlayer = (props) => {
     const [initial, setInitial] = useState(true)
     const getResponse = () => {
         if (initial) {
-            return "Hi, welcome to Fluentify! I am glad you are here. What should we talk about today?"
+            return "Hi, welcome to Fluentify! I see you have chosen travel as a topic. May I know why?"
         }
         if (transcript === undefined || transcript.length === 0) {
             return "I am sorry, I did not hear anything. Can you repeat that?"
@@ -45,7 +49,7 @@ export const MicPlayer = (props) => {
                 return value;
             }
         }
-        return "I am sorry, I am just a prototype. I didn't quite get that."
+        return "I am sorry, I am just a prototype and can't quite answer that."
     }
 
     useEffect(() => {

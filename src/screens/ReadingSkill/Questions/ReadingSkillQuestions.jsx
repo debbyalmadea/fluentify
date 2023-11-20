@@ -44,7 +44,7 @@ export const ReadingSkillQuestions = () => {
             <p className="modal-title">Lanjut ke hasil?</p>
           </div>
           <div className="modal-body">
-            <p className="modal-text">
+            <p className="modal-text" style={{ textAlign: "center" }}>
               Kamu tidak bisa balik ke bagian ini, jadi pastikan kamu sudah
               menjawab bagian ini dengan baik!
             </p>
@@ -137,7 +137,7 @@ export const ReadingSkillQuestions = () => {
             </>
           ) : (
             <>
-              {(number == 1) ? 
+              {number == 1 ? (
                 <Button
                   className="design-component-instance-node"
                   hierachy="secondary"
@@ -145,12 +145,10 @@ export const ReadingSkillQuestions = () => {
                   type="default"
                   text="Kembali"
                   onClick={() => {
-                    navigate(
-                      `/skill-builder/reading/text/${id}`
-                    );
+                    navigate(`/skill-builder/reading/text/${id}`);
                   }}
-                /> 
-                :  
+                />
+              ) : (
                 <Button
                   className="design-component-instance-node"
                   hierachy="secondary"
@@ -163,7 +161,7 @@ export const ReadingSkillQuestions = () => {
                     );
                   }}
                 />
-              }
+              )}
               <Button
                 className="design-component-instance-node"
                 hierachy="primary"

@@ -31,7 +31,7 @@ export const InitialAssessment = () => {
                                 textAlign: "start",
                             }}
                         >
-                            Ingin Mengerjakan Initial Assessment
+                            Ingin Mengerjakan Initial Assessment?
                         </p>
                     </div>
                     <div className="modal-body">

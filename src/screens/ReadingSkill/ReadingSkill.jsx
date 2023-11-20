@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button } from "../../components/Button";
 import { Choice } from "../../components/Choice";
 import { Header } from "../../components/Header";
@@ -36,8 +36,10 @@ export const ReadingSkill = () => {
           size="large"
           type="default"
           text="Lanjutkan"
-          onClick={() => navigate(`/skill-builder/reading/text/${selectedType + 1}`)}
-          />
+          onClick={() =>
+            navigate(`/skill-builder/reading/text/${selectedType + 1}`)
+          }
+        />
       </footer>
     </div>
   );

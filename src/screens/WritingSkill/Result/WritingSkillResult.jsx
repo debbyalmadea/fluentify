@@ -1,5 +1,4 @@
 import { Button } from "../../../components/Button";
-import { EssayQuestion } from "../../../components/EssayQuestion";
 import { Question } from "../../../components/Question";
 import { Header } from "../../../components/Header";
 // import { MultipleChoice } from "../../../components/MultipleChoice";
@@ -7,7 +6,6 @@ import { VuesaxLinearFlag } from "../../../icons/VuesaxLinearFlag";
 import "./style.css";
 import { CircleProgressBar } from "../../../components/CircleProgressBar";
 import data from "../../../data/listening_skill_results.json";
-import { MultipleChoice } from "../../../components/MultipleChoice";
 import { useState } from "react";
 import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
 import { Modal } from "../../../components/Modal";
@@ -15,6 +13,7 @@ import { AnswerField } from "../../../components/AnswerField";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { EvaluationCard } from "../../../components/EvaluationCard";
+import * as PropTypes from "prop-types";
 
 export const WritingSkillResult = ({ url }) => {
   const navigate = useNavigate();
@@ -41,8 +40,8 @@ export const WritingSkillResult = ({ url }) => {
           </div>
           <div className="modal-body">
             <p className="modal-text">
-              Apa keluhanmu untuk topik
-              <span style={{ fontWeight: "bolder" }}>{data.topic}</span>
+              Apa keluhanmu untuk topik{" "}
+              <span style={{ fontWeight: "bolder" }}>Education</span>
             </p>
             <div className="checkboxes">
               <label className="container">
@@ -80,7 +79,7 @@ export const WritingSkillResult = ({ url }) => {
           </div>
         </div>
       </Modal>
-      <div className="reading-result">
+      <div className="writing-result">
         <div className="body">
           <Header title="Writing Builder: Result" backUrl={url ?? "/"} />
           <div className="main">
@@ -90,7 +89,7 @@ export const WritingSkillResult = ({ url }) => {
                   <img
                     className="group-3"
                     alt="Group"
-                    src="/img/group-14.png"
+                    src="/img/freepik-speech-bubble-inject-252.png"
                   />
                   <p className="text-wrapper-7">{data.topic}</p>
                 </div>
@@ -98,10 +97,14 @@ export const WritingSkillResult = ({ url }) => {
                   flag={"default"}
                   number={1}
                   total={1}
-                  question={"Predominant mode of learning in education"}
+                  question={
+                    "If you won a million dollar lottery, would you still be in school?"
+                  }
                 />
                 <div className="answer">
-                  <p className="div">Lorem ipsum</p>
+                  <p className="writing-skill-result-div">
+                    If I won the lottery, I would go to France.
+                  </p>
                 </div>
                 <p className="section-title">Hasil</p>
                 <div className="low-fi-mobile-cards">
@@ -121,7 +124,7 @@ export const WritingSkillResult = ({ url }) => {
                         width: "fit-content",
                       }}
                     >
-                      <div className="text-wrapper-9">{data.point} poin</div>
+                      <div className="text-wrapper-9">12 poin</div>
                     </div>
                   </div>
                 </div>
@@ -152,9 +155,11 @@ export const WritingSkillResult = ({ url }) => {
                         >
                           <CircleProgressBar value={data.score} />
                         </div>
-                        <div className="text-wrapper-9">Idea</div>
+                        <div className="writing-result-text-wrapper">Idea</div>
                       </div>
-                      <div className="text-wrapper-9">{data.point} poin</div>
+                      <div className="writing-result-text-wrapper">
+                        {data.point} poin
+                      </div>
                     </div>
                   </div>
                   <div className="low-fi-small-cards">
@@ -183,9 +188,13 @@ export const WritingSkillResult = ({ url }) => {
                         >
                           <CircleProgressBar value={data.score} />
                         </div>
-                        <div className="text-wrapper-9">Grammar</div>
+                        <div className="writing-result-text-wrapper">
+                          Grammar
+                        </div>
                       </div>
-                      <div className="text-wrapper-9">{data.point} poin</div>
+                      <div className="writing-result-text-wrapper">
+                        {data.point} poin
+                      </div>
                     </div>
                   </div>
                   <div className="low-fi-small-cards">
@@ -214,9 +223,13 @@ export const WritingSkillResult = ({ url }) => {
                         >
                           <CircleProgressBar value={data.score} />
                         </div>
-                        <div className="text-wrapper-9">Lexical</div>
+                        <div className="writing-result-text-wrapper">
+                          Lexical
+                        </div>
                       </div>
-                      <div className="text-wrapper-9">{data.point} poin</div>
+                      <div className="writing-result-text-wrapper">
+                        {data.point} poin
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -225,7 +238,11 @@ export const WritingSkillResult = ({ url }) => {
               <div className="answers-container">
                 <p className="section-title">Jawaban</p>
                 <div className="container">
-                  <EvaluationCard evaluation_text={"Good Job!"} />
+                  <EvaluationCard
+                    evaluation_text={
+                      "Tulisan yang sangat baik! Karanganmu terstruktur, koheren, dan mengalir dengan baik. Walaupun demikian, perhatikan pengejaan dan penggunaan Past Tense di dalam kalimat tulisanmu di masa depan."
+                    }
+                  />
                   {/* <div className="solution-answer-field">
                     <img
                       className="group"
@@ -264,4 +281,8 @@ export const WritingSkillResult = ({ url }) => {
       </div>
     </>
   );
+};
+
+WritingSkillResult.propTypes = {
+  url: PropTypes.string,
 };

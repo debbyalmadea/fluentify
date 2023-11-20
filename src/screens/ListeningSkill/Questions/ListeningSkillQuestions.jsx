@@ -23,7 +23,6 @@ export const ListeningSkillQuestions = ({ url }) => {
   let [searchParams, setSearchParams] = useSearchParams();
   let init = searchParams.get("init");
 
-
   useEffect(() => {
     progressBarRef.current.max = data.total;
     progressBarRef.current.value = totalAnswered;
@@ -44,7 +43,12 @@ export const ListeningSkillQuestions = ({ url }) => {
             <p className="modal-title">Lanjut ke hasil?</p>
           </div>
           <div className="modal-body">
-            <p className="modal-text">
+            <p
+              className="modal-text"
+              style={{
+                textAlign: "center",
+              }}
+            >
               Kamu tidak bisa balik ke bagian ini, jadi pastikan kamu sudah
               menjawab bagian ini dengan baik!
             </p>
@@ -86,7 +90,8 @@ export const ListeningSkillQuestions = ({ url }) => {
             backUrl={
               number == 1
                 ? "/"
-                : `/skill-builder/listening/1/question/${+number - 1}?init=` + init
+                : `/skill-builder/listening/1/question/${+number - 1}?init=` +
+                  init
             }
           />
           <div className="main">
@@ -150,7 +155,9 @@ export const ListeningSkillQuestions = ({ url }) => {
                   text="Kembali"
                   onClick={() => {
                     navigate(
-                      `/skill-builder/listening/1/question/${+number - 1}?init=` + init
+                      `/skill-builder/listening/1/question/${
+                        +number - 1
+                      }?init=` + init
                     );
                   }}
                 />
@@ -175,7 +182,9 @@ export const ListeningSkillQuestions = ({ url }) => {
                   text="Kembali"
                   onClick={() => {
                     navigate(
-                      `/skill-builder/listening/1/question/${+number - 1}?init=` + init
+                      `/skill-builder/listening/1/question/${
+                        +number - 1
+                      }?init=` + init
                     );
                   }}
                 />
@@ -188,7 +197,8 @@ export const ListeningSkillQuestions = ({ url }) => {
                 text="Lanjutkan"
                 onClick={() => {
                   navigate(
-                    `/skill-builder/listening/1/question/${+number + 1}?init=` + init
+                    `/skill-builder/listening/1/question/${+number + 1}?init=` +
+                      init
                   );
                 }}
               />

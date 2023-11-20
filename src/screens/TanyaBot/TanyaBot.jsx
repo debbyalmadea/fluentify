@@ -126,7 +126,12 @@ export const TanyaBot = ({ backUrl }) => {
             <p className="modal-title">Lanjut ke bagian evaluasi?</p>
           </div>
           <div className="modal-body">
-            <p className="modal-text">
+            <p
+              className="modal-text"
+              style={{
+                textAlign: "center",
+              }}
+            >
               Kamu tidak bisa balik ke bagian ini, jadi pastikan kamu sudah
               memahami bagian ini dengan baik!
             </p>
