@@ -18,6 +18,7 @@ import {
   Title,
 } from "chart.js";
 import "chart.js/auto"; // ADD THIS
+import { Link } from "react-router-dom";
 
 let res = [
   { date: "01/11", value: 40 },
@@ -299,6 +300,21 @@ export const ProgressTracker = () => {
     );
   }
 
+  function getLink(category) {
+    switch (category.toLowerCase()) {
+      case "listening":
+        return "/skill-builder/listening/1/result";
+      case "writing":
+        return "/skill-builder/writing/result";
+      case "reading":
+        return "/skill-builder/reading/1/result";
+      case "speaking":
+        return "/skill-builder/speaking/result";
+      default:
+        break;
+    }
+  }
+
   return (
     <div className="progress-tracker">
       <div className="body">
@@ -390,7 +406,17 @@ export const ProgressTracker = () => {
 
               {histories.map((history, index) => {
                 console.log(history);
-                return <HistoryCard key={index} {...history} />;
+                return (
+                  <Link
+                    to={getLink(history.category)}
+                    key={index}
+                    style={{
+                      width: "100%",
+                    }}
+                  >
+                    <HistoryCard {...history} />
+                  </Link>
+                );
               })}
             </div>
           </div>
