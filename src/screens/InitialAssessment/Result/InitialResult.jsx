@@ -102,33 +102,7 @@ export const InitialResult = () => {
                   />
                   <p className="text-wrapper-7">Initial Assessment</p>
                 </div>
-                {/* <p className="section-title">Hasil</p>
-                <div className="low-fi-mobile-cards">
-                  <div
-                    style={{
-                      width: "100px",
-                      height: "100px",
-                    }}
-                  >
-                    <CircleProgressBar value={95} />
-                  </div>
-                  <div className="point-container">
-                    <div className="text-wrapper-8">Kamu mendapatkan</div>
-                    <div
-                      className="point"
-                      style={{
-                        width: "fit-content",
-                      }}
-                    >
-                      <div className="text-wrapper-9">{10} poin</div>
-                    </div>
-                  </div>
-                </div> */}
               </div>
-              {/* <div className="audio-player-container">
-                <p className="section-title middle">Kamu telah diklasifikasikan sebagai: </p>
-                <AudioPlayer />
-              </div> */}
               <div className="expertise">
                 <p className="section-title">Kamu telah diklasifikan sebagai:</p>
                 <div
@@ -139,7 +113,10 @@ export const InitialResult = () => {
                     width: "100%",
                   }}
                 >
-                  <Expertise category="Writing" level="Novice" value={50} />
+                  <Expertise category="Writing"
+                    level="Novice"
+                    value={50}
+                    onClick={() => navigate("/initial/result/writing")} />
                   <Expertise
                     category="Listening"
                     level="Intermediate"
@@ -155,7 +132,7 @@ export const InitialResult = () => {
                     width: "100%",
                   }}
                 >
-                  <Expertise category="Reading" level="Advanced" value={80} />
+                  <Expertise category="Reading" level="Advanced" value={80} onClick={() => navigate("/initial/result/reading")} />
                   <Expertise category="Speaking" level="Novice" value={40} onClick={() => navigate("/initial/result/speaking")} />
                 </div>
               </div>
@@ -182,7 +159,7 @@ export const InitialResult = () => {
               text="Selesai"
               type="default"
               onClick={() => {
-                toast.success("Selamat, latihan berhasil diselesaikan!")
+                toast.success("Selamat, tes awal berhasil diselesaikan!")
                 navigate("/")
               }}
             />
