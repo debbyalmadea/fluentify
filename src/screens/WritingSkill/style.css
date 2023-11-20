@@ -22,10 +22,14 @@
 
 .writing-skill .body {
   position: relative;
-  width: 100%; */
+  width: 100%;
   align-items: flex-start;
   align-self: stretch;
-  background: linear-gradient(180deg, rgb(29, 78, 216) 0%, rgba(29, 78, 216, 0.73) 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(29, 78, 216) 0%,
+    rgba(29, 78, 216, 0.73) 100%
+  );
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -33,7 +37,6 @@
   position: relative;
   width: 100%;
 }
-
 
 .writing-skill .main {
   align-items: center;
@@ -84,7 +87,6 @@
   width: fit-content;
 }
 
-
 .writing-skill .answer-field {
   align-items: flex-start;
   align-self: stretch;
@@ -101,4 +103,3 @@
   position: relative;
   width: 100%;
 }
-

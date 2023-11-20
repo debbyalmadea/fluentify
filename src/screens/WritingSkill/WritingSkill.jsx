@@ -35,7 +35,7 @@ const navigate = useNavigate();
                 className="modal-button"
                 onClick={() => {
                     setOpen(false);
-                    navigate("/skill-builder/listening/1/result");
+                    navigate("/skill-builder/writing/result");
                 }}
                 type="default"
                 text="Lanjut!"
