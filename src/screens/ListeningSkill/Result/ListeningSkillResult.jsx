@@ -14,11 +14,13 @@ import { useState } from "react";
 import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
 import { Modal } from "../../../components/Modal";
 import { AnswerField } from "../../../components/AnswerField";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 export const ListeningSkillResult = () => {
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
-
+  const navigate = useNavigate();
   return (
     <>
       {sent && <FeedbackSentModal open={sent} setOpen={setSent} />}

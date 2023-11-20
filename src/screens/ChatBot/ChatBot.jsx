@@ -138,7 +138,7 @@ export const ChatBot = () => {
               className="modal-button"
               onClick={() => {
                 setOpenContinueModal(false);
-                navigate("/chat-bot/evaluate");
+                navigate("/chat-bot/result");
               }}
               type="default"
               text="Lanjut!"

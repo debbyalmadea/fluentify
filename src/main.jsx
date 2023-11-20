@@ -17,7 +17,7 @@ import { ProgressTracker } from "./screens/ProgressTracker";
 import { SpeakingSkillResult } from "./screens/SpeakingSkill/Result";
 import { Toaster } from "react-hot-toast";
 import { SplashScreen } from "./screens/Splash/Splash";
-import { ChatBot } from "./screens/ChatBot";
+import { ChatBot, ChatBotResult } from "./screens/ChatBot";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +59,10 @@ const router = createBrowserRouter([
   {
     path: "/chat-bot",
     element: <ChatBot />,
+  },
+  {
+    path: "/chat-bot/result",
+    element: <ChatBotResult />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
