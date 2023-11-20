@@ -29,7 +29,7 @@ export const ListeningSkillResult = () => {
           </div>
           <div className="modal-header">
             <p
-              className="modal-title"
+              className="feedback-modal-title modal-title"
               style={{
                 textAlign: "start",
               }}
@@ -38,7 +38,7 @@ export const ListeningSkillResult = () => {
             </p>
           </div>
           <div className="modal-body">
-            <p className="modal-text">
+            <p className="feedback-modal-text modal-text">
               Apa keluhanmu untuk topik
               <span style={{ fontWeight: "bolder" }}>{data.topic}</span>
             </p>
@@ -202,8 +202,8 @@ export const ListeningSkillResult = () => {
               text="Selesai"
               type="default"
               onClick={() => {
-                toast.success("Selamat, latihan berhasil diselesaikan!")
-                navigate("/")
+                toast.success("Selamat, latihan berhasil diselesaikan!");
+                navigate("/");
               }}
             />
           </div>

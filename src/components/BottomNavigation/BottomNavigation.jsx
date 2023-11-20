@@ -67,14 +67,14 @@ export const BottomNavigation = ({ screen, className }) => {
           />
           <div className={`div screen-0-${screen}`}>Leaderboard</div>
         </div>
-        <div className="navigation-base">
+        <Link to={"/chat-bot"} className="navigation-base">
           <VuesaxLinearMessages
             color={screen === "chat-bot" ? "#2563EB" : "white"}
             strokeColor={screen === "chat-bot" ? "white" : "#D1D9E2"}
           />
 
           <div className={`div screen-1-${screen}`}>Chat Bot</div>
-        </div>
+        </Link>
       </div>
     </div>
   );

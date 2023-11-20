@@ -28,7 +28,7 @@ export const Question = ({
           </div>
           <div className="modal-header">
             <p
-              className="modal-title"
+              className="feedback-modal-title modal-title"
               style={{
                 textAlign: "start",
               }}
@@ -37,7 +37,7 @@ export const Question = ({
             </p>
           </div>
           <div className="modal-body">
-            <p className="modal-text">
+            <p className="feedback-modal-text modal-text">
               Apa keluhanmu untuk soal{" "}
               <span style={{ fontWeight: "bolder" }}>{question}</span>
             </p>

@@ -7,7 +7,7 @@ import { setTopic } from "../../actions";
 
 const _Home = ({ topic }) => {
   return (
-    <div className="home">
+    <div id="screen" className="home">
       <div className="frame">
         <div className="frame-2">
           <div className="frame-3">
@@ -18,7 +18,7 @@ const _Home = ({ topic }) => {
             <div className="avatar" />
           </div>
         </div>
-        <div className="frame-wrapper">
+        <div className="frame-wrapper slide-in">
           <div className="frame-4">
             <div className="topic">
               <div className="text-wrapper-3">{topic}</div>

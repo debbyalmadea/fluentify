@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import 'regenerator-runtime'
+import "regenerator-runtime";
 import "./index.css";
 import { Home } from "./screens/Home";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -17,6 +17,7 @@ import { ProgressTracker } from "./screens/ProgressTracker";
 import { SpeakingSkillResult } from "./screens/SpeakingSkill/Result";
 import { Toaster } from "react-hot-toast";
 import { SplashScreen } from "./screens/Splash/Splash";
+import { ChatBot } from "./screens/ChatBot";
 
 const router = createBrowserRouter([
   {
@@ -54,7 +55,11 @@ const router = createBrowserRouter([
   {
     path: "/splash",
     element: <SplashScreen />,
-  }
+  },
+  {
+    path: "/chat-bot",
+    element: <ChatBot />,
+  },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

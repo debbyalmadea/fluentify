@@ -1,0 +1,24 @@
+.message-bubble-user {
+  align-items: flex-start;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding: 0px 0px 0px 48px;
+  position: relative;
+  width: 100%;
+}
+
+.message-bubble-user .message-item-instance {
+  color: var(--black) !important;
+  font-family: var(--fluentify-text-p1-font-family) !important;
+  font-size: var(--fluentify-text-p1-font-size) !important;
+  font-style: var(--fluentify-text-p1-font-style) !important;
+  font-weight: var(--fluentify-text-p1-font-weight) !important;
+  letter-spacing: var(--fluentify-text-p1-letter-spacing) !important;
+  line-height: var(--fluentify-text-p1-line-height) !important;
+}
+
+.message-bubble-user-item {
+  background-color: #ffffff !important;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+}

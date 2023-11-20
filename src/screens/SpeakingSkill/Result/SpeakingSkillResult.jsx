@@ -31,7 +31,7 @@ export const SpeakingSkillResult = () => {
           </div>
           <div className="modal-header">
             <p
-              className="modal-title"
+              className="feedback-modal-title modal-title"
               style={{
                 textAlign: "start",
               }}
@@ -40,7 +40,7 @@ export const SpeakingSkillResult = () => {
             </p>
           </div>
           <div className="modal-body">
-            <p className="modal-text">
+            <p className="feedback-modal-text modal-text">
               Apa keluhanmu untuk topik
               <span style={{ fontWeight: "bolder" }}>{data.topic}</span>
             </p>
@@ -149,8 +149,7 @@ export const SpeakingSkillResult = () => {
                 <p className="section-title">Rekaman Pembicaraan</p>
                 <AudioPlayer />
               </div>
-              <div className="answers-container">
-              </div>
+              <div className="answers-container"></div>
             </div>
           </div>
         </div>
@@ -170,8 +169,8 @@ export const SpeakingSkillResult = () => {
               text="Selesai"
               type="default"
               onClick={() => {
-                toast.success("Selamat, latihan berhasil diselesaikan!")
-                navigate("/")
+                toast.success("Selamat, latihan berhasil diselesaikan!");
+                navigate("/");
               }}
             />
           </div>

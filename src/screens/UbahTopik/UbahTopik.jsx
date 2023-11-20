@@ -18,12 +18,12 @@ const _UbahTopik = ({ topic, setTopic }) => {
     setTopicButton(newTopic);
   };
   return (
-    <div className="ubah-topik">
+    <div id="screen" className="ubah-topik">
       <div className="frame">
         <Header title={"Ubah Topik"} />
         <div className="frame-2">
           <div className="frame-wrapper">
-            <div className="frame-3">
+            <div className="frame-3 slide-in">
               <div className="text-wrapper-6">Pilih Topik</div>
               <div className="pilih-topik">
                 <div className="frame-4">
@@ -62,7 +62,6 @@ const _UbahTopik = ({ topic, setTopic }) => {
                 defaultValue={popularTopics.includes(topic) ? "" : topic}
               />
               <Button
-                className="button-instance"
                 hierachy="primary"
                 size="large"
                 text="Simpan"

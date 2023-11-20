@@ -34,7 +34,7 @@
 .ubah-topik .frame-2 {
   align-items: center;
   align-self: stretch;
-  background-color: var(--fluentifyneutral-50);
+  background-color: var(--white);
   border-radius: 15px 15px 0px 0px;
   display: flex;
   flex: 1;
@@ -68,6 +68,8 @@
   padding: 20px 0px;
   position: relative;
   width: 100%;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
 }
 
 .ubah-topik .text-wrapper-6 {

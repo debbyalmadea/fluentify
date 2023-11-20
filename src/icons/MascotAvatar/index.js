@@ -1,0 +1,1 @@
+export { MascotAvatar } from "./MascotAvatar";
