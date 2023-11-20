@@ -16,6 +16,7 @@ import { WritingSkill } from "./screens/WritingSkill";
 import { WritingSkillResult } from "./screens/WritingSkill/Result/WritingSkillResult"
 import { ListeningSkillResult } from "./screens/ListeningSkill/Result/ListeningSkillResult";
 import { ProgressTracker } from "./screens/ProgressTracker";
+import { Leaderboard } from "./screens/Leaderboard/Leaderboard";
 import { SpeakingSkillResult } from "./screens/SpeakingSkill/Result";
 import { Toaster } from "react-hot-toast";
 import { SplashScreen } from "./screens/Splash/Splash";
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
   {
     path: "/progress-tracker",
     element: <ProgressTracker />,
+  },
+  {
+    path: "/leaderboard",
+    element: <Leaderboard />
   },
   {
     path: "/skill-builder/speaking/result",
