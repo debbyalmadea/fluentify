@@ -138,7 +138,7 @@ export const Login = () => {
                                     height: "10px",
                                 }}
                             />
-                            <div className="audio-player-container">
+                            <div className="audio-player-container slide-in">
                                 <Button
                                     className="button-5"
                                     hierachy="primary"

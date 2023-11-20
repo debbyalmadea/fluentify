@@ -81,8 +81,8 @@ export const Register = () => {
                                     hierachy="primary"
                                     size="large"
                                     type="default"
-                                    onClick={() => { toast.success("Registrasi berhasil!"); navigate("/login") }}
-                                    text="Login"
+                                    onClick={() => { toast.success("Registrasi berhasil!"); navigate("/initial") }}
+                                    text="Register"
                                 />
                             </div>
                             <div

@@ -77,7 +77,7 @@ export const InitialAssessment = () => {
                                     />
                                     <p className="text-wrapper-7">Petunjuk Pengerjaan</p>
                                 </div>
-                                <EvaluationCard evaluation_text={""} bot={false} />
+                                <EvaluationCard evaluation_text={"Selamat datang di tes awal aplikasi pembelajaran bahasa Inggris kami! Tes ini mengukur empat aspek keterampilan utama: listening, reading, writing, dan speaking. \n\n Listening (Pendengaran): Anda akan mendengarkan audio pendek dan menjawab pertanyaan. Ini menguji kemampuan memahami percakapan dan instruksi dalam bahasa Inggris secara lisan. \n\n Reading (Membaca): Uji kemampuan membaca dengan membaca teks singkat dan menjawab pertanyaan. Ini menilai pemahaman bacaan dan respons terhadap informasi tertulis. \n\n Writing (Menulis): Anda akan merespons prompt dengan menulis. Tes ini mengevaluasi kemampuan menyusun kalimat, menggunakan tata bahasa yang benar, dan menyampaikan ide secara tertulis. \n\n Speaking (Berbicara): Berinteraksi dengan robot melalui suara, merespons prompt atau topik. Ini menguji kemampuan mengucapkan kata-kata, mengartikulasikan ide, dan berkomunikasi verbal. \n\n Tes ini memberikan gambaran menyeluruh tentang kemampuan bahasa Inggris Anda"} bot={false} />
                             </div>
                         </div>
                     </div>
