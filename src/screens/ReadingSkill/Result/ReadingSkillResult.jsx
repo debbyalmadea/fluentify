@@ -47,11 +47,13 @@ export const ReadingSkillResult = () => {
           <div className="modal-body">
             <p className="modal-text">
               Apa keluhanmu untuk topik
-              <span style={{ fontWeight: "bolder" }}>{resultData.topic}</span>
+              <span style={{ fontWeight: "bolder" }}>{" " + resultData.topic}</span>
             </p>
             <div className="checkboxes">
               <label className="container">
                 <p>Soal yang diberikan tidak sesuai topik</p>
+                <p>Teks tidak sesuai dengan topik</p>
+                <p>Teks yang diberikan sulit dimengerti</p>
                 <input type="checkbox" />
                 <span className="checkmark"></span>
               </label>
@@ -127,7 +129,7 @@ export const ReadingSkillResult = () => {
                         iconClassName="check-fill-3"
                       />
                       <div className="text-wrapper-10">
-                        {data.total_correct}/{resultData.total} Benar
+                        {resultData.total_correct}/{resultData.total} Benar
                       </div>
                     </div>
                     <div className="div-2">
