@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { Question } from "../../../assets/illusts/Question";
 import { Modal } from "../../../components/Modal";
+
 // import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 export const ListeningSkillQuestions = ({ url }) => {
@@ -18,19 +19,29 @@ export const ListeningSkillQuestions = ({ url }) => {
   const progressBarRef = useRef();
   const navigate = useNavigate();
   const reduxAnswers = useSelector((state) => state.answers);
-  const totalAnswered = Object.keys(reduxAnswers).length;
   const [open, setOpen] = useState(false);
   let [searchParams, setSearchParams] = useSearchParams();
   let init = searchParams.get("init");
+  console.log(url, setSearchParams);
 
   useEffect(() => {
     progressBarRef.current.max = data.total;
-    progressBarRef.current.value = totalAnswered;
+    progressBarRef.current.value = getTotalAnswered(reduxAnswers);
     progressBarRef.current.style.setProperty(
       "--range-progress",
       `${(progressBarRef.current.value / data.total) * 100}%`
     );
-  }, [totalAnswered]);
+  }, [reduxAnswers]);
+
+  function getTotalAnswered(reduxAnswers) {
+    const reduxQuestionIds = Object.keys(reduxAnswers);
+    const questionsIds = data.questions.map((question) =>
+      question.id.toString()
+    );
+    console.log(reduxQuestionIds, questionsIds);
+
+    return reduxQuestionIds.filter((id) => questionsIds.includes(id)).length;
+  }
 
   return (
     <>
@@ -208,4 +219,8 @@ export const ListeningSkillQuestions = ({ url }) => {
       </div>
     </>
   );
+};
+
+ListeningSkillQuestions.propTypes = {
+  url: String,
 };

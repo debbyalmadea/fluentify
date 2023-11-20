@@ -21,17 +21,27 @@ export const ReadingSkillQuestions = () => {
   const dataTotal = data.datas[id - 1].total;
   const navigate = useNavigate();
   const reduxAnswers = useSelector((state) => state.answers);
-  const totalAnswered = Object.keys(reduxAnswers).length;
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     progressBarRef.current.max = dataTotal;
-    progressBarRef.current.value = totalAnswered;
+    progressBarRef.current.value = getTotalAnswered(reduxAnswers, id);
     progressBarRef.current.style.setProperty(
       "--range-progress",
       `${(progressBarRef.current.value / dataTotal) * 100}%`
     );
-  }, [totalAnswered]);
+  }, [reduxAnswers, dataTotal, id]);
+
+  function getTotalAnswered(reduxAnswers, id) {
+    console.log(data.datas, id);
+    const reduxQuestionIds = Object.keys(reduxAnswers);
+    const questionsIds = data.datas[id - 1].questions.map((question) =>
+      question.id.toString()
+    );
+    console.log(reduxQuestionIds, questionsIds);
+
+    return reduxQuestionIds.filter((id) => questionsIds.includes(id)).length;
+  }
 
   return (
     <>
