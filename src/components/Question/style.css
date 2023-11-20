@@ -44,7 +44,7 @@ line-height: 24px; /* 133.333% */
 
 /* FEEDBACK MODAL */
 .feedback-modal.modal-content {
-  align-items: start;
+  align-items: flex-start;
 }
 
 .feedback-modal .modal-title, .modal-text {

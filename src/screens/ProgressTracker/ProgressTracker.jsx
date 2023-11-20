@@ -9,14 +9,169 @@ import * as PropTypes from "prop-types";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Expertise } from "../../components/ExpertiseProgress/Expertise";
+import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  LineElement,
+  PointElement,
+  LinearScale,
+  Title,
+} from "chart.js";
+import "chart.js/auto"; // ADD THIS
 
-const FilterCategory = ({ selectedCategory, onChange }) => {
+let res = [
+  { date: "01/11", value: 40 },
+  { date: "02/11", value: 55 },
+  { date: "03/11", value: 70 },
+  { date: "04/11", value: 65 },
+  { date: "05/11", value: 80 },
+  { date: "06/11", value: 85 },
+  { date: "07/11", value: 90 },
+  { date: "08/11", value: 75 },
+  { date: "09/11", value: 60 },
+  { date: "10/11", value: 45 },
+];
+
+// Calculate the sum of values in alternateDataset
+const sumOfAlternateDataset = res.reduce((acc, data) => acc + data.value, 0);
+
+// Function to generate random values for additional datasets
+const generateRandomDataset = (sum) => {
+  const dataset = [];
+  const days = res.length;
+  for (let i = 0; i < days; i++) {
+    const randomValue = Math.floor(Math.random() * (sum / days));
+    dataset.push({ date: res[i].date, value: randomValue });
+  }
+  return dataset;
+};
+
+// Generate four additional datasets
+const listeningDataset = generateRandomDataset(sumOfAlternateDataset);
+const readingDataset = generateRandomDataset(sumOfAlternateDataset);
+const speakingDataset = generateRandomDataset(sumOfAlternateDataset);
+const writingDataset = generateRandomDataset(sumOfAlternateDataset);
+
+ChartJS.register(LineElement, PointElement, LinearScale, Title);
+
+const data = {
+  labels: res.map((e) => e.date),
+  datasets: [
+    {
+      label: "First dataset",
+      data: res.map((e) => e.value),
+      fill: true,
+      backgroundColor: ["rgba(219, 234, 254, 0.40)"],
+      borderColor: ["#2563EB"],
+      borderWidth: 3,
+    },
+  ],
+};
+
+const listeningData = {
+  labels: listeningDataset.map((e) => e.date),
+  datasets: [
+    {
+      label: "First dataset",
+      data: listeningDataset.map((e) => e.value),
+      fill: true,
+      backgroundColor: ["rgba(219, 234, 254, 0.40)"],
+      borderColor: ["#2563EB"],
+      borderWidth: 3,
+    },
+  ],
+};
+
+const readingData = {
+  labels: readingDataset.map((e) => e.date),
+  datasets: [
+    {
+      label: "First dataset",
+      data: readingDataset.map((e) => e.value),
+      fill: true,
+      backgroundColor: ["rgba(219, 234, 254, 0.40)"],
+      borderColor: ["#2563EB"],
+      borderWidth: 3,
+    },
+  ],
+};
+
+const writingData = {
+  labels: writingDataset.map((e) => e.date),
+  datasets: [
+    {
+      label: "First dataset",
+      data: writingDataset.map((e) => e.value),
+      fill: true,
+      backgroundColor: ["rgba(219, 234, 254, 0.40)"],
+      borderColor: ["#2563EB"],
+      borderWidth: 3,
+    },
+  ],
+};
+
+const speakingData = {
+  labels: speakingDataset.map((e) => e.date),
+  datasets: [
+    {
+      label: "First dataset",
+      data: speakingDataset.map((e) => e.value),
+      fill: true,
+      backgroundColor: ["rgba(219, 234, 254, 0.40)"],
+      borderColor: ["#2563EB"],
+      borderWidth: 3,
+    },
+  ],
+};
+
+const options = {
+  scales: {
+    y: {
+      grid: {
+        color: "white",
+      },
+    },
+    x: {
+      grid: {
+        color: "white",
+      },
+    },
+  },
+  pan: {
+    enabled: true,
+    mode: "x",
+  },
+  zoom: {
+    enabled: true,
+    mode: "x",
+    sensitivity: 0.5,
+  },
+  plugins: {
+    legend: {
+      display: false,
+    },
+  },
+  elements: {
+    point: {
+      radius: 0,
+    },
+  },
+  maintainAspectRatio: false,
+};
+const FilterCategory = ({
+  selectedCategory,
+  onChange,
+  style,
+  label = true,
+}) => {
   return (
     <DropdownMenu.Root>
-      <div className="DropdownMenu">
-        <DropdownMenu.Label className="DropdownMenuLabel">
-          Kategori
-        </DropdownMenu.Label>
+      <div className="DropdownMenu" style={style}>
+        {label && (
+          <DropdownMenu.Label className="DropdownMenuLabel">
+            Kategori
+          </DropdownMenu.Label>
+        )}
         <DropdownMenu.Trigger asChild>
           <button className="DropdownMenuTrigger">
             {selectedCategory ?? "Semua"}
@@ -108,6 +263,8 @@ FilterCategory.defaultProps = {
 FilterCategory.propTypes = {
   selectedCategory: PropTypes.string,
   onChange: PropTypes.func.isRequired,
+  style: PropTypes.object,
+  label: PropTypes.bool,
 };
 
 export const ProgressTracker = () => {
@@ -115,6 +272,8 @@ export const ProgressTracker = () => {
   const [histories, setHistories] = useState(history_data.history);
   const [startDate, setStartDate] = useState(undefined);
   const [endDate, setEndDate] = useState(new Date());
+  const [progressSelectedCategory, setProgressSelectedCategory] =
+    useState("Semua");
   function handleHistoryCategoryChange(category) {
     setSelectedCategory(category);
     if (category === "Semua") {
@@ -147,7 +306,31 @@ export const ProgressTracker = () => {
         <div className="main">
           <div className="container">
             <div className="progress">
-              <div className="filter"></div>
+              <div className="filter">
+                <FilterCategory
+                  label={false}
+                  selectedCategory={progressSelectedCategory}
+                  onChange={(category) => setProgressSelectedCategory(category)}
+                />
+              </div>
+              <div
+                style={{
+                  width: "100%",
+                  height: "240px",
+                }}
+              >
+                {progressSelectedCategory === "Semua" ? (
+                  <Line id="chart" data={data} options={options} />
+                ) : progressSelectedCategory === "Writing" ? (
+                  <Line id="chart" data={writingData} options={options} />
+                ) : progressSelectedCategory === "Listening" ? (
+                  <Line id="chart" data={listeningData} options={options} />
+                ) : progressSelectedCategory === "Reading" ? (
+                  <Line id="chart" data={readingData} options={options} />
+                ) : (
+                  <Line id="chart" data={speakingData} options={options} />
+                )}
+              </div>
             </div>
             <div className="expertise">
               <p className="section-title">Keahlian</p>
