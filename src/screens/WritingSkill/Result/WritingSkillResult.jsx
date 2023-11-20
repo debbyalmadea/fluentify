@@ -98,7 +98,7 @@ export const WritingSkillResult = ({ url }) => {
                   flag={"default"}
                   number={1}
                   total={1}
-                  question={"If you won a million dollar lottery, where would you go and why?"}
+                  question={"If you won a million dollar lottery, would you still be in school?"}
                 />
                 <div className="answer">
                   <p className="div">If I won the lottery, I would go to France.</p>
