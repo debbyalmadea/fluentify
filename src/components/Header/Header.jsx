@@ -47,7 +47,12 @@ export const Header = ({
               <p className="modal-title">Keluar dari halaman?</p>
             </div>
             <div className="modal-body">
-              <p className="modal-text">
+              <p
+                className="modal-text"
+                style={{
+                  textAlign: "center",
+                }}
+              >
                 Jika keluar, sesi latihan akan dihentikan dan kemajuan kamu
                 tidak tersimpan
               </p>

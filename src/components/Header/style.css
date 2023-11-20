@@ -4,7 +4,7 @@
   display: inline-flex;
   flex-direction: column;
   padding: 40px 16px 16px;
-  position: relative;
+  position: sticky;
   width: 100%;
 }
 

@@ -29,7 +29,7 @@
   flex-direction: column;
   flex-grow: 1;
   gap: 20px;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 50% 0px 0px 0px;
   position: relative;
   width: 100%;

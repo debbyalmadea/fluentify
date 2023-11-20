@@ -15,9 +15,11 @@ import { SpeakingSkill } from "./screens/SpeakingSkill";
 import { WritingSkill } from "./screens/WritingSkill";
 import { WritingSkillResult } from "./screens/WritingSkill/Result/WritingSkillResult"
 import { ListeningSkillResult } from "./screens/ListeningSkill/Result/ListeningSkillResult";
+import { ProgressTracker } from "./screens/ProgressTracker";
 import { SpeakingSkillResult } from "./screens/SpeakingSkill/Result";
 import { Toaster } from "react-hot-toast";
 import { SplashScreen } from "./screens/Splash/Splash";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/skill-builder/listening/:id/result",
     element: <ListeningSkillResult />,
+  },
+  {
+    path: "/progress-tracker",
+    element: <ProgressTracker />,
   },
   {
     path: "/skill-builder/speaking/result",

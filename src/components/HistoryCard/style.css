@@ -1,0 +1,175 @@
+.history-card {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--fluentifyneutral-400);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.history-card .frame {
+  align-items: flex-start;
+  align-self: stretch;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #d1d9e2;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: 0px 0px 20px;
+  position: relative;
+  width: 100%;
+}
+
+.history-card .listening-2 {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(29, 78, 216) 0%, rgba(29, 78, 216, 0.73) 100%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  padding: 16px 20px;
+  position: relative;
+  width: 60px;
+}
+
+.history-card .freepik-speech {
+  left: 0;
+  position: absolute;
+}
+
+.history-card .instance-node-2 {
+  height: 24px !important;
+  margin-left: -2px !important;
+  margin-right: -2px !important;
+  position: relative !important;
+  width: 24px !important;
+}
+
+.history-card .frame-2 {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 4px;
+  position: relative;
+}
+
+.history-card .text-wrapper {
+  color: #000000;
+  font-family: var(--fluentify-caption-medium-font-family);
+  font-size: var(--fluentify-caption-medium-font-size);
+  font-style: var(--fluentify-caption-medium-font-style);
+  font-weight: var(--fluentify-caption-medium-font-weight);
+  letter-spacing: var(--fluentify-caption-medium-letter-spacing);
+  line-height: var(--fluentify-caption-medium-line-height);
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.history-card .lorem-ipsum-dolor {
+  align-self: stretch;
+  color: #000000;
+  font-family: var(--fluentify-text-p1-font-family);
+  font-size: var(--fluentify-text-p1-font-size);
+  font-style: var(--fluentify-text-p1-font-style);
+  font-weight: var(--fluentify-text-p1-font-weight);
+  letter-spacing: var(--fluentify-text-p1-letter-spacing);
+  line-height: var(--fluentify-text-p1-line-height);
+  position: relative;
+}
+
+.history-card .frame-3 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.history-card .progress-instance {
+  color: var(--fluentifysuccess-600) !important;
+  font-family: var(--fluentify-overline-medium-font-family) !important;
+  font-size: var(--fluentify-overline-medium-font-size) !important;
+  font-style: var(--fluentify-overline-medium-font-style) !important;
+  font-weight: var(--fluentify-overline-medium-font-weight) !important;
+  letter-spacing: var(--fluentify-overline-medium-letter-spacing) !important;
+  line-height: var(--fluentify-overline-medium-line-height) !important;
+}
+
+.history-card .progress-2 {
+  height: 24px !important;
+  width: 24px !important;
+}
+
+.history-card .progress-3 {
+  height: 24px !important;
+  left: 3px !important;
+  width: 21px !important;
+}
+
+.history-card .low-fi-button {
+  align-items: center;
+  background-color: var(--fluentifyprimary-100);
+  border: 1px solid;
+  border-color: var(--fluentifyprimary);
+  border-radius: 12px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 6px;
+  height: 20px;
+  justify-content: center;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.history-card .text-wrapper-2 {
+  color: var(--fluentifyprimary);
+  font-family: "Inter", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: -0.01px;
+  line-height: 18px;
+  margin-bottom: -6px;
+  margin-top: -8px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.history-card .writing {
+  height: 49px;
+  top: 7px;
+  width: 53px;
+}
+
+.history-card .listening {
+  height: 46px;
+  top: 10px;
+  width: 48px;
+}
+
+.history-card .reading {
+  height: 37px;
+  top: 16px;
+  width: 50px;
+}
+
+.history-card .speaking {
+  height: 36px;
+  top: 12px;
+  width: 47px;
+}

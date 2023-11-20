@@ -1,0 +1,1 @@
+export { VuesaxLinearMicrophone } from "./VuesaxLinearMicrophone";
