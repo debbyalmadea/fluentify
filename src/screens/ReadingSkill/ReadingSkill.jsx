@@ -16,13 +16,14 @@ export const ReadingSkill = () => {
         <Header title="Reading Builder: Choose" />
         <div className="main">
           <div className="judul">Jenis Teks</div>
-          <div className="div">
+          <div className="reading-skill-div slide-in">
             {TextType.map((type, index) => (
               <Choice
-                className="choice-instance" 
-                state={index === selectedType ? "selected" : "default"} 
+                key={index}
+                className="choice-instance"
+                state={index === selectedType ? "selected" : "default"}
                 value={(index + 1).toString()}
-                label={type} 
+                label={type}
                 onClick={() => setSelectedType(index)}
               />
             ))}
@@ -36,7 +37,7 @@ export const ReadingSkill = () => {
           type="default"
           text="Lanjutkan"
           onClick={() => navigate("/skill-builder/reading/text/1")}
-          />
+        />
       </footer>
     </div>
   );

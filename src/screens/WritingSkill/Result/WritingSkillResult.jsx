@@ -13,7 +13,7 @@ import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
 import { Modal } from "../../../components/Modal";
 import { AnswerField } from "../../../components/AnswerField";
 
-export const WritingSkillResult = ({ url }) => {
+export const WritingSkillResult = () => {
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
 
@@ -81,9 +81,7 @@ export const WritingSkillResult = ({ url }) => {
           <Header title="Writing Builder: Result" backUrl={url ?? "/"} />
           <div className="main">
             <div className="container">
-
-
-              <div className="above-the-fold">
+              <div className="above-the-fold slide-in">
                 <div className="questions-3">
                   <img
                     className="group-3"
@@ -125,19 +123,29 @@ export const WritingSkillResult = ({ url }) => {
                 </div>
                 <div className="low-fi-mobile-cards">
                   <div className="low-fi-small-cards">
-                    <div style={{
-                      width: "300px",
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                      alignItems: "center"
-                    }}>
-                      <div style={{
+                    <div
+                      style={{
+                        width: "300px",
                         display: "flex",
                         flexDirection: "row",
+                        justifyContent: "space-between",
                         alignItems: "center",
-                      }}>
-                        <div style={{ width: "48px", height: "48px", marginRight: "16px" }}>
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "48px",
+                            height: "48px",
+                            marginRight: "16px",
+                          }}
+                        >
                           <CircleProgressBar value={data.score} />
                         </div>
                         <div className="text-wrapper-9">Idea</div>
@@ -146,19 +154,29 @@ export const WritingSkillResult = ({ url }) => {
                     </div>
                   </div>
                   <div className="low-fi-small-cards">
-                    <div style={{
-                      width: "300px",
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                      alignItems: "center"
-                    }}>
-                      <div style={{
+                    <div
+                      style={{
+                        width: "300px",
                         display: "flex",
                         flexDirection: "row",
+                        justifyContent: "space-between",
                         alignItems: "center",
-                      }}>
-                        <div style={{ width: "48px", height: "48px", marginRight: "16px" }}>
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "48px",
+                            height: "48px",
+                            marginRight: "16px",
+                          }}
+                        >
                           <CircleProgressBar value={data.score} />
                         </div>
                         <div className="text-wrapper-9">Grammar</div>
@@ -167,19 +185,29 @@ export const WritingSkillResult = ({ url }) => {
                     </div>
                   </div>
                   <div className="low-fi-small-cards">
-                    <div style={{
-                      width: "300px",
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                      alignItems: "center"
-                    }}>
-                      <div style={{
+                    <div
+                      style={{
+                        width: "300px",
                         display: "flex",
                         flexDirection: "row",
+                        justifyContent: "space-between",
                         alignItems: "center",
-                      }}>
-                        <div style={{ width: "48px", height: "48px", marginRight: "16px" }}>
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "48px",
+                            height: "48px",
+                            marginRight: "16px",
+                          }}
+                        >
                           <CircleProgressBar value={data.score} />
                         </div>
                         <div className="text-wrapper-9">Lexical</div>
@@ -187,7 +215,6 @@ export const WritingSkillResult = ({ url }) => {
                       <div className="text-wrapper-9">{data.point} poin</div>
                     </div>
                   </div>
-
                 </div>
               </div>
 
@@ -195,11 +222,13 @@ export const WritingSkillResult = ({ url }) => {
                 <p className="section-title">Jawaban</p>
                 <div className="container">
                   <div className="solution-answer-field">
-                    <img className="group" alt="Group" src="/img/group-12.png" />
+                    <img
+                      className="group"
+                      alt="Group"
+                      src="/img/group-12.png"
+                    />
                     <p className="answer">Great Job!</p>
-
                   </div>
-
                 </div>
               </div>
             </div>
@@ -221,8 +250,8 @@ export const WritingSkillResult = ({ url }) => {
               text="Selesai"
               type="default"
               onClick={() => {
-                toast.success("Selamat, latihan berhasil diselesaikan!")
-                navigate("/")
+                toast.success("Selamat, latihan berhasil diselesaikan!");
+                navigate("/");
               }}
             />
           </div>

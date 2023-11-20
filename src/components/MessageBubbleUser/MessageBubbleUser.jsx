@@ -12,7 +12,7 @@ export const MessageBubbleUser = ({
   messageItemText = "Lorem ipsum dolor sit amet",
 }) => {
   return (
-    <div className={`message-bubble-user ${className}`}>
+    <div className={`message-bubble-user ${className} slide-in`}>
       <MessageItem
         className={"message-bubble-user-item"}
         divClassName="message-item-instance"

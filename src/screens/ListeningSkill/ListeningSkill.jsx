@@ -63,7 +63,9 @@ export const ListeningSkillAudio = ({ url }) => {
         <div className="body">
           <Header title="Listening Builder: Audio" showAlert />
           <div className="main">
-            <AudioPlayer />
+            <div className="listening-skill-audio-player slide-in">
+              <AudioPlayer />
+            </div>
           </div>
         </div>
         <footer className="footer">

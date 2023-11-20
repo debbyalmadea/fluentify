@@ -87,7 +87,7 @@ export const ReadingSkillResult = () => {
           <Header title="Reading Builder: Result" backUrl="/" />
           <div className="main">
             <div className="container">
-              <div className="above-the-fold">
+              <div className="above-the-fold slide-in">
                 <div className="questions-3">
                   <img
                     className="group-3"
@@ -148,9 +148,7 @@ export const ReadingSkillResult = () => {
                   <div className="main">
                     <div className="text">
                       <div className="judul">{textData.title}</div>
-                      <p className="isi">
-                        {textData.text}
-                      </p>
+                      <p className="isi">{textData.text}</p>
                     </div>
                   </div>
                   <Button
@@ -158,8 +156,10 @@ export const ReadingSkillResult = () => {
                     size="large"
                     type="default"
                     text="Baca teks"
-                    onClick={() => navigate("/skill-builder/reading/text-revisit/1")}
-                    />
+                    onClick={() =>
+                      navigate("/skill-builder/reading/text-revisit/1")
+                    }
+                  />
                 </div>
               </div>
               <div className="answers-container">
@@ -222,8 +222,8 @@ export const ReadingSkillResult = () => {
               text="Selesai"
               type="default"
               onClick={() => {
-                toast.success("Selamat, latihan berhasil diselesaikan!")
-                navigate("/")
+                toast.success("Selamat, latihan berhasil diselesaikan!");
+                navigate("/");
               }}
             />
           </div>

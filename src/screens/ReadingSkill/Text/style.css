@@ -72,6 +72,8 @@
   letter-spacing: var(--fluentify-text-p1-letter-spacing);
   line-height: var(--fluentify-text-p1-line-height);
   position: relative;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
 }
 
 .reading-text .footer {

@@ -14,7 +14,7 @@ export const MessageBubbleBot = ({
   loading = false,
 }) => {
   return (
-    <div className={`message-bubble-bot ${className}`}>
+    <div className={`message-bubble-bot ${className} slide-in`}>
       <MascotAvatar className="mascot-avatar" />
       {loading ? (
         <MessageItem

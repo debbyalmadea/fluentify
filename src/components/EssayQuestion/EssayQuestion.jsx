@@ -28,7 +28,7 @@ export const EssayQuestion = ({
   };
   console.log(user_answer);
   return (
-    <div className={`essay state-${state} ${className}`}>
+    <div className={`essay state-${state} ${className} slide-in`}>
       <Question
         flag={state !== "default"}
         number={number}

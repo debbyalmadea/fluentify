@@ -14,17 +14,12 @@ export const ReadingSkillText = ({ revisit }) => {
         <Header
           showAlert={!revisit}
           title="Reading Builder: Text"
-          backUrl= {
-            revisit ? "/skill-builder/reading/1/result" 
-            : "/skill-builder/reading"
-          }
+          backUrl={revisit ? "/skill-builder/reading/1/result" : "/"}
         />
         <div className="main">
           <div className="text">
             <div className="judul">{data.title}</div>
-            <p className="isi">
-              {data.text}
-            </p>
+            <p className="isi slide-in">{data.text}</p>
           </div>
         </div>
       </div>
@@ -36,11 +31,12 @@ export const ReadingSkillText = ({ revisit }) => {
           type="default"
           text="Lanjutkan"
           onClick={() => {
-            const nextPage = revisit ? "/skill-builder/reading/1/result"
-                                      : "/skill-builder/reading/1/question/1"
-            navigate(nextPage)
+            const nextPage = revisit
+              ? "/skill-builder/reading/1/result"
+              : "/skill-builder/reading/1/question/1";
+            navigate(nextPage);
           }}
-          />
+        />
       </footer>
     </div>
   );

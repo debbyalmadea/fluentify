@@ -13,8 +13,8 @@ export const Choice = ({
   return (
     <button className="choice-button" onClick={onClick} disabled={disabled}>
       <div className={`choice ${state} ${className}`}>
-        <div className="text-wrapper">{value}.</div>
-        <div className="div">{label}</div>
+        <div className="choice-text-wrapper">{value}.</div>
+        <div className="choice-div">{label}</div>
       </div>
     </button>
   );
