@@ -6,10 +6,14 @@ import "./style.css";
 import { Modal } from "../../components/Modal";
 import { Question } from "../../assets/illusts/Question";
 import { useNavigate } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
-export const ListeningSkillAudio = () => {
+export const ListeningSkillAudio = ({ url }) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+  let [searchParams, setSearchParams] = useSearchParams();
+  let init = searchParams.get("init");
+
   return (
     <>
       <Modal open={open} setOpen={setOpen}>
@@ -34,7 +38,12 @@ export const ListeningSkillAudio = () => {
               className="modal-button"
               onClick={() => {
                 setOpen(false);
+                if (init) {
+                  navigate("/skill-builder/listening/1/question/1?init=true");
+                  return;
+                }
                 navigate("/skill-builder/listening/1/question/1");
+                return;
               }}
               type="default"
               text="Lanjut!"

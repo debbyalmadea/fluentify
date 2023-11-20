@@ -7,7 +7,6 @@ import { CloseCrossFill } from "../../../icons/CloseCrossFill";
 import { VuesaxLinearFlag } from "../../../icons/VuesaxLinearFlag";
 import "./style.css";
 import { CircleProgressBar } from "../../../components/CircleProgressBar";
-import { AudioPlayer } from "../../../components/AudioPlayer";
 import data from "../../../data/reading_skill_results.json";
 import textData from "../../../data/reading_skill_text.json";
 import { MultipleChoice } from "../../../components/MultipleChoice";

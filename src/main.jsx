@@ -16,10 +16,12 @@ import { WritingSkill } from "./screens/WritingSkill";
 import { WritingSkillResult } from "./screens/WritingSkill/Result/WritingSkillResult";
 import { ListeningSkillResult } from "./screens/ListeningSkill/Result/ListeningSkillResult";
 import { ProgressTracker } from "./screens/ProgressTracker";
+import { Leaderboard } from "./screens/Leaderboard/Leaderboard";
 import { SpeakingSkillResult } from "./screens/SpeakingSkill/Result";
 import { Toaster } from "react-hot-toast";
 import { SplashScreen } from "./screens/Splash/Splash";
 import { ChatBot, ChatBotResult } from "./screens/ChatBot";
+import { TanyaBot } from "./screens/TanyaBot";
 import { Login } from "./screens/Login/Login";
 import { Register } from "./screens/Register";
 import { InitialResult } from "./screens/InitialAssessment/Result";
@@ -28,7 +30,6 @@ import { ReadingSkill } from "./screens/ReadingSkill";
 import { ReadingSkillText } from "./screens/ReadingSkill/Text";
 import { ReadingSkillQuestions } from "./screens/ReadingSkill/Questions/ReadingSkillQuestions";
 import { ReadingSkillResult } from "./screens/ReadingSkill/Result/ReadingSkillResult";
-import { Leaderboard } from "./screens/Leaderboard/Leaderboard";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
     element: <ProgressTracker />,
   },
   {
+    path: "/leaderboard",
+    element: <Leaderboard />,
+  },
+  {
     path: "/skill-builder/speaking/result",
     element: <SpeakingSkillResult />,
   },
@@ -104,6 +109,10 @@ const router = createBrowserRouter([
     element: <ChatBot />,
   },
   {
+    path: "/skill-builder/writing/tanya-bot",
+    element: <TanyaBot backUrl={"/skill-builder/writing"} />,
+  },
+  {
     path: "/chat-bot/result",
     element: <ChatBotResult />,
   },
@@ -125,8 +134,16 @@ const router = createBrowserRouter([
     element: <SpeakingSkillResult url="/initial/result" />,
   },
   {
+    path: "/initial/result/writing",
+    element: <WritingSkillResult url="/initial/result" />,
+  },
+  {
     path: "/initial/result/listening",
     element: <ListeningSkillResult url="/initial/result" />,
+  },
+  {
+    path: "/initial/result/reading",
+    element: <ReadingSkillResult url="/initial/result" />,
   },
   {
     path: "/leaderboard",
