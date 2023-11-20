@@ -8,31 +8,31 @@
   position: relative;
 
   border-radius: 5px;
-border: 1px solid var(--fluentify-neutral-400, #D1D9E2);
-background: var(--white, #FFF);
+  border: 1px solid var(--fluentify-neutral-400, #d1d9e2);
+  background: var(--white, #fff);
 }
 
 .question .text-wrapper {
-  color: var(--fluentify-primary, #2563EB);
-text-align: start;
-/* Fluentify/Text/bold */
-font-family: Nunito;
-font-size: 14px;
-font-style: normal;
-font-weight: 700;
-line-height: 22px; /* 157.143% */
+  color: var(--fluentify-primary, #2563eb);
+  text-align: start;
+  /* Fluentify/Text/bold */
+  font-family: Nunito;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 157.143% */
 }
 
 .question .div {
   align-self: stretch;
   color: #000;
 
-/* Fluentify/Subtitles/subtitle 2 */
-font-family: Nunito;
-font-size: 18px;
-font-style: normal;
-font-weight: 600;
-line-height: 24px; /* 133.333% */
+  /* Fluentify/Subtitles/subtitle 2 */
+  font-family: Nunito;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 133.333% */
 }
 
 .question .flag {
@@ -47,7 +47,8 @@ line-height: 24px; /* 133.333% */
   align-items: start;
 }
 
-.feedback-modal .modal-title, .modal-text {
+.feedback-modal .modal-title,
+.modal-text {
   text-align: start;
 }
 
@@ -58,9 +59,9 @@ line-height: 24px; /* 133.333% */
 
 .checkboxes {
   display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 /* The container */
@@ -72,21 +73,20 @@ gap: 10px;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  
 }
 
 .checkboxes p {
   width: 100%;
   padding-left: 42px;
-    text-align: start;
-color: #000;
+  text-align: start;
+  color: #000;
 
-/* Fluentify/Text/p1 */
-font-family: Nunito;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 150% */
+  /* Fluentify/Text/p1 */
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
 }
 
 /* Hide the browser's default checkbox */
@@ -106,19 +106,19 @@ line-height: 24px; /* 150% */
   height: 25px;
   width: 25px;
   border-radius: 5px;
-border: 1px solid var(--fluentify-neutral-400, #D1D9E2);
-background: var(--white, #FFF);
+  border: 1px solid var(--fluentify-neutral-400, #d1d9e2);
+  background: var(--white, #fff);
 }
 
 /* On mouse-over, add a grey background color */
-.checkboxes  .container:hover input ~ .checkmark {
+.checkboxes .container:hover input ~ .checkmark {
   background-color: #fff;
 }
 
 /* When the checkbox is checked, add a blue background */
-.checkboxes  .container input:checked ~ .checkmark {
-border: 1px solid var(--fluentify-primary, #2563EB);
-background: var(--fluentify-primary, #2563EB);
+.checkboxes .container input:checked ~ .checkmark {
+  border: 1px solid var(--fluentify-primary, #2563eb);
+  background: var(--fluentify-primary, #2563eb);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -129,12 +129,12 @@ background: var(--fluentify-primary, #2563EB);
 }
 
 /* Show the checkmark when checked */
-.checkboxes  .container input:checked ~ .checkmark:after {
+.checkboxes .container input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.checkboxes  .container .checkmark:after {
+.checkboxes .container .checkmark:after {
   left: 7px;
   top: 4px;
   width: 5px;

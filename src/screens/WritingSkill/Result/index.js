@@ -1,0 +1,3 @@
+export { WritingSkillResult } from "./WritingSkillResult";
+
+

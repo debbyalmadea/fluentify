@@ -12,6 +12,8 @@ import {
   ListeningSkillQuestions,
 } from "./screens/ListeningSkill";
 import { SpeakingSkill } from "./screens/SpeakingSkill";
+import { WritingSkill } from "./screens/WritingSkill";
+import { WritingSkillResult } from "./screens/WritingSkill/Result/WritingSkillResult"
 import { ListeningSkillResult } from "./screens/ListeningSkill/Result/ListeningSkillResult";
 import { SpeakingSkillResult } from "./screens/SpeakingSkill/Result";
 import { Toaster } from "react-hot-toast";
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
   {
     path: "/ubah-topik",
     element: <UbahTopik />,
+  },
+  {
+    path: "/skill-builder/writing",
+    element: <WritingSkill />,
+  },
+  {
+    path: "/skill-builder/writing/result",
+    element: <WritingSkillResult />,
   },
   {
     path: "/skill-builder/listening",
