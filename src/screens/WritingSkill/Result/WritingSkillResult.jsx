@@ -14,8 +14,9 @@ import { Modal } from "../../../components/Modal";
 import { AnswerField } from "../../../components/AnswerField";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { EvaluationCard } from "../../../components/EvaluationCard";
 
-export const WritingSkillResult = () => {
+export const WritingSkillResult = ({ url }) => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
@@ -224,14 +225,15 @@ export const WritingSkillResult = () => {
               <div className="answers-container">
                 <p className="section-title">Jawaban</p>
                 <div className="container">
-                  <div className="solution-answer-field">
+                  <EvaluationCard evaluation_text={"Good Job!"} />
+                  {/* <div className="solution-answer-field">
                     <img
                       className="group"
                       alt="Group"
                       src="/img/group-12.png"
                     />
                     <p className="answer">Great Job!</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
