@@ -17,6 +17,7 @@ import { ProgressTracker } from "./screens/ProgressTracker";
 import { SpeakingSkillResult } from "./screens/SpeakingSkill/Result";
 import { Toaster } from "react-hot-toast";
 import { SplashScreen } from "./screens/Splash/Splash";
+import { Login } from "./screens/Login/Login";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
   {
     path: "/splash",
     element: <SplashScreen />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   }
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
