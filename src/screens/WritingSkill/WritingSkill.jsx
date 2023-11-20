@@ -67,7 +67,7 @@ export const WritingSkill = () => {
               <EssayQuestion
                 number={1}
                 total={1}
-                question='online education, predominant mode of learning in education'
+                question='If you won a million dollar lottery, where would you go and why?'
                 state={"default"}>
 
               </EssayQuestion>
@@ -75,24 +75,24 @@ export const WritingSkill = () => {
           </div>
         </div>
         <footer className="footer">
-            <Button
-              className="design-component-instance-node"
-              hierachy="secondary"
-              size="large"
-              type="default"
-              text="Tanya Bot"
-              onClick={() => {
-                navigate("/skill-builder/writing/tanya-bot");
-              }}
-            />
-            <Button
-              className="design-component-instance-node"
-              hierachy="primary"
-              size="large"
-              type="default"
-              text="Selesai"
-              onClick={() => setOpen(true)}
-            />
+          <Button
+            className="design-component-instance-node"
+            hierachy="secondary"
+            size="large"
+            type="default"
+            text="Tanya Bot"
+            onClick={() => {
+              navigate("/skill-builder/writing/tanya-bot");
+            }}
+          />
+          <Button
+            className="design-component-instance-node"
+            hierachy="primary"
+            size="large"
+            type="default"
+            text="Selesai"
+            onClick={() => setOpen(true)}
+          />
 
 
         </footer>

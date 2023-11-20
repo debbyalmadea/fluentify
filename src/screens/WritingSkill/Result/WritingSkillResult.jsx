@@ -98,10 +98,10 @@ export const WritingSkillResult = ({ url }) => {
                   flag={"default"}
                   number={1}
                   total={1}
-                  question={"Predominant mode of learning in education"}
+                  question={"If you won a million dollar lottery, where would you go and why?"}
                 />
                 <div className="answer">
-                  <p className="div">Lorem ipsum</p>
+                  <p className="div">If I won the lottery, I would go to France.</p>
                 </div>
                 <p className="section-title">Hasil</p>
                 <div className="low-fi-mobile-cards">
@@ -225,7 +225,7 @@ export const WritingSkillResult = ({ url }) => {
               <div className="answers-container">
                 <p className="section-title">Jawaban</p>
                 <div className="container">
-                  <EvaluationCard evaluation_text={"Good Job!"} />
+                  <EvaluationCard evaluation_text={"Tulisan yang sangat baik! Karanganmu terstruktur, koheren, dan mengalir dengan baik. Walaupun demikian, perhatikan pengejaan dan penggunaan Past Tense di dalam kalimat tulisanmu di masa depan."} />
                   {/* <div className="solution-answer-field">
                     <img
                       className="group"

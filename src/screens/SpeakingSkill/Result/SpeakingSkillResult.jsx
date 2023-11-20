@@ -120,6 +120,96 @@ export const SpeakingSkillResult = ({ url }) => {
                     </div>
                   </div>
                 </div>
+
+                <div className="low-fi-mobile-cards">
+                  <div
+                    style={{
+                      width: "300px",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: "48px",
+                          height: "48px",
+                          marginRight: "16px",
+                        }}
+                      >
+                        <CircleProgressBar value={70} />
+                      </div>
+                      <div className="text-wrapper-9">Pronunciation</div>
+                    </div>
+                    <div className="text-wrapper-9">{70} poin</div>
+                  </div>
+                  <div
+                    style={{
+                      width: "300px",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: "48px",
+                          height: "48px",
+                          marginRight: "16px",
+                        }}
+                      >
+                        <CircleProgressBar value={80} />
+                      </div>
+                      <div className="text-wrapper-9">Grammar</div>
+                    </div>
+                    <div className="text-wrapper-9">{80} poin</div>
+                  </div>
+                  <div
+                    style={{
+                      width: "300px",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: "48px",
+                          height: "48px",
+                          marginRight: "16px",
+                        }}
+                      >
+                        <CircleProgressBar value={90} />
+                      </div>
+                      <div className="text-wrapper-9">Fluency</div>
+                    </div>
+                    <div className="text-wrapper-9">{80} poin</div>
+                  </div>
+                </div>
               </div>
               <div className="audio-player-container slide-in">
                 <p className="section-title">Rekaman Pembicaraan</p>

@@ -71,9 +71,9 @@
 
 .freepik-robot-inject {
     height: 225px;
-    left: 125px;
+    left: 130px;
     position: absolute;
-    top: 100px;
+    top: 150px;
     width: 187px;
     animation: moveUpDown 6s ease infinite;
 }
@@ -88,8 +88,8 @@
 
 .user-input-textbox {
     position: absolute;
-    top: 360px;
-    left: 55px;
+    top: 420px;
+    left: 60px;
     width: 300px;
     height: 80px;
     z-index: 1;
