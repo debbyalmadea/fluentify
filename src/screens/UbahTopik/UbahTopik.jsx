@@ -21,7 +21,7 @@ const _UbahTopik = ({ topic, setTopic }) => {
     <div id="screen" className="ubah-topik">
       <div className="frame">
         <Header title={"Ubah Topik"} />
-        <div className="frame-2">
+        <div className="frame-2 main">
           <div className="frame-wrapper">
             <div className="frame-3 slide-in">
               <div className="text-wrapper-6">Pilih Topik</div>

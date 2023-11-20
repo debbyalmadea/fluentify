@@ -1,6 +1,6 @@
 .header {
   align-items: center;
-  background: linear-gradient(180deg, rgb(29, 78, 216) 0%, rgba(29, 78, 216, 0.73) 100%);
+  background: var(--fluentifyprimary-700);
   display: inline-flex;
   flex-direction: column;
   padding: 40px 16px 16px;
