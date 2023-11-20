@@ -1,0 +1,344 @@
+.reading-result {
+    align-items: flex-start;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.reading-result .body {
+    align-items: flex-start;
+    align-self: stretch;
+    background: linear-gradient(180deg, rgb(29, 78, 216) 0%, rgba(29, 78, 216, 0.73) 100%);
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.reading-result .header-instance {
+    background-color: transparent !important;
+    flex: 0 0 auto !important;
+}
+
+.reading-result .design-component-instance-node {
+    align-self: unset !important;
+    width: 100% !important;
+}
+
+.reading-result .main {
+    align-items: center;
+    align-self: stretch;
+    background-color: var(--white);
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
+    position: relative;
+    width: 100%;
+}
+
+.reading-result .container {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.reading-result .above-the-fold {
+    align-items: center;
+    align-self: stretch;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: var(--slate-200);
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 0px 40px;
+    position: relative;
+    width: 100%;
+}
+
+.reading-result .audio-player-container {
+    display: flex;
+    padding-bottom: 40px;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    border-bottom: 1px solid var(--fluentify-neutral-400, #D1D9E2);
+    width: 100%;
+}
+
+.reading-result .audio-player {
+    border-radius: 5px;
+    border: 1px solid var(--fluentify-neutral-400, #D1D9E2);
+}
+
+.reading-result .section-title {
+    color: #000;
+    text-align: start;
+    width: 100%;
+    /* Fluentify/Subtitles/subtitle 2 */
+    font-family: Nunito;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 133.333% */
+}
+
+
+.reading-result .questions-3 {
+    align-items: flex-start;
+    align-self: stretch;
+    background: linear-gradient(180deg, rgb(29, 78, 216) 0%, rgba(29, 78, 216, 0.73) 100%);
+    border: 1px solid;
+    border-color: var(--slate-100);
+    border-radius: 10px;
+    box-shadow: var(--shadow-XSM);
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 24px;
+    overflow: hidden;
+    padding: 16px 24px;
+    position: relative;
+    width: 100%;
+}
+
+.reading-result .group-3 {
+    height: 51px;
+    left: 6px;
+    position: absolute;
+    top: 5px;
+    width: 87px;
+}
+
+.reading-result .text-wrapper-7 {
+    color: var(--white);
+    font-family: var(--fluentify-subtitles-subtitle-2-font-family);
+    font-size: var(--fluentify-subtitles-subtitle-2-font-size);
+    font-style: var(--fluentify-subtitles-subtitle-2-font-style);
+    font-weight: var(--fluentify-subtitles-subtitle-2-font-weight);
+    letter-spacing: var(--fluentify-subtitles-subtitle-2-letter-spacing);
+    line-height: var(--fluentify-subtitles-subtitle-2-line-height);
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.reading-result .low-fi-mobile-cards {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 10px;
+    border: 1px solid var(--fluentify-neutral-400, #D1D9E2);
+    background: var(--white, #FFF);
+}
+
+.reading-result .point-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.reading-result .text-wrapper-8 {
+    color: #000;
+    text-align: center;
+
+    /* Fluentify/Text/p2 */
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    /* 157.143% */
+}
+
+.reading-result .point {
+    display: flex;
+    height: 20px;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-radius: 12px;
+    border: 1px solid var(--fluentifyprimary, #2563EB);
+    background: var(--fluentifyprimary-100, #DBEAFE);
+}
+
+.reading-result .text-wrapper-9 {
+    color: var(--fluentifyprimary, #2563EB);
+    text-align: center;
+
+    /* Fluentify Caption/medium */
+    font-family: Nunito;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    /* 133.333% */
+}
+
+.reading-result .container-2 {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.reading-result .div-2 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 4px;
+    height: 22px;
+    position: relative;
+}
+
+.reading-result .check-fill-2 {
+    height: 16px !important;
+    width: 16px !important;
+}
+
+.reading-result .check-fill-3 {
+    height: 15px !important;
+    width: 15px !important;
+}
+
+.reading-result .text-wrapper-10 {
+    color: var(--fluentifysuccess-600);
+    font-family: var(--fluentify-text-p2-font-family);
+    font-size: var(--fluentify-text-p2-font-size);
+    font-style: var(--fluentify-text-p2-font-style);
+    font-weight: var(--fluentify-text-p2-font-weight);
+    letter-spacing: var(--fluentify-text-p2-letter-spacing);
+    line-height: var(--fluentify-text-p2-line-height);
+    margin-top: -0.5px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.reading-result .dot-fill-fill {
+    border: 1px solid;
+    border-color: #d1d9e2;
+    border-radius: 50px;
+    height: 16px;
+    position: relative;
+    width: 16px;
+}
+
+.reading-result .text-wrapper-11 {
+    color: var(--black);
+    font-family: var(--fluentify-text-p2-font-family);
+    font-size: var(--fluentify-text-p2-font-size);
+    font-style: var(--fluentify-text-p2-font-style);
+    font-weight: var(--fluentify-text-p2-font-weight);
+    letter-spacing: var(--fluentify-text-p2-letter-spacing);
+    line-height: var(--fluentify-text-p2-line-height);
+    margin-top: -0.5px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.reading-result .close-cross-fill-3 {
+    height: 16px !important;
+    position: relative !important;
+    width: 16px !important;
+}
+
+.reading-result .text-wrapper-12 {
+    color: var(--fluentifydanger-600);
+    font-family: var(--fluentify-text-p2-font-family);
+    font-size: var(--fluentify-text-p2-font-size);
+    font-style: var(--fluentify-text-p2-font-style);
+    font-weight: var(--fluentify-text-p2-font-weight);
+    letter-spacing: var(--fluentify-text-p2-letter-spacing);
+    line-height: var(--fluentify-text-p2-line-height);
+    margin-top: -0.5px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+/* ANSWERS SECTION */
+.reading-result .answers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    width: 100%;
+}
+
+.reading-result .answers-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+}
+
+/* FOOTER SECTION */
+.reading-result .footer {
+    align-items: center;
+    align-self: stretch;
+    background-color: var(--white);
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0px 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.reading-result .container-3 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 12px;
+    justify-content: center;
+    padding: 0px 16px;
+    position: relative;
+    width: 100%;
+}
+
+.reading-result .button-5 {
+    display: flex !important;
+    flex: 1 !important;
+    flex-grow: 1 !important;
+}
+
+.expertise {
+    display: flex;
+    padding-bottom: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--fluentify-neutral-400, #D1D9E2);
+}

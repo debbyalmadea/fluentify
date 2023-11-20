@@ -20,6 +20,7 @@ import { SplashScreen } from "./screens/Splash/Splash";
 import { Login } from "./screens/Login/Login";
 import { Register } from "./screens/Register";
 import { InitialResult } from "./screens/InitialAssessment/Result";
+import { InitialAssessment } from "./screens/InitialAssessment";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />
+  },
+  {
+    path: "/initial",
+    element: <InitialAssessment />
   },
   {
     path: "/initial/result",
