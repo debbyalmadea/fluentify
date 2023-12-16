@@ -71,6 +71,14 @@ align-self: stretch;
 border-bottom: 1px solid var(--fluentify-neutral-400, #D1D9E2);
 }
 
+.progress-tracker .history {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 20px;
+align-self: stretch;
+}
+
 .DropdownMenu {
     display: flex;
 flex-direction: column;

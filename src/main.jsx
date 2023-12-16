@@ -30,6 +30,7 @@ import { ReadingSkill } from "./screens/ReadingSkill";
 import { ReadingSkillText } from "./screens/ReadingSkill/Text";
 import { ReadingSkillQuestions } from "./screens/ReadingSkill/Questions/ReadingSkillQuestions";
 import { ReadingSkillResult } from "./screens/ReadingSkill/Result/ReadingSkillResult";
+import { History } from "./screens/History";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
   {
     path: "/progress-tracker",
     element: <ProgressTracker />,
+  },
+  {
+    path: "/progress-tracker/history",
+    element: <History />,
   },
   {
     path: "/leaderboard",

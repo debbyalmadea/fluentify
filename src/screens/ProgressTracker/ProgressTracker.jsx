@@ -1,12 +1,9 @@
 import { useState } from "react";
 import { BottomNavigation } from "../../components/BottomNavigation";
 import { Header } from "../../components/Header";
-import { HistoryCard } from "../../components/HistoryCard/HistoryCard";
-import history_data from "../../data/history.json";
 import "./style.css";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import * as PropTypes from "prop-types";
-import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Expertise } from "../../components/ExpertiseProgress/Expertise";
 import { Line } from "react-chartjs-2";
@@ -18,7 +15,8 @@ import {
   Title,
 } from "chart.js";
 import "chart.js/auto"; // ADD THIS
-import { Link } from "react-router-dom";
+import { Button } from "../../components/Button";
+import { useNavigate } from "react-router-dom";
 
 let res = [
   { date: "01/11", value: 40 },
@@ -269,51 +267,9 @@ FilterCategory.propTypes = {
 };
 
 export const ProgressTracker = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Semua");
-  const [histories, setHistories] = useState(history_data.history);
-  const [startDate, setStartDate] = useState(undefined);
-  const [endDate, setEndDate] = useState(new Date());
   const [progressSelectedCategory, setProgressSelectedCategory] =
     useState("Semua");
-  function handleHistoryCategoryChange(category) {
-    setSelectedCategory(category);
-    if (category === "Semua") {
-      setHistories(history_data.history);
-    } else {
-      setHistories(
-        history_data.history.filter(
-          (history) => history.category === category.toLowerCase()
-        )
-      );
-    }
-  }
-
-  function handleDateChange(startDate, endDate) {
-    setStartDate(startDate);
-    setEndDate(endDate);
-    setHistories(
-      history_data.history.filter(
-        (history) =>
-          new Date(history.date) >= startDate &&
-          new Date(history.date) <= endDate
-      )
-    );
-  }
-
-  function getLink(category) {
-    switch (category.toLowerCase()) {
-      case "listening":
-        return "/skill-builder/listening/1/result";
-      case "writing":
-        return "/skill-builder/writing/result";
-      case "reading":
-        return "/skill-builder/reading/1/result";
-      case "speaking":
-        return "/skill-builder/speaking/result";
-      default:
-        break;
-    }
-  }
+  const navigate = useNavigate();
 
   return (
     <div className="progress-tracker">
@@ -378,46 +334,13 @@ export const ProgressTracker = () => {
               </div>
             </div>
             <div className="history">
-              <p className="section-title">Riwayat</p>
-              <FilterCategory
-                selectedCategory={selectedCategory}
-                onChange={handleHistoryCategoryChange}
+              <Button
+                type={"default"}
+                hierachy={"primary"}
+                size={"large"}
+                text="Riwayat"
+                onClick={() => navigate("/progress-tracker/history")}
               />
-              <div className="datepicker-container">
-                <p className="datepicker-label">Tanggal Awal</p>
-                <ReactDatePicker
-                  showIcon
-                  placeholderText="DD/MM/YYYY"
-                  selected={startDate}
-                  onChange={(date) => handleDateChange(date, endDate)}
-                  dateFormat="dd/MM/yyyy"
-                />
-              </div>
-              <div className="datepicker-container">
-                <p className="datepicker-label">Tanggal Akhir</p>
-                <ReactDatePicker
-                  showIcon
-                  placeholderText="DD/MM/YYYY"
-                  selected={endDate}
-                  onChange={(date) => handleDateChange(startDate, date)}
-                  dateFormat="dd/MM/yyyy"
-                />
-              </div>
-
-              {histories.map((history, index) => {
-                console.log(history);
-                return (
-                  <Link
-                    to={getLink(history.category)}
-                    key={index}
-                    style={{
-                      width: "100%",
-                    }}
-                  >
-                    <HistoryCard {...history} />
-                  </Link>
-                );
-              })}
             </div>
           </div>
         </div>
