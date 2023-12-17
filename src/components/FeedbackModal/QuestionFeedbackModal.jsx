@@ -6,7 +6,13 @@ import { VuesaxLinearFlag } from "../../icons/VuesaxLinearFlag";
 import { Button } from "../Button";
 import { AnswerField } from "../AnswerField";
 import { useSelector } from "react-redux";
-export const QuestionFeedbackModal = ({ open, setOpen, title, question }) => {
+export const QuestionFeedbackModal = ({
+  open,
+  setOpen,
+  title,
+  highlight,
+  choices,
+}) => {
   const [sent, setSent] = useState(false);
   const openModal = useSelector((state) => state.openModal);
   console.log(openModal);
@@ -31,20 +37,19 @@ export const QuestionFeedbackModal = ({ open, setOpen, title, question }) => {
           </div>
           <div className="modal-body">
             <p className="feedback-modal-text modal-text">
-              Apa keluhanmu untuk soal{" "}
-              <span style={{ fontWeight: "bolder" }}>{question}</span>
+              Apa keluhanmu untuk{" "}
+              <span style={{ fontWeight: "bolder" }}>{highlight}</span>
             </p>
             <div className="checkboxes">
-              <label className="container">
-                <p>Solusi yang diberikan salah</p>
-                <input type="checkbox" />
-                <span className="checkmark"></span>
-              </label>
-              <label className="container">
-                <p>Jawaban saya seharusnya benar</p>
-                <input type="checkbox" />
-                <span className="checkmark"></span>
-              </label>
+              {choices.map((choice, idx) => {
+                return (
+                  <label key={idx} className="container">
+                    <p>{choice}</p>
+                    <input type="checkbox" />
+                    <span className="checkmark"></span>
+                  </label>
+                );
+              })}
             </div>
             <AnswerField placeholder="Tambahkan komentar..." />
           </div>
@@ -83,5 +88,6 @@ QuestionFeedbackModal.propTypes = {
   open: PropTypes.bool,
   setOpen: PropTypes.func,
   title: PropTypes.string,
-  question: PropTypes.string,
+  highlight: PropTypes.string,
+  choices: PropTypes.array,
 };
