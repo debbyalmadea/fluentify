@@ -299,7 +299,7 @@ export const ProgressTracker = () => {
           <Header title={"Progress Tracker"} />
           <div className="main">
             <div className="container">
-              <div className="progress">
+              <div className="progress-screen">
                 <div className="filter">
                   <FilterCategory
                     label={false}
