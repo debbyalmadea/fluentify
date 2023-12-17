@@ -10,7 +10,7 @@ import orgber from "../../assets/illusts/orgber.png";
 import { ChevronLeftRegular } from "../../icons/ChevronLeftRegular";
 const pages = {
     0: {
-        title: "Pembelajaran Bahasa Inggris Komprehensif",
+        title: "Pembelajaran Komprehensif",
         description: "Fluentify mengasah 4 aspek berbahasa Inggris sekaligus, dari aspek Writing, Reading, Listening, dan Speaking.",
         image: "https://cdn.animaapp.com/projects/6556e0dedaf633747531ba10/releases/655a29648c17a2032c6172f9/img/conversation-amico-1.svg",
     },
