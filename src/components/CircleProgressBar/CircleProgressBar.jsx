@@ -16,7 +16,7 @@ const TRAIL_COLOR = {
   LOW: "#FCA5A5",
 };
 
-export function CircleProgressBar({ value }) {
+export function CircleProgressBar({ value, text, overrideColor }) {
   const [pathColor, setPathColor] = useState(COLOR.INITIAL);
   const [trailColor, setTrailColor] = useState(TRAIL_COLOR.INITIAL);
   useEffect(() => {
@@ -42,13 +42,13 @@ export function CircleProgressBar({ value }) {
     >
       <CircularProgressbar
         value={value}
-        text={value}
+        text={text ?? value}
         strokeWidth={8}
         styles={buildStyles({
-          textColor: pathColor,
+          textColor: overrideColor ? overrideColor.pathColor : pathColor,
           textSize: "30px",
-          pathColor: pathColor,
-          trailColor: trailColor,
+          pathColor: overrideColor ? overrideColor.pathColor : pathColor,
+          trailColor: overrideColor ? overrideColor.trailColor : trailColor,
         })}
       />
     </div>
@@ -61,4 +61,6 @@ CircleProgressBar.defaultProps = {
 
 CircleProgressBar.propTypes = {
   value: PropTypes.number,
+  text: PropTypes.string,
+  overrideColor: PropTypes.object,
 };

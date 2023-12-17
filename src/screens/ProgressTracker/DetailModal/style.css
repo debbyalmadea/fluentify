@@ -1,0 +1,6 @@
+.detail-modal.modal-content {
+    align-items: flex-start;
+  } 
+.detail-modal-title, .detail-modal-text {
+text-align: start;
+} 

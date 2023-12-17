@@ -38,7 +38,14 @@ export const HistoryCard = ({ category, className, score, point, topic }) => {
           )}
         </div>
         <div className="frame-2">
-          <div className="text-wrapper">Topik:</div>
+          <div
+            className="text-wrapper"
+            style={{
+              color: "#737373",
+            }}
+          >
+            17/11/2023
+          </div>
           <div className="lorem-ipsum-dolor">
             {["listening", "reading", "speaking"].includes(category) && (
               <p className="p">{topic}</p>
@@ -51,9 +58,9 @@ export const HistoryCard = ({ category, className, score, point, topic }) => {
       <div className="frame-3">
         <div
           style={{
-            width: "32px",
-            height: "32px",
-            fontSize: "32px",
+            width: "48px",
+            height: "48px",
+            fontSize: "48px",
           }}
         >
           <CircleProgressBar value={score} />

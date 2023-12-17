@@ -147,13 +147,14 @@ export const History = () => {
   }
 
   function handleDateChange(startDate, endDate) {
+    let start = startDate ?? new Date("1970-01-01");
+    let end = endDate ?? new Date();
     setStartDate(startDate);
     setEndDate(endDate);
     setHistories(
       history_data.history.filter(
         (history) =>
-          new Date(history.date) >= startDate &&
-          new Date(history.date) <= endDate
+          new Date(history.date) >= start && new Date(history.date) <= end
       )
     );
   }
@@ -205,20 +206,31 @@ export const History = () => {
                 />
               </div>
 
-              {histories.map((history, index) => {
-                console.log(history);
-                return (
-                  <Link
-                    to={getLink(history.category)}
-                    key={index}
-                    style={{
-                      width: "100%",
-                    }}
-                  >
-                    <HistoryCard {...history} />
-                  </Link>
-                );
-              })}
+              {histories.length === 0 && (
+                <div className="empty-history">
+                  <p className="empty-history-text">Tidak ada riwayat</p>
+                </div>
+              )}
+
+              {histories.length > 0 && (
+                <>
+                  <p className="datepicker-label">Bulan lalu</p>
+                  {histories.map((history, index) => {
+                    console.log(history);
+                    return (
+                      <Link
+                        to={getLink(history.category)}
+                        key={index}
+                        style={{
+                          width: "100%",
+                        }}
+                      >
+                        <HistoryCard {...history} />
+                      </Link>
+                    );
+                  })}
+                </>
+              )}
             </div>
           </div>
         </div>

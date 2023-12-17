@@ -7,10 +7,13 @@ import { Modal } from "../../components/Modal";
 import { Question } from "../../assets/illusts/Question";
 import { useNavigate } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
+import { reset } from "../../actions";
+import { useDispatch } from "react-redux";
 
 export const ListeningSkillAudio = ({ url }) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   let [searchParams, setSearchParams] = useSearchParams();
   let init = searchParams.get("init");
 
@@ -80,7 +83,10 @@ export const ListeningSkillAudio = ({ url }) => {
             size="large"
             type="default"
             text="Lanjutkan"
-            onClick={() => setOpen(true)}
+            onClick={() => {
+              dispatch(reset());
+              setOpen(true);
+            }}
           />
         </footer>
       </div>

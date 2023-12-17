@@ -12,3 +12,8 @@ export const saveAnswer = (questionId, answer) => ({
   type: SAVE_ANSWER,
   payload: { questionId, answer },
 });
+
+export const RESET = "RESET";
+export const reset = () => ({
+  type: RESET,
+});

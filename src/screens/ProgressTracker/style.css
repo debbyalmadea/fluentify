@@ -86,12 +86,12 @@ position: relative;
 text-align: start;
 padding-left: 0px;
 
-/* Fluentify Input/label */
-font-family: Nunito;
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: 22px; /* 183.333% */
+ /* Fluentify/Text/p1 */
+ font-family: Nunito;
+ font-size: 16px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 24px; /* 150% */
 }
 
 .DropdownMenuTrigger {
@@ -337,3 +337,52 @@ line-height: 22px; /* 183.333% */
   .react-datepicker__day-names {
     margin-top: 12px;
   }
+
+.h2 {
+  color: #000;
+
+/* Fluentify/Subtitles/subtitle 2 */
+font-family: Nunito;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 133.333% */
+align-self: stretch;
+}
+
+.aspect-detail {
+  display: flex;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+}
+
+.aspect-detail-text-container {
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+flex: 1 0 0;
+}
+
+.placeholder {
+  color: #000;
+font-family: Nunito;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+align-self: stretch;
+}
+
+.caption {
+  align-self: stretch;
+  color: #000;
+
+/* Fluentify Caption/medium */
+font-family: Nunito;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}

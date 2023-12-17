@@ -4,9 +4,12 @@ import { Choice } from "../../components/Choice";
 import { Header } from "../../components/Header";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
+import { reset } from "../../actions";
+import { useDispatch } from "react-redux";
 
 export const ReadingSkill = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const TextType = ["Artikel", "Cerita Pendek", "Cerita Panjang"];
   const [selectedType, setSelectedType] = useState(0);
 
@@ -36,9 +39,10 @@ export const ReadingSkill = () => {
           size="large"
           type="default"
           text="Lanjutkan"
-          onClick={() =>
-            navigate(`/skill-builder/reading/text/${selectedType + 1}`)
-          }
+          onClick={() => {
+            dispatch(reset());
+            navigate(`/skill-builder/reading/text/${selectedType + 1}`);
+          }}
         />
       </footer>
     </div>

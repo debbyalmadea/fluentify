@@ -94,12 +94,12 @@ position: relative;
 text-align: start;
 padding-left: 0px;
 
-/* Fluentify Input/label */
-font-family: Nunito;
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: 22px; /* 183.333% */
+ /* Fluentify/Text/p1 */
+ font-family: Nunito;
+ font-size: 16px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 24px; /* 150% */
 }
 
 .DropdownMenuTrigger {
@@ -256,15 +256,15 @@ flex: 1 0 0;
 }
 
 .datepicker-label {
-    color: var(--black, #000);
-text-align: center;
-
-/* Fluentify Input/label */
-font-family: Nunito;
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: 22px; /* 183.333% */
+  color: var(--black, #000);
+  text-align: center;
+  
+  /* Fluentify/Text/p1 */
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
 }
 
 .react-datepicker__triangle {
@@ -344,4 +344,16 @@ line-height: 22px; /* 183.333% */
 
   .react-datepicker__day-names {
     margin-top: 12px;
+  }
+
+  .empty-history-text {
+    color: var(--Fluentify-Neutral-500, #737373);
+text-align: center;
+
+ /* Fluentify/Text/p1 */
+ font-family: Nunito;
+ font-size: 16px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 24px; /* 150% */
   }

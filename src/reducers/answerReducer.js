@@ -1,4 +1,4 @@
-import { SAVE_ANSWER } from "../actions";
+import { RESET, SAVE_ANSWER } from "../actions";
 
 const initialState = {};
 
@@ -9,6 +9,8 @@ const answersReducer = (state = initialState, action) => {
         ...state,
         [action.payload.questionId]: action.payload.answer,
       };
+    case RESET:
+      return initialState;
     default:
       return state;
   }
