@@ -6,7 +6,7 @@ import { Turtle } from "../../icons/Turtle";
 import Speech from 'react-speech';
 
 const pairs = {
-    // "hi": "Hi, I am Fluenty! How can I assist you today?",
+    "hi": "Hi, I am Fluenty! How can I assist you today?",
     "hello": "Hi, I am Fluenty! How can I assist you today?",
     "name": "I'm Fluenty, your chatbot assistant companion! What's your name?",
     "education": "Education is the key to success! Let's see, what motivates you to learn English?",
@@ -32,11 +32,12 @@ const pairs = {
 
 
 export const MicPlayer = (props) => {
-    const audioRef = useRef();
+
     const [isPlaying, setIsPlaying] = useState(false);
     const [speed, setSpeed] = useState(1);
-    const { transcript, resetTranscript, SpeechRecognition } = props;
+    const { transcript, resetTranscript, SpeechRecognition, progressBarRef } = props;
     const [initial, setInitial] = useState(true)
+    const [clicks, setClicks] = useState(0);
     const getResponse = () => {
         if (initial) {
             return "Hi, welcome to Fluentify! I see you have chosen travel as a topic. May I know why?"
@@ -70,7 +71,6 @@ export const MicPlayer = (props) => {
         const timeoutId = setTimeout(() => {
             clickPlayButton();
         }, 1000);
-
         return () => {
             clearTimeout(timeoutId);
         };
@@ -95,6 +95,18 @@ export const MicPlayer = (props) => {
 
     const togglePlayPause = () => {
         setIsPlaying((prev) => !prev);
+        if (progressBarRef.current.value !== undefined) {
+            progressBarRef.current.value = clicks + 1;
+        } else {
+            progressBarRef.current.value = clicks;
+        }
+        if (isPlaying == false) {
+            setClicks((clicks) => clicks + 1)
+        }
+        progressBarRef.current.style.setProperty(
+            "--range-progress",
+            `${Math.min((progressBarRef.current.value / 5) * 100, 100)}%`
+        );
     };
 
     const handleSlowDown = () => {
