@@ -17,6 +17,7 @@ export const MultipleChoice = ({
   correct_answer,
   explanation,
   correct_answer_label,
+  onFlagClick,
 }) => {
   console.log(question);
   const dispatch = useDispatch();
@@ -50,6 +51,7 @@ export const MultipleChoice = ({
         number={number}
         total={total}
         question={question}
+        onFlagClick={onFlagClick}
       />
       <div className="frame-2">
         {answers.map((answer, index) => (
@@ -104,4 +106,5 @@ MultipleChoice.propTypes = {
   correct_answer: PropTypes.string,
   explanation: PropTypes.string,
   correct_answer_label: PropTypes.string,
+  onFlagClick: PropTypes.func,
 };

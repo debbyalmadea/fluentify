@@ -17,6 +17,10 @@ import {
 import "chart.js/auto"; // ADD THIS
 import { Button } from "../../components/Button";
 import { useNavigate } from "react-router-dom";
+import { WritingModal } from "./DetailModal/WritingModal";
+import { ListeningModal } from "./DetailModal/ListeningModal";
+import { ReadingModal } from "./DetailModal/ReadingModal";
+import { SpeakingModal } from "./DetailModal/SpeakingModal";
 
 let res = [
   { date: "01/11", value: 40 },
@@ -270,82 +274,119 @@ export const ProgressTracker = () => {
   const [progressSelectedCategory, setProgressSelectedCategory] =
     useState("Semua");
   const navigate = useNavigate();
+  const [open, setOpen] = useState();
 
   return (
-    <div className="progress-tracker">
-      <div className="body">
-        <Header title={"Progress Tracker"} />
-        <div className="main">
-          <div className="container">
-            <div className="progress">
-              <div className="filter">
-                <FilterCategory
-                  label={false}
-                  selectedCategory={progressSelectedCategory}
-                  onChange={(category) => setProgressSelectedCategory(category)}
+    <>
+      <WritingModal
+        open={open === "writing"}
+        setOpen={(bool) => setOpen(bool ? "writing" : undefined)}
+      />
+      <ListeningModal
+        open={open === "listening"}
+        setOpen={(bool) => setOpen(bool ? "listening" : undefined)}
+      />
+      <ReadingModal
+        open={open === "reading"}
+        setOpen={(bool) => setOpen(bool ? "reading" : undefined)}
+      />
+      <SpeakingModal
+        open={open === "speaking"}
+        setOpen={(bool) => setOpen(bool ? "speaking" : undefined)}
+      />
+      <div className="progress-tracker">
+        <div className="body">
+          <Header title={"Progress Tracker"} />
+          <div className="main">
+            <div className="container">
+              <div className="progress-screen">
+                <div className="filter">
+                  <FilterCategory
+                    label={false}
+                    selectedCategory={progressSelectedCategory}
+                    onChange={(category) =>
+                      setProgressSelectedCategory(category)
+                    }
+                  />
+                </div>
+                <div
+                  style={{
+                    width: "100%",
+                    height: "240px",
+                  }}
+                >
+                  {progressSelectedCategory === "Semua" ? (
+                    <Line id="chart" data={data} options={options} />
+                  ) : progressSelectedCategory === "Writing" ? (
+                    <Line id="chart" data={writingData} options={options} />
+                  ) : progressSelectedCategory === "Listening" ? (
+                    <Line id="chart" data={listeningData} options={options} />
+                  ) : progressSelectedCategory === "Reading" ? (
+                    <Line id="chart" data={readingData} options={options} />
+                  ) : (
+                    <Line id="chart" data={speakingData} options={options} />
+                  )}
+                </div>
+              </div>
+              <div className="expertise">
+                <p className="section-title">Keahlian</p>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
+                  <Expertise
+                    category="Writing"
+                    level="Novice"
+                    value={50}
+                    onClick={() => setOpen("writing")}
+                  />
+                  <Expertise
+                    category="Listening"
+                    level="Intermediate"
+                    value={20}
+                    onClick={() => setOpen("listening")}
+                  />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
+                  <Expertise
+                    category="Reading"
+                    level="Advanced"
+                    value={80}
+                    onClick={() => setOpen("reading")}
+                  />
+                  <Expertise
+                    category="Speaking"
+                    level="Expert"
+                    value={60}
+                    onClick={() => setOpen("speaking")}
+                  />
+                </div>
+              </div>
+              <div className="history">
+                <Button
+                  type={"default"}
+                  hierachy={"primary"}
+                  size={"large"}
+                  text="Riwayat"
+                  onClick={() => navigate("/progress-tracker/history")}
                 />
               </div>
-              <div
-                style={{
-                  width: "100%",
-                  height: "240px",
-                }}
-              >
-                {progressSelectedCategory === "Semua" ? (
-                  <Line id="chart" data={data} options={options} />
-                ) : progressSelectedCategory === "Writing" ? (
-                  <Line id="chart" data={writingData} options={options} />
-                ) : progressSelectedCategory === "Listening" ? (
-                  <Line id="chart" data={listeningData} options={options} />
-                ) : progressSelectedCategory === "Reading" ? (
-                  <Line id="chart" data={readingData} options={options} />
-                ) : (
-                  <Line id="chart" data={speakingData} options={options} />
-                )}
-              </div>
-            </div>
-            <div className="expertise">
-              <p className="section-title">Keahlian</p>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                  width: "100%",
-                }}
-              >
-                <Expertise category="Writing" level="Novice" value={50} />
-                <Expertise
-                  category="Listening"
-                  level="Intermediate"
-                  value={20}
-                />
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                  width: "100%",
-                }}
-              >
-                <Expertise category="Reading" level="Advanced" value={80} />
-                <Expertise category="Speaking" level="Expert" value={60} />
-              </div>
-            </div>
-            <div className="history">
-              <Button
-                type={"default"}
-                hierachy={"primary"}
-                size={"large"}
-                text="Riwayat"
-                onClick={() => navigate("/progress-tracker/history")}
-              />
             </div>
           </div>
         </div>
+        <BottomNavigation screen={"progress"} />
       </div>
-      <BottomNavigation screen={"progress"} />
-    </div>
+    </>
   );
 };

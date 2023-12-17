@@ -18,6 +18,7 @@ export const EssayQuestion = ({
   user_answer,
   correct_answer,
   explanation,
+  onFlagClick,
 }) => {
   const dispatch = useDispatch();
   const reduxAnswers = useSelector((state) => state.answers);
@@ -34,6 +35,7 @@ export const EssayQuestion = ({
         number={number}
         total={total}
         question={question}
+        onFlagClick={onFlagClick}
       />
       {state === "default" && (
         <AnswerField
@@ -98,4 +100,5 @@ EssayQuestion.propTypes = {
   user_answer: PropTypes.string,
   correct_answer: PropTypes.string,
   explanation: PropTypes.string,
+  onFlagClick: PropTypes.func,
 };

@@ -39,7 +39,7 @@ const ACCENT_COLOR = {
 
 export const Expertise = ({ category, level, value, onClick }) => {
   return (
-    <div
+    <button
       style={{
         display: "flex",
         flexDirection: "column",
@@ -151,7 +151,7 @@ export const Expertise = ({ category, level, value, onClick }) => {
       >
         {level}
       </p>
-    </div>
+    </button>
   );
 };
 

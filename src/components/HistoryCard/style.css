@@ -129,21 +129,20 @@
   display: inline-flex;
   flex: 0 0 auto;
   gap: 6px;
-  height: 20px;
+  height: 24px;
+  width: 70px;
   justify-content: center;
-  padding: 8px 12px;
+  padding: 12px 24px;
   position: relative;
 }
 
 .history-card .text-wrapper-2 {
   color: var(--fluentifyprimary);
   font-family: "Inter", Helvetica;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: -0.01px;
   line-height: 18px;
-  margin-bottom: -6px;
-  margin-top: -8px;
   position: relative;
   text-align: center;
   white-space: nowrap;

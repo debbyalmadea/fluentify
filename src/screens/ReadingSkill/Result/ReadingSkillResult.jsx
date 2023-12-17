@@ -11,84 +11,27 @@ import data from "../../../data/reading_skill_results.json";
 import textDataJSON from "../../../data/reading_skill_text.json";
 import { MultipleChoice } from "../../../components/MultipleChoice";
 import { useState } from "react";
-import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
-import { Modal } from "../../../components/Modal";
-import { AnswerField } from "../../../components/AnswerField";
 import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
 import { EvaluationCard } from "../../../components/EvaluationCard";
+import { QuestionFeedbackModal } from "../../../components/FeedbackModal/QuestionFeedbackModal";
 
 export const ReadingSkillResult = () => {
   const { id } = useParams();
   const resultData = data.datas[id - 1];
   const textData = textDataJSON.datas[id - 1];
   const navigate = useNavigate();
-  const [open, setOpen] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [open, setOpen] = useState();
 
   return (
     <>
-      {sent && <FeedbackSentModal open={sent} setOpen={setSent} />}
-      <Modal open={open} setOpen={setOpen}>
-        <div className="feedback-modal modal-content">
-          <div className="modal-illust">
-            <VuesaxLinearFlag />
-          </div>
-          <div className="modal-header">
-            <p
-              className="modal-title"
-              style={{
-                textAlign: "start",
-              }}
-            >
-              Reading Skill Builder
-            </p>
-          </div>
-          <div className="modal-body">
-            <p className="modal-text">
-              Apa keluhanmu untuk topik{" "}
-              <span style={{ fontWeight: "bolder" }}>
-                {" " + resultData.topic}
-              </span>
-            </p>
-            <div className="checkboxes">
-              <label className="container">
-                <p>Soal yang diberikan tidak sesuai topik</p>
-                <p>Teks tidak sesuai dengan topik</p>
-                <p>Teks yang diberikan sulit dimengerti</p>
-                <input type="checkbox" />
-                <span className="checkmark"></span>
-              </label>
-            </div>
-            <AnswerField placeholder="Tambahkan komentar..." />
-          </div>
-          <div className="modal-footer">
-            <Button
-              hierachy={"primary"}
-              size={"large"}
-              style={{ marginRight: "16px" }}
-              className="modal-button"
-              onClick={() => {
-                setOpen(false);
-                setSent(true);
-                setTimeout(() => {
-                  setSent(false);
-                }, 3000);
-              }}
-              type="default"
-              text="Kirim"
-            />
-            <Button
-              hierachy={"secondary"}
-              size={"large"}
-              className="modal-button"
-              onClick={() => setOpen(false)}
-              type="default"
-              text="Batal"
-            />
-          </div>
-        </div>
-      </Modal>
+      <QuestionFeedbackModal
+        open={open}
+        setOpen={setOpen}
+        choices={open ? open.choices : []}
+        highlight={open ? open.highlight : ""}
+        title={open ? open.title : ""}
+      />
       <div className="reading-skill-result">
         <div className="body">
           <Header title="Reading Builder: Result" backUrl="/" />
@@ -194,6 +137,16 @@ export const ReadingSkillResult = () => {
                         total={resultData.total}
                         questionId={question.id}
                         state={question.is_correct ? "correct" : "wrong"}
+                        onFlagClick={() =>
+                          setOpen({
+                            title: "Reading Skill Builder",
+                            highlight: "soal " + question.question,
+                            choices: [
+                              "Solusi yang diberikan salah",
+                              "Jawaban saya seharusnya benar",
+                            ],
+                          })
+                        }
                       />
                     ) : (
                       <EssayQuestion
@@ -203,6 +156,16 @@ export const ReadingSkillResult = () => {
                         questionId={question.id}
                         total={resultData.total}
                         state={question.is_correct ? "correct" : "wrong"}
+                        onFlagClick={() =>
+                          setOpen({
+                            title: "Reading Skill Builder",
+                            highlight: "soal " + question.question,
+                            choices: [
+                              "Solusi yang diberikan salah",
+                              "Jawaban saya seharusnya benar",
+                            ],
+                          })
+                        }
                       />
                     )
                   )}
@@ -241,7 +204,17 @@ export const ReadingSkillResult = () => {
               icon={<VuesaxLinearFlag className="vuesax-linear-flag-2-3" />}
               size="large"
               type="icon-only"
-              onClick={() => setOpen(true)}
+              onClick={() =>
+                setOpen({
+                  title: "Reading Skill Builder",
+                  highlight: "topik " + resultData.topic,
+                  choices: [
+                    "Soal yang diberikan tidak sesuai topik",
+                    "Teks tidak sesuai dengan topik",
+                    "Teks yang diberikan sulit dimengerti",
+                  ],
+                })
+              }
             />
             <Button
               className="button-5"

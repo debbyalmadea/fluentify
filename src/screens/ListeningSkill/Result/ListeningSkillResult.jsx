@@ -11,77 +11,24 @@ import { AudioPlayer } from "../../../components/AudioPlayer";
 import data from "../../../data/listening_skill_results.json";
 import { MultipleChoice } from "../../../components/MultipleChoice";
 import { useState } from "react";
-import { FeedbackSentModal } from "../../../components/FeedbackSentModal";
-import { Modal } from "../../../components/Modal";
-import { AnswerField } from "../../../components/AnswerField";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { EvaluationCard } from "../../../components/EvaluationCard";
 import * as PropTypes from "prop-types";
+import { QuestionFeedbackModal } from "../../../components/FeedbackModal/QuestionFeedbackModal";
 
 export const ListeningSkillResult = ({ url }) => {
-  const [open, setOpen] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [open, setOpen] = useState();
   const navigate = useNavigate();
   return (
     <>
-      {sent && <FeedbackSentModal open={sent} setOpen={setSent} />}
-      <Modal open={open} setOpen={setOpen}>
-        <div className="feedback-modal modal-content">
-          <div className="modal-illust">
-            <VuesaxLinearFlag />
-          </div>
-          <div className="modal-header">
-            <p
-              className="feedback-modal-title modal-title"
-              style={{
-                textAlign: "start",
-              }}
-            >
-              Listening Skill Builder
-            </p>
-          </div>
-          <div className="modal-body">
-            <p className="feedback-modal-text modal-text">
-              Apa keluhanmu untuk topik{" "}
-              <span style={{ fontWeight: "bolder" }}>{data.topic}</span>
-            </p>
-            <div className="checkboxes">
-              <label className="container">
-                <p>Soal yang diberikan tidak sesuai topik</p>
-                <input type="checkbox" />
-                <span className="checkmark"></span>
-              </label>
-            </div>
-            <AnswerField placeholder="Tambahkan komentar..." />
-          </div>
-          <div className="modal-footer">
-            <Button
-              hierachy={"primary"}
-              size={"large"}
-              style={{ marginRight: "16px" }}
-              className="modal-button"
-              onClick={() => {
-                setOpen(false);
-                setSent(true);
-                setTimeout(() => {
-                  setSent(false);
-                }, 3000);
-              }}
-              type="default"
-              text="Kirim"
-            />
-            <Button
-              hierachy={"secondary"}
-              size={"large"}
-              className="modal-button"
-              onClick={() => setOpen(false)}
-              type="default"
-              text="Batal"
-            />
-          </div>
-        </div>
-      </Modal>
+      <QuestionFeedbackModal
+        open={open}
+        setOpen={setOpen}
+        choices={open ? open.choices : []}
+        highlight={open ? open.highlight : ""}
+        title={open ? open.title : ""}
+      />
       <div className="reading-result">
         <div className="body">
           <Header title="Listening Builder: Result" backUrl={url ?? "/"} />
@@ -158,6 +105,16 @@ export const ListeningSkillResult = ({ url }) => {
                         total={data.total}
                         questionId={question.id}
                         state={question.is_correct ? "correct" : "wrong"}
+                        onFlagClick={() =>
+                          setOpen({
+                            title: "Listening Skill Builder",
+                            highlight: "soal " + question.question,
+                            choices: [
+                              "Solusi yang diberikan salah",
+                              "Jawaban saya seharusnya benar",
+                            ],
+                          })
+                        }
                       />
                     ) : (
                       <EssayQuestion
@@ -167,6 +124,16 @@ export const ListeningSkillResult = ({ url }) => {
                         questionId={question.id}
                         total={data.total}
                         state={question.is_correct ? "correct" : "wrong"}
+                        onFlagClick={() =>
+                          setOpen({
+                            title: "Listening Skill Builder",
+                            highlight: "soal " + question.question,
+                            choices: [
+                              "Solusi yang diberikan salah",
+                              "Jawaban saya seharusnya benar",
+                            ],
+                          })
+                        }
                       />
                     )
                   )}
@@ -205,7 +172,17 @@ export const ListeningSkillResult = ({ url }) => {
               icon={<VuesaxLinearFlag className="vuesax-linear-flag-2-3" />}
               size="large"
               type="icon-only"
-              onClick={() => setOpen(true)}
+              onClick={() =>
+                setOpen({
+                  title: "Listening Skill Builder",
+                  highlight: "topik " + data.topic,
+                  choices: [
+                    "Soal yang diberikan tidak sesuai topik",
+                    "Teks tidak sesuai dengan topik",
+                    "Teks yang diberikan sulit dimengerti",
+                  ],
+                })
+              }
             />
             <Button
               className="button-5"
